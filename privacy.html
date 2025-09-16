@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NZTWTM0S01');
+  </script>
+
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <title>Privacy Policy | Redeemed Digital</title>
+  <meta name="description" content="Privacy Policy for Redeemed Digital."/>
+  <meta name="theme-color" content="#002362"/>
+  <link rel="stylesheet" href="./styles.css?v=1"/>
+
+  <!-- Font Awesome (icons for nav/CTA) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <!-- Header dropdown + CTA styles (to match other pages) -->
+  <style>
+    /* Desktop nav */
+    header .container.nav { align-items: center; }
+    .main-nav { display:flex; gap:18px; align-items:center; }
+    .nav-link { color:#fff; text-decoration:none; padding:8px 10px; }
+    .nav-cta { background:#22c55e; color:#001633; font-weight:800; padding:10px 16px; border-radius:999px; display:inline-flex; align-items:center; gap:8px; text-decoration:none; }
+    .nav-cta:hover { filter:brightness(1.05); }
+
+    /* Dropdown */
+    .dropdown { position:relative; }
+    .dropdown-toggle { cursor:pointer; display:inline-flex; align-items:center; gap:8px; }
+    .dropdown-menu {
+      position:absolute; top:100%; left:0; min-width:240px;
+      background:#0c1533; border:1px solid var(--border); border-radius:12px;
+      padding:8px; display:none; z-index:1000;
+    }
+    .dropdown-menu a { display:block; color:#fff; padding:10px 12px; border-radius:10px; text-decoration:none; }
+    .dropdown-menu a:hover { background:rgba(255,255,255,.06); }
+    .dropdown.open .dropdown-menu { display:block; }
+
+    /* Mobile drawer hidden by default (desktop) */
+    .nav-menu{display:none}
+    .menu-toggle{display:none}
+
+    @media (max-width:768px){
+      .menu-toggle{display:block;margin-left:auto;font-size:1.6rem;background:none;border:0;cursor:pointer;color:#fff}
+      header .container.nav > nav{display:none}
+      .nav-menu{
+        display:flex;flex-direction:column;position:fixed;top:0;right:-100%;
+        width:82%;max-width:360px;height:100dvh;background:#001633;border-left:1px solid var(--border);
+        padding:80px 18px 18px;gap:10px;transition:right .26s ease;z-index:999
+      }
+      .nav-menu.open{right:0}
+      .nav-menu a{padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.06);color:#fff;text-decoration:none}
+      .nav-group-title{font-weight:800; letter-spacing:.04em; padding:10px 0 4px; color:#9fb0ff;}
+      .nav-cta{justify-content:center}
+    }
+
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="container nav">
+    <!-- Brand -->
+    <a href="./index.html" class="brand-cta" aria-label="Redeemed Digital Home">
+      <span class="brand-cta__icon">
+        <img src="images/Rd logo 1.png" alt="Redeemed Digital logo"/>
+      </span>
+      Redeemed Digital
+    </a>
+
+    <!-- Desktop nav (updated) -->
+    <nav class="main-nav" aria-label="Primary">
+      <a class="nav-link" href="./index.html">Home</a>
+
+      <div class="dropdown" id="servicesDropdown">
+        <a class="nav-link dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false">
+          Services <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu" role="menu" aria-label="Services submenu">
+          <a href="./web-design.html" role="menuitem">Websites</a>
+          <a href="./automation.html" role="menuitem">AI</a>
+          <a href="./google.html" role="menuitem">Google Business profiles</a>
+          <a href="./software.html" role="menuitem">Custom software</a>
+          <a href="./hosting.html" role="menuitem">Hosting plans</a>
+          <a href="./zoho.html" role="menuitem">Zoho</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="./portfolio.html">Portfolio</a>
+      <a class="nav-link" href="./about.html">About</a>
+      <a class="nav-link" href="./login.html">Login</a>
+      <a class="nav-cta" href="./index.html#contact">
+        <i class="fa-solid fa-rocket"></i> Start your project
+      </a>
+    </nav>
+
+    <!-- Hamburger (mobile) -->
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+
+  <!-- Mobile drawer (updated) -->
+  <nav class="nav-menu" aria-label="Mobile">
+    <a href="./index.html">Home</a>
+
+    <div class="nav-group-title">Services</div>
+    <a href="./web-design.html">Websites</a>
+    <a href="./automation.html">AI</a>
+    <a href="./google.html">Google Business profiles</a>
+    <a href="./software.html">Custom software</a>
+    <a href="./hosting.html">Hosting plans</a>
+    <a href="./zoho.html">Zoho</a>
+
+    <a href="./portfolio.html">Portfolio</a>
+    <a href="./about.html">About</a>
+    <a href="./login.html">Login</a>
+    <a class="nav-cta" href="./index.html#contact"><i class="fa-solid fa-rocket"></i> Start your project</a>
+  </nav>
+</header>
+
+<!-- Page header -->
+<section class="hero">
+  <div class="container hero-wrap">
+    <div data-reveal>
+      <div class="eyebrow">
+        <span aria-hidden="true" class="badge" style="background:#046a88">
+          <i class="fa-solid fa-shield-halved"></i>
+        </span>
+        Our Commitment
+      </div>
+      <h1>Privacy Policy</h1>
+      <p class="lead">We respect your privacy. This page explains what we collect, why we collect it, and how we protect your information.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Policy -->
+<section class="section">
+  <div class="container">
+    <article class="card" style="padding:22px">
+      <h2 class="title" style="margin-top:0">Overview</h2>
+      <p style="color:var(--muted)">
+        This Privacy Policy describes how Redeemed Digital (“we”, “our”, “us”) collects, uses, and shares information
+        when you visit our website, contact us, or use our services. By using this site, you agree to the practices described here.
+      </p>
+
+      <h3>Information we collect</h3>
+      <ul style="color:var(--muted);margin-top:.4rem">
+        <li><strong>Contact details</strong> (name, email, phone, website URL) when you submit our contact form.</li>
+        <li><strong>Project information</strong> that you provide in your inquiry (goals, budget, timelines).</li>
+        <li><strong>Usage data</strong> such as pages viewed, device/browser type, and general location (via analytics).</li>
+        <li><strong>Technical data</strong> like IP address and cookies that help us keep the site secure and improve performance.</li>
+      </ul>
+
+      <h3>How we use your information</h3>
+      <ul style="color:var(--muted);margin-top:.4rem">
+        <li>To respond to inquiries, provide quotes, and deliver services.</li>
+        <li>To improve the website’s performance, usability, and content.</li>
+        <li>To maintain security, prevent fraud, and comply with legal obligations.</li>
+      </ul>
+
+      <h3>Sharing of information</h3>
+      <p style="color:var(--muted)">
+        We do not sell your personal information. We may share data with trusted service providers (e.g., hosting, analytics,
+        form processing) who process it on our behalf under confidentiality agreements, and when required by law.
+      </p>
+
+      <h3>Cookies & analytics</h3>
+      <p style="color:var(--muted)">
+        We use cookies and similar technologies to operate the site and understand usage. You can control cookies through your
+        browser settings; disabling some cookies may impact functionality.
+      </p>
+
+      <h3>Data retention</h3>
+      <p style="color:var(--muted)">
+        We retain personal information only as long as necessary for the purposes described or as required by law.
+      </p>
+
+      <h3>Your rights</h3>
+      <p style="color:var(--muted)">
+        Depending on your location, you may have rights to access, correct, or delete your personal information.
+        To make a request, use the contact details below.
+      </p>
+
+      <h3>Children’s privacy</h3>
+      <p style="color:var(--muted)">
+        Our website and services are not directed to children under 13. We do not knowingly collect information from children.
+      </p>
+
+      <h3>Updates to this policy</h3>
+      <p style="color:var(--muted)">
+        We may update this Privacy Policy periodically. Changes will be posted on this page with an updated “Last updated” date.
+      </p>
+
+      <h3>Contact us</h3>
+      <p style="color:var(--muted)">
+        Questions about this policy? Reach us via the form on our <a href="./index.html#contact">Contact</a> section.
+      </p>
+
+      <div style="color:var(--muted);margin-top:12px">Last updated: <span id="pp-date">August 2025</span></div>
+    </article>
+  </div>
+</section>
+
+<!-- Footer (unchanged content) -->
+<footer>
+  <div class="container footer-grid" style="padding:30px 0">
+    <div>
+      <div class="logo-wrap">
+        <img alt="Redeemed Digital" class="logo-img" src="images/RD logo 2.png" style="max-width:150px; height:auto;"/>
+        <strong>Redeemed Digital</strong>
+      </div>
+      <p style="color:var(--muted);margin:.6rem 0 0;max-width:520px">Empowering businesses with digital tools—built with purpose, designed for growth.</p>
+      <div class="socials">
+        <a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61577762971978" target="_blank" rel="noopener">
+          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#ffffff;">
+            <i class="fa-brands fa-facebook-f"></i>
+          </span>
+        </a>
+        <a aria-label="LinkedIn" href="https://www.linkedin.com/company/redeemed-digital" target="_blank" rel="noopener">
+          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px">
+      <div>
+        <div style="font-weight:700">Services</div>
+        <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:6px;color:var(--muted)">
+          <li><a href="./web-design.html">Websites</a></li>
+          <li><a href="./automation.html">AI Automation</a></li>
+          <li><a href="./google.html">Google Business</a></li>
+          <li><a href="./index.html#services">SEO</a></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-weight:700">Zoho</div>
+        <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:6px;color:var(--muted)">
+          <li><a href="https://go.zoho.com/fOg">CRM</a></li>
+          <li><a href="https://go.zoho.com/Cl1">Books</a></li>
+          <li><a href="https://go.zoho.com/Fu3">One</a></li>
+          <li><a href="https://go.zoho.com/qFy">More...</a></li>
+        </ul>
+      </div>
+    </div>
+    <a href="https://go.zoho.com/qFy" target="_blank" rel="noopener noreferrer" title="Zoho Affiliate">
+      <img src="Images/New Zoho Affiliate Badge-Rectangle.svg" alt="Zoho Affiliate Logo" style="width: 150px; margin-top: 20px;">
+    </a>
+  </div>
+  <div class="container" style="padding:0 0 26px;color:var(--muted);font-size:.92rem">© <span id="year"></span> Redeemed Digital. All rights reserved.</div>
+</footer>
+
+<!-- Scripts -->
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Reveal on scroll (if used)
+  const nodes = Array.from(document.querySelectorAll('[data-reveal]'));
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('shown'); io.unobserve(e.target); } });
+  },{threshold:0.14});
+  nodes.forEach(n=>io.observe(n));
+
+  // Desktop Services dropdown toggle
+  const dd = document.getElementById('servicesDropdown');
+  if (dd){
+    const toggle = dd.querySelector('.dropdown-toggle');
+    const close = () => { dd.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); };
+    toggle.addEventListener('click', (e)=>{ e.preventDefault(); dd.classList.toggle('open'); toggle.setAttribute('aria-expanded', dd.classList.contains('open') ? 'true':'false'); });
+    dd.addEventListener('mouseleave', close);
+    document.addEventListener('click',(e)=>{ if(!dd.contains(e.target)) close(); });
+  }
+
+  // Mobile menu toggle (same as other pages)
+  const burger = document.querySelector('.menu-toggle');
+  const drawer = document.querySelector('.nav-menu');
+  if (burger && drawer){
+    burger.addEventListener('click', ()=>{
+      const open = drawer.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true':'false');
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    drawer.querySelectorAll('a').forEach(a=>{
+      a.addEventListener('click', ()=>{
+        drawer.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+</script>
+<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script>
+<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq018e18ad8915609debcc99abcbdf321daf8e51f93e656d5cd6dff74e3c8cee82" defer></script>
+<!-- 100% privacy-first analytics -->
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"
+></script>
+<!--Simple Analytics Automated Events Script-->
+<script
+ async
+ data-collect="outbound,emails"
+ src="https://scripts.simpleanalyticscdn.com/auto-events.js"
+ ></script>
+</body>
+</html>

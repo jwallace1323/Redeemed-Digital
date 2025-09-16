@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NZTWTM0S01');
+  </script>
+
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <!-- SEO -->
+  <title>SEO-First Websites — Four States (NE OK • NW AR • SW MO • SE KS) | Redeemed Digital</title>
+  <meta name="description" content="Custom, conversion-focused web design with SEO, performance, and accessibility baked in for the Four States—Northeast Oklahoma, Northwest Arkansas, Southwest Missouri, and Southeast Kansas."/>
+  <link rel="canonical" href="https://yourdomain.com/website.html"/>
+  <meta name="theme-color" content="#002362"/>
+
+  <!-- Social cards -->
+  <meta property="og:title" content="SEO-First Websites — Four States | Redeemed Digital"/>
+  <meta property="og:description" content="Beautiful, blazing-fast websites built to rank and convert for NE OK, NW AR, SW MO & SE KS."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://yourdomain.com/website.html"/>
+  <meta property="og:image" content="https://yourdomain.com/og/websites-hero.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <link rel="stylesheet" href="./styles.css?v=1">
+
+  <!-- Header/nav styles to match the rest of the site -->
+  <style>
+    /* Desktop nav */
+    header .container.nav { align-items: center; }
+    .main-nav { display:flex; gap:18px; align-items:center; }
+    .nav-link { color:#fff; text-decoration:none; padding:8px 10px; }
+    .nav-cta { background:#22c55e; color:#001633; font-weight:800; padding:10px 16px; border-radius:999px; display:inline-flex; align-items:center; gap:8px; text-decoration:none; }
+    .nav-cta:hover { filter:brightness(1.05); }
+
+    /* Dropdown */
+    .dropdown { position:relative; }
+    .dropdown-toggle { cursor:pointer; display:inline-flex; align-items:center; gap:8px; }
+    .dropdown-menu {
+      position:absolute; top:100%; left:0; min-width:240px;
+      background:#0c1533; border:1px solid var(--border); border-radius:12px;
+      padding:8px; display:none; z-index:1000;
+    }
+    .dropdown-menu a { display:block; color:#fff; padding:10px 12px; border-radius:10px; text-decoration:none; }
+    .dropdown-menu a:hover { background:rgba(255,255,255,.06); }
+    .dropdown.open .dropdown-menu { display:block; }
+
+    /* Mobile drawer hidden by default (desktop) */
+    .nav-menu{display:none}
+    .menu-toggle{display:none}
+    @media (max-width:768px){
+      .menu-toggle{display:block;margin-left:auto;font-size:1.6rem;background:none;border:0;cursor:pointer;color:#fff}
+      header .container.nav > nav{display:none}
+      .nav-menu{
+        display:flex;flex-direction:column;position:fixed;top:0;right:-100%;
+        width:82%;max-width:360px;height:100dvh;background:#001633;border-left:1px solid var(--border);
+        padding:80px 18px 18px;gap:10px;transition:right .26s ease;z-index:999
+      }
+      .nav-menu.open{right:0}
+      .nav-menu a{padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.06);color:#fff;text-decoration:none}
+      .nav-group-title{font-weight:800; letter-spacing:.04em; padding:10px 0 4px; color:#9fb0ff;}
+      .nav-cta{justify-content:center}
+    }
+
+    html{scroll-behavior:smooth}
+    #contact{scroll-margin-top:90px}
+  </style>
+
+  <!-- Breadcrumbs schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://yourdomain.com/"},
+      {"@type":"ListItem","position":2,"name":"Websites","item":"https://yourdomain.com/website.html"}
+    ]
+  }
+  </script>
+
+  <!-- LocalBusiness (service area) + Service schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Redeemed Digital",
+    "image": "https://redeemeddigital.com/RD-logo.png",
+    "url": "https://redeemeddigital.com",
+    "telephone": "+1-918-000-0000",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Grove",
+      "addressRegion": "OK",
+      "postalCode": "74344",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      "Northeast Oklahoma","Northwest Arkansas","Southwest Missouri","Southeast Kansas",
+      "Tulsa OK","Grove OK","Grand Lake OK",
+      "Fayetteville AR","Bentonville AR","Rogers AR",
+      "Joplin MO","Neosho MO","Carthage MO",
+      "Pittsburg KS","Parsons KS","Chanute KS"
+    ],
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61577762971978",
+      "https://www.linkedin.com/company/redeemeddigital"
+    ],
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"SEO-First Websites",
+    "serviceType":"Web Design",
+    "provider":{"@type":"LocalBusiness","name":"Redeemed Digital"},
+    "areaServed":["NE Oklahoma","NW Arkansas","SW Missouri","SE Kansas"],
+    "description":"Custom websites with technical SEO, performance, accessibility, and conversion strategy built in.",
+    "offers":{"@type":"AggregateOffer","lowPrice":"599","highPrice":"2999","priceCurrency":"USD"}
+  }
+  </script>
+</head>
+<body>
+<!-- Header -->
+<header>
+  <div class="container nav">
+    <a href="./index.html" class="brand-cta" aria-label="Redeemed Digital Home">
+      <span class="brand-cta__icon">
+        <img src="Images/Rd logo 1.png" alt="Redeemed Digital logo — Four States web design & AI automation" loading="lazy"/>
+      </span>
+      Redeemed Digital
+    </a>
+
+    <!-- New desktop nav -->
+    <nav class="main-nav" aria-label="Primary">
+      <a class="nav-link" href="./index.html">Home</a>
+
+      <div class="dropdown" id="servicesDropdown">
+        <a class="nav-link dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false">
+          Services <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu" role="menu" aria-label="Services submenu">
+          <a href="./web-design.html" role="menuitem" aria-current="page">Websites</a>
+          <a href="./automation.html" role="menuitem">AI</a>
+          <a href="./google.html" role="menuitem">Google Business profiles</a>
+          <a href="./software.html" role="menuitem">Custom software</a>
+          <a href="./hosting.html" role="menuitem">Hosting plans</a>
+          <a href="./zoho.html" role="menuitem">Zoho</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="./portfolio.html">Portfolio</a>
+      <a class="nav-link" href="./about.html">About</a>
+      <a class="nav-link" href="./login.html">Login</a>
+      <a class="nav-cta" href="#contact">
+        <i class="fa-solid fa-rocket"></i> Start your project
+      </a>
+    </nav>
+
+    <!-- Burger -->
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+
+  <!-- Mobile drawer -->
+  <nav class="nav-menu" aria-label="Mobile">
+    <a href="./index.html">Home</a>
+
+    <div class="nav-group-title">Services</div>
+    <a href="./web-design.html" aria-current="page">Websites</a>
+    <a href="./automation.html">AI</a>
+    <a href="./google.html">Google Business profiles</a>
+    <a href="./software.html">Custom software</a>
+    <a href="./hosting.html">Hosting plans</a>
+    <a href="./zoho.html">Zoho</a>
+
+    <a href="./portfolio.html">Portfolio</a>
+    <a href="./about.html">About</a>
+    <a href="./login.html">Login</a>
+    <a class="nav-cta" href="#contact"><i class="fa-solid fa-rocket"></i> Start your project</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container hero-wrap">
+    <div data-reveal>
+      <div class="eyebrow">
+        <span aria-hidden="true" class="badge" style="background:#046a88">
+          <i class="fa-solid fa-globe"></i>
+        </span>
+        Conversion-focused Web Design
+      </div>
+      <h1>Custom Websites & SEO for the Four States</h1>
+      <p class="lead">
+        We build beautiful, blazing-fast websites with a foundation in SEO and user experience. Our designs are crafted to convert visitors into customers, serving businesses in Northeast Oklahoma, Northwest Arkansas, Southwest Missouri, and Southeast Kansas.
+      </p>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 6px">
+        <a class="btn" href="#contact">
+          <span aria-hidden="true" class="badge" style="background:#046a88">
+            <i class="fa-solid fa-bolt"></i>
+          </span>
+          Get a Quote
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Approach Section -->
+<section class="section">
+  <div class="container">
+    <h2 class="title">Our Approach to Web Design</h2>
+    <div class="service-grid" data-reveal>
+      <div class="card">
+        <div class="head">
+          <span aria-hidden="true" class="badge" style="background:#046a88">
+            <i class="fa-solid fa-compass-drafting"></i>
+          </span>
+          SEO from Day One
+        </div>
+        <div class="body" style="color:var(--muted)">We build every website with a solid SEO foundation, ensuring technical health, structured data, and on-page optimization are prioritized from the start to help you rank higher on Google.</div>
+      </div>
+      <div class="card">
+        <div class="head">
+          <span aria-hidden="true" class="badge" style="background:#046a88">
+            <i class="fa-solid fa-gauge-high"></i>
+          </span>
+          Unrivaled Performance
+        </div>
+        <div class="body" style="color:var(--muted)">Your website's speed matters. We focus on lean code and optimized assets to create lightning-fast sites that keep visitors engaged and improve your search engine rankings.</div>
+      </div>
+      <div class="card">
+        <div class="head">
+          <span aria-hidden="true" class="badge" style="background:#046a88">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </span>
+          Mobile-First Design
+        </div>
+        <div class="body" style="color:var(--muted)">With the majority of web traffic coming from mobile, our designs are optimized for a flawless experience on smartphones and tablets, ensuring your business looks great on any screen.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Showcase Section (Placeholder) -->
+<section class="section">
+  <div class="container">
+    <h2 class="title">Featured Website Projects</h2>
+    <div class="work-grid" data-reveal>
+      <!-- You can add your portfolio items here, similar to the work section on your index page -->
+      <a class="card portfolio-link" href="https://realtorgrandlake.com" target="_blank" rel="noopener">
+        <div class="work-thumb">
+          <img alt="Project Placeholder" src="images/Garrett.png" loading="lazy"/>
+        </div>
+        <div class="body">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3 style="margin:0">Real-Estate Websites</h3>
+          </div>
+          <p style="color:var(--muted);margin:.4rem 0 0">This custom real estate website was built to showcase listings with a clean, modern design and fast-loading pages. Featuring a full IDX integration, it dynamically pulls local MLS data based on user location or preference — ensuring visitors always see the most relevant listings in Northeast Oklahoma . The site includes lead capture forms, an agent bio, contact tools, and SEO-optimized content to help generate traffic and convert visitors into clients.</p>
+        </div>
+      </a>
+      <a class="card portfolio-link" href="https://creationschildcare.net/" target="_blank" rel="noopener">
+        <div class="work-thumb">
+          <img alt="Project Placeholder" src="images/creations .png" loading="lazy"/>
+        </div>
+        <div class="body">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3 style="margin:0">Childcare Facility Websites</h3>
+          </div>
+          <p style="color:var(--muted);margin:.4rem 0 0">Designed for a Christian-based childcare center, this site provides a welcoming online presence for prospective and current families. It includes staff bios, a curriculum overview, downloadable subsidy forms, and embedded Google Maps and contact forms. Built to be mobile-friendly and easy to navigate, the website gives parents the confidence they need while helping the center manage communications more efficiently.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact (optional anchor target) -->
+<section class="section" id="contact">
+  <div class="container">
+    <h2 class="title">Tell Us Your Goals — We’ll Send a Plan & Quote</h2>
+    <p style="color:var(--muted);margin:0 0 10px">Serving <strong>NE OK</strong>, <strong>NW AR</strong>, <strong>SW MO</strong>, and <strong>SE KS</strong>. We typically reply within 24 hours.</p>
+    <!-- You can reuse your existing contact form block here if desired -->
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container footer-grid" style="padding:30px 0">
+    <div>
+      <div class="logo-wrap">
+        <img alt="Redeemed Digital wordmark — Four States web design agency" class="logo-img" src="images/RD logo 2.png" style="max-width:150px; height:auto;" loading="lazy"/>
+        <strong>Redeemed Digital</strong>
+      </div>
+      <p style="color:var(--muted);margin:.6rem 0 0;max-width:520px">Empowering businesses with digital tools—built with purpose, designed for growth.</p>
+      <div class="socials">
+        <a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61577762971978" target="_blank" rel="noopener">
+          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:800;color:#ffffff;">
+            <i class="fa-brands fa-facebook-f"></i>
+          </span>
+        </a>
+        <a aria-label="LinkedIn" href="https://www.linkedin.com/company/redeemed-digital" target="_blank" rel="noopener">
+          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px">
+      <div>
+        <div style="font-weight:700">Services</div>
+        <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:6px;color:var(--muted)">
+          <li><a href="./web-design.html">Websites</a></li>
+          <li><a href="./automation.html">AI Automation</a></li>
+          <li><a href="./google.html">Google Business</a></li>
+          <li><a href="./index.html#services">SEO</a></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-weight:700">Zoho</div>
+        <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:6px;color:var(--muted)">
+          <li><a href="https://go.zoho.com/fOg">CRM</a></li>
+          <li><a href="https://go.zoho.com/Cl1">Books</a></li>
+          <li><a href="https://go.zoho.com/Fu3">One</a></li>
+          <li><a href="https://go.zoho.com/qFy">More...</a></li>
+        </ul>
+      </div>
+    </div>
+    <a href="https://go.zoho.com/qFy" target="_blank" rel="noopener noreferrer" title="Zoho Affiliate">
+      <img src="images/New Zoho Affiliate Badge-Rectangle.svg" alt="Zoho Affiliate Logo" style="width: 150px; margin-top: 20px;" loading="lazy">
+    </a>
+  </div>
+  <div class="container" style="padding:0 0 26px;color:var(--muted);font-size:.92rem">© <span id="year"></span> Redeemed Digital. All rights reserved.</div>
+</footer>
+
+<!-- Scripts -->
+<script>
+  // Year
+  const yEl = document.getElementById('year'); if (yEl) yEl.textContent = new Date().getFullYear();
+
+  // Reveal on scroll
+  const nodes = Array.from(document.querySelectorAll('[data-reveal]'));
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('shown'); io.unobserve(e.target); } });
+  },{threshold:0.14});
+  nodes.forEach(n=>io.observe(n));
+
+  // Desktop Services dropdown toggle
+  const dd = document.getElementById('servicesDropdown');
+  if (dd){
+    const toggle = dd.querySelector('.dropdown-toggle');
+    const close = () => { dd.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); };
+    toggle.addEventListener('click', (e)=>{ e.preventDefault(); dd.classList.toggle('open'); toggle.setAttribute('aria-expanded', dd.classList.contains('open') ? 'true':'false'); });
+    dd.addEventListener('mouseleave', close);
+    document.addEventListener('click',(e)=>{ if(!dd.contains(e.target)) close(); });
+  }
+
+  // Mobile menu toggle
+  const burger = document.querySelector('.menu-toggle');
+  const drawer = document.querySelector('.nav-menu');
+  if (burger && drawer){
+    burger.addEventListener('click', ()=>{
+      const open = drawer.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true':'false');
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    drawer.querySelectorAll('a').forEach(a=>{
+      a.addEventListener('click', ()=>{
+        drawer.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+</script>
+<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script>
+<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq018e18ad8915609debcc99abcbdf321daf8e51f93e656d5cd6dff74e3c8cee82" defer></script>
+
+<!-- 100% privacy-first analytics -->
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"
+></script>
+<!--Simple Analytics Automated Events Script-->
+<script
+ async
+ data-collect="outbound,emails"
+ src="https://scripts.simpleanalyticscdn.com/auto-events.js"
+ ></script>
+</body>
+</html>

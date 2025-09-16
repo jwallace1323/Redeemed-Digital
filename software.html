@@ -13,16 +13,26 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
 
-  <!-- SEO: Four States–focused title/description -->
-  <title>Web Design & AI Automation — Four States (NE OK, NW AR, SW MO, SE KS) | Redeemed Digital</title>
-  <meta name="description" content="SEO-first web design and AI automation for the Four States region — Northeast Oklahoma, Northwest Arkansas, Southwest Missouri, and Southeast Kansas. Serving Tulsa, Fayetteville, Joplin, Pittsburg, and beyond."/>
+  <!-- SEO -->
+  <title>Custom Software & Integrations — Four States (NE OK • NW AR • SW MO • SE KS) | Redeemed Digital</title>
+  <meta name="description" content="Custom software, data pipelines, and API integrations for the Four States—Northeast Oklahoma, Northwest Arkansas, Southwest Missouri, and Southeast Kansas. Connect tools, automate workflows, and get real-time dashboards."/>
+  <link rel="canonical" href="https://yourdomain.com/software.html"/>
   <meta name="theme-color" content="#002362"/>
-  <link rel="stylesheet" href="./styles.css?v=1">
+
+  <!-- Social cards -->
+  <meta property="og:title" content="Custom Software & Integrations — Four States | Redeemed Digital"/>
+  <meta property="og:description" content="Dashboards, data pipelines, and API integrations for NE OK, NW AR, SW MO & SE KS. Automate workflows and connect your stack."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://yourdomain.com/software.html"/>
+  <meta property="og:image" content="https://yourdomain.com/og/software-hero.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
 
   <!-- Font Awesome (icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
-  <!-- minimal header-only overrides + dropdown + CTA -->
+  <link rel="stylesheet" href="./styles.css?v=1">
+
+  <!-- Header/nav styles to match the rest of the site -->
   <style>
     /* Desktop nav */
     header .container.nav { align-items: center; }
@@ -43,11 +53,11 @@
     .dropdown-menu a:hover { background:rgba(255,255,255,.06); }
     .dropdown.open .dropdown-menu { display:block; }
 
-    /* Mobile drawer hidden by default (desktop) */
+    /* Mobile drawer is hidden by default (desktop) */
     .nav-menu{display:none}
     .menu-toggle{display:none}
-
     @media (max-width:768px){
+      /* On mobile: show burger, hide desktop nav, enable drawer */
       .menu-toggle{display:block;margin-left:auto;font-size:1.6rem;background:none;border:0;cursor:pointer;color:#fff}
       header .container.nav > nav{display:none}
       .nav-menu{
@@ -57,21 +67,26 @@
       }
       .nav-menu.open{right:0}
       .nav-menu a{padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.06);color:#fff;text-decoration:none}
-
-      /* Mobile dropdown group */
       .nav-group-title{font-weight:800; letter-spacing:.04em; padding:10px 0 4px; color:#9fb0ff;}
       .nav-cta{justify-content:center}
     }
-
     html{scroll-behavior:smooth}
     #contact{scroll-margin-top:90px}
-
-    /* Make anchor-wrapped cards look identical to .card */
-    a.card { display:block; color:inherit; text-decoration:none; }
-    a.card .head { color:#fff; }
   </style>
 
-  <!-- LocalBusiness schema: broadened areaServed to Four States (unchanged) -->
+  <!-- Breadcrumbs schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://yourdomain.com/"},
+      {"@type":"ListItem","position":2,"name":"Custom Software & Integrations","item":"https://yourdomain.com/software.html"}
+    ]
+  }
+  </script>
+
+  <!-- LocalBusiness schema (service area) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -106,6 +121,20 @@
     }]
   }
   </script>
+
+  <!-- Service schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Custom Software & Integrations",
+    "serviceType":"Software Development & Systems Integration",
+    "provider":{"@type":"LocalBusiness","name":"Redeemed Digital"},
+    "areaServed":["NE Oklahoma","NW Arkansas","SW Missouri","SE Kansas"],
+    "description":"Custom dashboards, data pipelines, and API integrations that connect your tools, automate workflows, and surface real-time insights.",
+    "offers":{"@type":"AggregateOffer","lowPrice":"999","highPrice":"9999","priceCurrency":"USD"}
+  }
+  </script>
 </head>
 <body>
 <!-- Header -->
@@ -130,7 +159,7 @@
           <a href="./web-design.html" role="menuitem">Websites</a>
           <a href="./automation.html" role="menuitem">AI</a>
           <a href="./google.html" role="menuitem">Google Business profiles</a>
-          <a href="./software.html" role="menuitem">Custom software</a>
+          <a href="./software.html" role="menuitem" aria-current="page">Custom software</a>
           <a href="./hosting.html" role="menuitem">Hosting plans</a>
           <a href="./zoho.html" role="menuitem">Zoho</a>
         </div>
@@ -156,7 +185,7 @@
     <a href="./web-design.html">Websites</a>
     <a href="./automation.html">AI</a>
     <a href="./google.html">Google Business profiles</a>
-    <a href="./software.html">Custom software</a>
+    <a href="./software.html" aria-current="page">Custom software</a>
     <a href="./hosting.html">Hosting plans</a>
     <a href="./zoho.html">Zoho</a>
 
@@ -167,21 +196,19 @@
   </nav>
 </header>
 
-<!-- Hero -->
+<!-- Hero Section -->
 <section class="hero">
   <div class="container hero-wrap">
     <div data-reveal>
       <div class="eyebrow">
         <span aria-hidden="true" class="badge" style="background:#046a88">
-          <i class="fa-solid fa-cross"></i>
+          <i class="fa-solid fa-code"></i>
         </span>
-        Built with purpose, designed for growth
+        Tailored Solutions
       </div>
-      <h1>Premier Websites &amp; AI Automation for Growing Brands</h1>
+      <h1>Custom Software & Integrations</h1>
       <p class="lead">
-        We craft lightning-fast, SEO-first websites and automate the busywork with AI for businesses across the Four States —
-        <strong>Northeast Oklahoma, Northwest Arkansas, Southwest Missouri, and Southeast Kansas</strong>.
-        From Google Business Profiles to custom software, we turn clicks into customers.
+        Your business is unique, and so are its needs. We create custom dashboards, data pipelines, and API integrations that connect your existing tools, automate complex workflows, and provide a single source of truth for your business data across <strong>NE Oklahoma, NW Arkansas, SW Missouri, and SE Kansas</strong>.
       </p>
 
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 6px">
@@ -189,199 +216,62 @@
           <span aria-hidden="true" class="badge" style="background:#046a88">
             <i class="fa-solid fa-bolt"></i>
           </span>
-          Get a Fast Quote
-        </a>
-
-        <a class="btn" href="#work">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:inline-flex;align-items:center;justify-content:center;">
-            <i class="fa-solid fa-table-cells"></i>
-          </span>
-          See Work
+          Get a Quote
         </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TRUSTED BY -->
-<section aria-label="Trusted by" class="section">
+<!-- Our Approach Section -->
+<section class="section">
   <div class="container">
-    <div class="eyebrow">
-      <span aria-hidden="true" class="badge" style="background:#046a88">
-        <i class="fa-solid fa-check"></i>
-      </span>
-      Trusted by
-    </div>
-    <div class="carousel-viewport">
-      <div class="carousel-track" id="trustCarousel">
-        <a class="carousel-item" href="https://creationschildcare.net" target="_blank" rel="noopener"><img alt="Creations Childcare website by Redeemed Digital" class="carousel-logo" src="images/CC logo.png" loading="lazy"/></a>
-        <a class="carousel-item" href="https://brushcreekpestcontrol.com" target="_blank" rel="noopener"><img alt="Brush Creek Pest Control site by Redeemed Digital" class="carousel-logo" src="images/BC logo.png" loading="lazy"/></a>
-        <a class="carousel-item" href="https://grandlakeroofing.net" target="_blank" rel="noopener"><img alt="Grand Lake Roofing site by Redeemed Digital" class="carousel-logo" src="images/GLR logo.png" loading="lazy"/></a>
-        <a class="carousel-item" href="https://deepstudios.net" target="_blank" rel="noopener"><img alt="Deep Studios website by Redeemed Digital" class="carousel-logo" src="images/deep studios logo.png" loading="lazy"/></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Services -->
-<section class="section" id="services">
-  <div class="container">
-    <h2 class="title">Web Design, SEO &amp; AI Automation for the Four States Region</h2>
-    <p style="color:var(--muted);max-width:760px;margin:8px 0 22px">
-      We help small businesses across <strong>Northeast Oklahoma, Northwest Arkansas, Southwest Missouri, and Southeast Kansas</strong> generate more leads with SEO-first websites and automated systems. Popular hubs we serve include Tulsa, Fayetteville, Joplin, Grove, Bentonville, and Pittsburg.
-    </p>
-
+    <h2 class="title">What We Build</h2>
     <div class="service-grid" data-reveal>
-      <!-- Clickable -->
-      <a class="card" href="./web-design.html">
-        <div class="head">
-          <span aria-hidden="true" class="badge" style="background:#046a88">
-            <i class="fa-solid fa-globe"></i>
-          </span>
-          SEO-First Websites
-        </div>
-        <div class="body" style="color:var(--muted)">Conversion-focused design, blazing performance, technical SEO, schema, and analytics baked in for Four States businesses.</div>
-      </a>
-
-      <!-- Clickable -->
-      <a class="card" href="./automation.html">
-        <div class="head">
-          <span aria-hidden="true" class="badge" style="background:#046a88">
-            <i class="fa-solid fa-microchip"></i>
-          </span>
-          AI Automation Workflows
-        </div>
-        <div class="body" style="color:var(--muted)">Lead intake, proposals, invoicing, CRM updates, email/chat automations, and more.</div>
-      </a>
-
-      <!-- Clickable -->
-      <a class="card" href="./google.html">
-        <div class="head">
-          <span aria-hidden="true" class="badge" style="background:#046a88">
-            <i class="fa-solid fa-location-dot"></i>
-          </span>
-          Google Business Profiles
-        </div>
-        <div class="body" style="color:var(--muted)">Setup, optimization, review strategy, and local SEO to rank in the map pack.</div>
-      </a>
-
-      <!-- Clickable -->
-      <a class="card" href="./software.html">
-        <div class="head">
-          <span aria-hidden="true" class="badge" style="background:#046a88">
-            <i class="fa-solid fa-code"></i>
-          </span>
-          Custom Software &amp; Integrations
-        </div>
-        <div class="body" style="color:var(--muted)">Dashboards, data pipelines, and API integrations that glue your tools together.</div>
-      </a>
-
-      <!-- Clickable -->
-      <a class="card" href="./hosting.html">
-        <div class="head">
-          <span aria-hidden="true" class="badge" style="background:#046a88">
-            <i class="fa-solid fa-shield-halved"></i>
-          </span>
-          Care Plans &amp; Hosting
-        </div>
-        <div class="body" style="color:var(--muted)">Secure hosting, updates, uptime monitoring, backups, and priority support.</div>
-      </a>
-
-      <!-- NOT clickable (as requested) -->
       <div class="card">
         <div class="head">
           <span aria-hidden="true" class="badge" style="background:#046a88">
-            <i class="fa-solid fa-comments"></i>
+            <i class="fa-solid fa-diagram-project"></i>
           </span>
-          Brand &amp; Conversion Copy
+          Data Pipelines & Integrations
         </div>
-        <div class="body" style="color:var(--muted)">Clear messaging and persuasive copy that turns browsers into buyers.</div>
+        <div class="body" style="color:var(--muted)">Connect disparate systems, from your CRM and accounting software to your marketing platforms. We build seamless integrations that ensure your data flows smoothly and accurately.</div>
+      </div>
+      <div class="card">
+        <div class="head">
+          <span aria-hidden="true" class="badge" style="background:#046a88">
+            <i class="fa-solid fa-chart-line"></i>
+          </span>
+          Custom Dashboards
+        </div>
+        <div class="body" style="color:var(--muted)">Get a clear, real-time view of your business performance. We design and build custom dashboards that pull data from various sources into a single, easy-to-understand interface.</div>
+      </div>
+      <div class="card">
+        <div class="head">
+          <span aria-hidden="true" class="badge" style="background:#046a88">
+            <i class="fa-solid fa-plug"></i>
+          </span>
+          API Development
+        </div>
+        <div class="body" style="color:var(--muted)">We build custom APIs and connectors so your applications communicate reliably, unlocking automation and new functionality.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Work -->
-<section class="section" id="work">
+<!-- Example Workflows Section -->
+<section class="section">
   <div class="container">
-    <h2 class="title">Recent Four States Web Design Projects &amp; Client Results</h2>
+    <h2 class="title">Example Integrations & Solutions</h2>
     <div class="work-grid" data-reveal>
-      <a class="card portfolio-link" href="https://creationschildcare.net" target="_blank" rel="noopener">
-        <div class="work-thumb"><img alt="images/Creations Childcare responsive web design — Oklahoma project by Redeemed Digital" src="images/creations .png" loading="lazy"/></div>
-        <div class="body">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <h3 style="margin:0;display:flex;gap:.6rem;align-items:center">Creations Childcare</h3>
-          </div>
-          <p style="color:var(--muted);margin:.4rem 0 0">Responsive site with contact forms and mobile optimization.</p>
-        </div>
-      </a>
-
-      <a class="card portfolio-link" href="https://realtorgrandlake.com" target="_blank" rel="noopener">
-        <div class="work-thumb"><img alt="Legacy Real Estate IDX website — Grand Lake area project by Redeemed Digital" src="images/Garrett.png" loading="lazy"/></div>
-        <div class="body">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <h3 style="margin:0;display:flex;gap:.6rem;align-items:center">Garrett Schaede-Legacy Real Estate</h3>
-          </div>
-          <p style="color:var(--muted);margin:.4rem 0 0">Modern realtor site with IDX integration for live MLS listings and seamless property searches.</p>
-        </div>
-      </a>
-
-      <a class="card portfolio-link" href="https://brushcreekpestcontrol.com" target="_blank" rel="noopener">
-        <div class="work-thumb"><img alt="Brush Creek Pest Control one-page website — Oklahoma project by Redeemed Digital" src="images/brushcreek.png" loading="lazy"/></div>
-        <div class="body">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <h3 style="margin:0;display:flex;gap:.6rem;align-items:center">Brush Creek Pest Control</h3>
-          </div>
-          <p style="color:var(--muted);margin:.4rem 0 0">Simple, effective one-pager emphasizing services and quick contact.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Process -->
-<section class="section" id="process">
-  <div class="container">
-    <h2 class="title">Our Web Design &amp; AI Automation Process</h2>
-    <div class="service-grid" data-reveal>
-      <div class="card"><div class="head">
-        <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#fff;font-weight:800;">?</span>
-        1. Discover
-      </div><div class="body" style="color:var(--muted)">Goals, audience, offers, tech stack audit.</div></div>
-
-      <div class="card"><div class="head">
-        <span aria-hidden="true" class="badge" style="background:#046a88">
-          <i class="fa-solid fa-pen-ruler"></i>
-        </span>
-        2. Design
-      </div><div class="body" style="color:var(--muted)">Brand, wireframes, copy, and content plan.</div></div>
-
-      <div class="card"><div class="head">
-        <span aria-hidden="true" class="badge" style="background:#046a88">
-          <i class="fa-solid fa-screwdriver-wrench"></i>
-        </span>
-        3. Build
-      </div><div class="body" style="color:var(--muted)">SEO-first dev, integrations, analytics, QA.</div></div>
-
-      <div class="card"><div class="head">
-        <span aria-hidden="true" class="badge" style="background:#046a88;display:inline-flex;align-items:center;justify-content:center;gap:3px;padding:4px 6px;">
-          <i class="fa-solid fa-rocket"></i>
-        </span>
-        4. Launch
-      </div><div class="body" style="color:var(--muted)">Migrations, redirects, tracking, training.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="section" id="faq">
-  <div class="container">
-    <h2 class="title">Web Design &amp; SEO FAQs for Four States Businesses</h2>
-    <div class="service-grid" data-reveal>
-      <div class="card"><div class="head"><span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#ffffff;font-weight:800;">?</span>Do you offer maintenance?</div><div class="body" style="color:var(--muted)">Yes—our Care Plans include hosting, monitoring, updates, and monthly reports.</div></div>
-      <div class="card"><div class="head"><span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#ffffff;font-weight:800;">?</span>What does “SEO-first” mean?</div><div class="body" style="color:var(--muted)">Technical health, structured data, speed, accessibility, and on-page strategy from day one.</div></div>
-      <div class="card"><div class="head"><span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#ffffff;font-weight:800;">?</span>Can you integrate my tools?</div><div class="body" style="color:var(--muted)">Absolutely. We connect CRMs, payment processors, calendars, and more via APIs &amp; webhooks.</div></div>
-      <div class="card"><div class="head"><span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#ffffff;font-weight:800;">?</span>Do you work with tight budgets?</div><div class="body" style="color:var(--muted)">We offer phased projects and clear scopes so you can launch fast and iterate.</div></div>
+      <div class="card" style="padding: 1.5rem">
+        <h3 style="margin-top: 0;">Sales Reporting Dashboard</h3>
+        <p style="color:var(--muted);margin:.4rem 0 0">Pull sales data from your CRM, website, and accounting software into a single, real-time dashboard that helps you track performance and make better business decisions.</p>
+      </div>
+      <div class="card" style="padding: 1.5rem">
+        <h3 style="margin-top: 0;">Automated Customer Notifications</h3>
+        <p style="color:var(--muted);margin:.4rem 0 0">Integrate your project management tool with your email and SMS provider to automatically send customers updates on their project status, reducing manual communication and improving satisfaction.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -486,41 +376,15 @@
   },{threshold:0.14});
   nodes.forEach(n=>io.observe(n));
 
-  // Dropdown (desktop)
+  // Desktop Services dropdown toggle
   const dd = document.getElementById('servicesDropdown');
   if (dd){
     const toggle = dd.querySelector('.dropdown-toggle');
-    const menu = dd.querySelector('.dropdown-menu');
-    const open = () => { dd.classList.add('open'); toggle.setAttribute('aria-expanded','true'); };
     const close = () => { dd.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); };
     toggle.addEventListener('click', (e)=>{ e.preventDefault(); dd.classList.toggle('open'); toggle.setAttribute('aria-expanded', dd.classList.contains('open') ? 'true':'false'); });
     dd.addEventListener('mouseleave', close);
     document.addEventListener('click',(e)=>{ if(!dd.contains(e.target)) close(); });
   }
-
-  // TRUST CAROUSEL — seamless loop sized to your logos
-  (function(){
-    const track = document.getElementById('trustCarousel');
-    if (!track) return;
-    const viewport = track.parentElement;
-    function setup(){
-      const baseChildren = Array.from(track.children);
-      const gap = parseFloat(getComputedStyle(track).gap) || 48;
-      const baseWidth = baseChildren.reduce((sum,el)=> sum + el.getBoundingClientRect().width, 0) + gap*(baseChildren.length-1);
-      while(track.scrollWidth < baseWidth*2 + viewport.clientWidth){
-        baseChildren.forEach(el=> track.appendChild(el.cloneNode(true)));
-      }
-      track.style.setProperty('--cycle', baseWidth + 'px');
-      track.style.animation = 'none'; void track.offsetWidth; track.style.animation = `marquee var(--marquee-duration) linear infinite`;
-    }
-    const imgs = track.querySelectorAll('img');
-    let loaded = 0;
-    imgs.forEach(img=>{
-      if (img.complete){ loaded++; }
-      else img.addEventListener('load', ()=>{ loaded++; if(loaded===imgs.length) setup(); }, {once:true});
-    });
-    if (loaded===imgs.length) setup();
-  })();
 
   // Mobile menu toggle
   const burger = document.querySelector('.menu-toggle');
@@ -542,7 +406,6 @@
 </script>
 <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script>
 <script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq018e18ad8915609debcc99abcbdf321daf8e51f93e656d5cd6dff74e3c8cee82" defer></script>
-
 <!-- 100% privacy-first analytics -->
 <script async src="https://scripts.simpleanalyticscdn.com/latest.js"
 ></script>
