@@ -128,6 +128,7 @@
           <a href="./web-design.html" role="menuitem">Websites</a>
           <a href="./automation.html" role="menuitem">AI</a>
           <a href="./google.html" role="menuitem">Google Business profiles</a>
+           <a href="./social.html" role="menuitem">Social Media</a>
           <a href="./software.html" role="menuitem">Custom software</a>
           <a href="./hosting.html" role="menuitem">Hosting plans</a>
           <a href="./zoho.html" role="menuitem">Zoho</a>
@@ -154,6 +155,7 @@
     <a href="./web-design.html">Websites</a>
     <a href="./automation.html">AI</a>
     <a href="./google.html">Google Business profiles</a>
+     <a href="./social.html">Social Media</a>
     <a href="./software.html">Custom software</a>
     <a href="./hosting.html">Hosting plans</a>
     <a href="./zoho.html">Zoho</a>
@@ -270,20 +272,67 @@
 <!-- Contact -->
 <section class="section" id="contact">
   <div class="container">
-    <h2 class="title">Get a Quote — Serving NE OK, NW AR, SW MO &amp; SE KS</h2>
+    <h2 class="title">Get a Quote — Serving NE OK, NW AR, SW MO & SE KS</h2>
     <p style="color:var(--muted);margin:0 0 10px">We typically reply within 24 hours.</p>
 
     <div class="service-grid" data-reveal style="grid-template-columns:1fr 1fr;gap:24px">
+
+      <!-- Contact Form -->
       <form action="https://formspree.io/f/xrbkpyll" class="card" id="contactForm" method="POST" style="padding:18px">
-        <div class="service-grid" style="grid-template-columns:1fr 1fr">
-          <div><label class="eyebrow" for="name" style="letter-spacing:.06em">Name</label><input id="name" name="name" placeholder="Your name" required style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"/></div>
-          <div><label class="eyebrow" for="email" style="letter-spacing:.06em">Email</label><input id="email" name="_replyto" placeholder="you@company.com" required style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem" type="email"/></div>
-          <div><label class="eyebrow" for="website" style="letter-spacing:.06em">Current website</label><input id="website" name="website" placeholder="https://" style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem" type="url"/></div>
-          <div><label class="eyebrow" for="budget" style="letter-spacing:.06em">Estimated budget</label><input id="budget" name="budget" placeholder="$2,500 - $5,000" style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"/></div>
-          <div style="grid-column:1/-1"><label class="eyebrow" for="message" style="letter-spacing:.06em">Project goals</label><textarea id="message" name="message" placeholder="Tell us what success looks like…" rows="5" style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"></textarea></div>
+        <div class="service-grid" style="grid-template-columns:1fr 1fr;gap:18px">
+          
+          <!-- Name -->
+          <div>
+            <label class="eyebrow" for="name" style="letter-spacing:.06em">Name</label>
+            <input id="name" name="name" placeholder="Your name" required style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"/>
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label class="eyebrow" for="email" style="letter-spacing:.06em">Email</label>
+            <input id="email" name="_replyto" placeholder="you@company.com" required type="email" style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"/>
+          </div>
+
+          <!-- Dropdown -->
+          <div style="grid-column:1/-1">
+            <label class="eyebrow" for="service" style="letter-spacing:.06em">What service are you interested in?</label>
+            <select id="service" name="service" required style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem">
+              <option value="">Select a service</option>
+              <option value="Website">Website</option>
+              <option value="Artificial Intelligence">Artificial Intelligence</option>
+              <option value="Social Media Management">Social Media Management</option>
+              <option value="Google Business Profile">Google Business Profile</option>
+              <option value="Software/App Development">Software/App Development</option>
+              <option value="Hosting Plans">Hosting Plans</option>
+              <option value="Zoho">Zoho</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <!-- Website -->
+          <div>
+            <label class="eyebrow" for="website" style="letter-spacing:.06em">Current website</label>
+            <input id="website" name="website" placeholder="https://" type="url" style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"/>
+          </div>
+
+          <!-- Budget -->
+          <div>
+            <label class="eyebrow" for="budget" style="letter-spacing:.06em">Estimated budget</label>
+            <input id="budget" name="budget" placeholder="$2,500 - $5,000" style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"/>
+          </div>
+
+          <!-- Message -->
+          <div style="grid-column:1/-1">
+            <label class="eyebrow" for="message" style="letter-spacing:.06em">Project goals</label>
+            <textarea id="message" name="message" placeholder="Tell us what success looks like…" rows="5" style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"></textarea>
+          </div>
+
+          <!-- Hidden fields -->
           <input name="_gotcha" style="display:none" type="text"/>
           <input name="_subject" type="hidden" value="New Contact Form Submission from Redeemed Digital"/>
         </div>
+
+        <!-- Submit Button -->
         <div style="display:flex;gap:10px;align-items:center;margin-top:14px">
           <button class="btn" type="submit">
             <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
@@ -299,7 +348,7 @@
         <iframe
           title="Redeemed Digital — Four States service area (centered near Grove, OK)"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51936.09153403257!2d-94.807!3d36.593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b6c7f2a0b8d1db%3A0x0000000000000000!2sGrove%2C%20OK!5e0!3m2!1sen!2sus!4v1710000000000"
-          width="100%" height="420" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          width="100%" height="100%" style="min-height:620px;border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
     </div>
