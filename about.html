@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- Google tag (gtag.js) | GA4 ID fixed to match config -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZTWTM0S01"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -16,15 +16,19 @@
   <!-- SEO -->
   <title>About Redeemed Digital — Four States (NE OK • NW AR • SW MO • SE KS) | My Story & Mission</title>
   <meta name="description" content="Hi, I’m the founder of Redeemed Digital. I build fast, SEO-first websites and AI automations for businesses across the Four States—Northeast Oklahoma, Northwest Arkansas, Southwest Missouri, and Southeast Kansas."/>
-  <link rel="canonical" href="https://yourdomain.com/about.html"/>
+  <link rel="canonical" href="https://redeemeddigital.com/about.html"/>
   <meta name="theme-color" content="#002362"/>
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Social cards -->
   <meta property="og:title" content="About Redeemed Digital — My Story & Mission"/>
   <meta property="og:description" content="Purpose-driven web design and automation for the Four States region."/>
   <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://yourdomain.com/about.html"/>
-  <meta property="og:image" content="https://yourdomain.com/og/about-hero.jpg"/>
+  <meta property="og:url" content="https://redeemeddigital.com/about.html"/>
+  <meta property="og:image" content="https://redeemeddigital.com/og-image.jpg"/>
   <meta name="twitter:card" content="summary_large_image"/>
 
   <!-- Font Awesome (icons) -->
@@ -104,7 +108,7 @@
     ],
     "sameAs": [
       "https://www.facebook.com/profile.php?id=61577762971978",
-      "https://www.linkedin.com/company/redeemeddigital"
+      "https://www.linkedin.com/company/redeemedigital"
     ],
     "openingHoursSpecification": [{
       "@type": "OpeningHoursSpecification",
@@ -119,7 +123,8 @@
 <!-- Header -->
 <header>
   <div class="container nav">
-    <a href="./index.html" class="brand-cta" aria-label="Redeemed Digital Home">
+    <!-- Home link updated to root to avoid /index.html duplication -->
+    <a href="/" class="brand-cta" aria-label="Redeemed Digital Home">
       <span class="brand-cta__icon">
         <img src="images/Rd logo 1.png" alt="Redeemed Digital logo — Four States web design & AI automation" loading="lazy"/>
       </span>
@@ -128,7 +133,8 @@
 
     <!-- New desktop nav -->
     <nav class="main-nav" aria-label="Primary">
-      <a class="nav-link" href="./index.html">Home</a>
+      <!-- Home link updated -->
+      <a class="nav-link" href="/">Home</a>
 
       <div class="dropdown" id="servicesDropdown">
         <a class="nav-link dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false">
@@ -159,7 +165,8 @@
 
   <!-- Mobile drawer -->
   <nav class="nav-menu" aria-label="Mobile">
-    <a href="./index.html">Home</a>
+    <!-- Home link updated -->
+    <a href="/">Home</a>
 
     <div class="nav-group-title">Services</div>
     <a href="./web-design.html">Websites</a>
@@ -386,7 +393,8 @@
           <li><a href="./web-design.html">Websites</a></li>
           <li><a href="./automation.html">AI Automation</a></li>
           <li><a href="./google.html">Google Business</a></li>
-          <li><a href="./index.html#services">SEO</a></li>
+          <!-- Updated link to avoid /index.html anchor -->
+          <li><a href="/#services">SEO</a></li>
         </ul>
       </div>
       <div>
