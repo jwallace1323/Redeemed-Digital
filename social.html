@@ -31,11 +31,20 @@
 
   <style>
     /* Desktop nav */
-    header .container.nav { align-items: center; }
+    header .container.nav { align-items: center; display:flex; }
     .main-nav { display:flex; gap:18px; align-items:center; }
+    .nav-divider{width:1px;height:28px;background:rgba(255,255,255,.2);margin:0 12px;}
     .nav-link { color:#fff; text-decoration:none; padding:8px 10px; }
     .nav-cta { background:#22c55e; color:#001633; font-weight:800; padding:10px 16px; border-radius:999px; display:inline-flex; align-items:center; gap:8px; text-decoration:none; }
     .nav-cta:hover { filter:brightness(1.05); }
+
+    /* Brand logo sizing */
+    .brand-cta{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+    .brand-cta__icon{display:inline-flex;align-items:center;justify-content:center;line-height:0}
+    .brand-cta__icon img{height:40px;width:auto;object-fit:contain}
+    @media (min-width:640px){ /* sm breakpoint */
+      .brand-cta__icon img{height:32px}
+    }
 
     /* Dropdown */
     .dropdown { position:relative; }
@@ -77,6 +86,12 @@
     a.card .head { color:#fff; }
 
     /* Custom styles for this page */
+    /* Utility shim for common classes used in markup */
+    .mx-auto{margin-left:auto;margin-right:auto}
+    .max-w-4xl{max-width:56rem}
+    .max-w-2xl{max-width:42rem}
+    .text-center{text-align:center}
+    .text-white{color:#fff}
     .service-package {
         display: flex;
         flex-direction: column;
@@ -167,16 +182,44 @@
       position: relative;
       overflow: hidden;
       border-radius: 12px;
-      max-width: 1200px; /* Increased max-width for three columns */
+      max-width: 1240px; /* Increased max-width for three columns */
       margin: 0 auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
 
-    .pricing-section .pricing-grid {
-      display: grid;
-      gap: 1.5rem;
-      margin-top: 4rem;
-      align-items: stretch; /* Stretch items to ensure equal height */
-      grid-template-columns: 1fr;
+    /* Pricing header typography */
+    .pricing-section h2{
+      font-weight:700;
+      letter-spacing:.02em;
+      color:#9fb0ff;
+      text-align:center;
+      margin:0;
+    }
+    .pricing-section .section-title{
+      font-size:clamp(1.8rem,3.6vw,3rem);
+      line-height:1.1;
+      font-weight:800;
+      text-align:center;
+      color:#fff;
+      margin:.5rem auto 0;
+      max-width:56rem;
+    }
+    .pricing-section > p{
+      max-width:42rem;
+      margin:1rem auto 0;
+      text-align:center;
+      color:#cbd5e1;
+      font-size:1.125rem;
+    }
+
+    .pricing-section .pricing-grid{
+      display:grid;
+      gap:1.5rem;
+      margin-top:2.5rem;
+      align-items:stretch;
+      grid-template-columns:1fr;
     }
 
     .pricing-card {
@@ -186,29 +229,38 @@
       background: rgba(255, 255, 255, 0.025);
       display: flex; /* Use flexbox to align content within the card */
       flex-direction: column;
+      gap: 10px;
+      min-height: 100%;
+      backdrop-filter: saturate(130%) blur(2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,.18);
     }
 
     .pricing-card.highlight {
       background: var(--bg);
       border: 1px solid rgba(255, 255, 255, 0.1);
       position: relative;
+      outline: 1px solid rgba(127, 195, 255, .25);
+      box-shadow: 0 10px 28px rgba(0,0,0,.26), inset 0 0 0 1px rgba(255,255,255,.04);
+      transform: translateY(-2px);
     }
     
     .pricing-card h3 {
       font-size: 1.125rem;
       font-weight: 600;
-      color: #7c3aed; /* Adjusted to a similar color */
+      color: #9fb0ff;
     }
 
-    .pricing-card .price {
-      font-size: 3rem;
-      font-weight: 600;
+    .pricing-card .price{
+      font-size: clamp(2.25rem, 4.6vw, 3rem);
+      font-weight: 700;
       color: #fff;
+      letter-spacing: -.02em;
     }
     
     .pricing-card .price-sub {
       font-size: 1rem;
       color: #a3a3a3;
+      opacity:.9;
     }
     
     .pricing-card ul {
@@ -216,6 +268,7 @@
       padding: 0;
       margin: 2rem 0 0;
       flex-grow: 1; /* Make the list grow to fill space */
+      line-height:1.55;
     }
     
     .pricing-card li {
@@ -234,11 +287,34 @@
       color: #7c3aed;
     }
     
-    .pricing-card li .fa-check {
-      height: 1.5rem;
-      width: 1.25rem;
-      flex-shrink: 0;
-      color: #7c3aed;
+    .pricing-card li .fa-check{
+      color:#22c55e;
+      margin-top:.2rem;
+      flex:0 0 1.1rem;
+    }
+
+    /* Fix odd justified spacing and broken line wraps inside pricing bullets */
+    .pricing-card ul,
+    .pricing-card li{
+      text-align: left;         /* override any global justify */
+      text-justify: auto;
+      white-space: normal;
+      word-spacing: normal;
+      letter-spacing: normal;
+    }
+    .pricing-card li{
+      justify-content: flex-start; /* keep text next to icon */
+      max-width: 68ch;             /* improve readability */
+    }
+    .pricing-card li strong,
+    .pricing-card li em{
+      white-space: nowrap;         /* keep key phrases together (e.g., "20–25 posts/month") */
+    }
+
+    .pricing-card .nav-cta{
+      margin-top:auto;
+      text-align:center;
+      width:100%;
     }
 
     .pricing-card .btn {
@@ -252,6 +328,12 @@
       .pricing-section .pricing-grid {
         grid-template-columns: repeat(3, 1fr);
       }
+    }
+    @media (min-width: 768px){
+      .pricing-section .pricing-grid{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px){
+      .pricing-section .pricing-grid{ grid-template-columns: repeat(3, 1fr); }
     }
   </style>
 
@@ -292,53 +374,20 @@
 </head>
 <body>
 <header>
-  <div class="container nav">
+  <div class="container nav" style="gap:12px">
     <a href="/" class="brand-cta" aria-label="Redeemed Digital Home">
       <span class="brand-cta__icon">
         <img src="images/Rd logo 1.png" alt="Redeemed Digital logo — Four States web design & AI automation" loading="lazy"/>
       </span>
       Redeemed Digital
     </a>
+    <div class="nav-divider" aria-hidden="true"></div>
     <nav class="main-nav" aria-label="Primary">
       <a class="nav-link" href="/">Home</a>
-      <div class="dropdown" id="servicesDropdown">
-        <a class="nav-link dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false">
-          Services <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
-        </a>
-        <div class="dropdown-menu" role="menu" aria-label="Services submenu">
-          <a href="./web-design.html" role="menuitem">Websites</a>
-          <a href="./automation.html" role="menuitem">AI</a>
-          <a href="./google.html" role="menuitem">Google Business profiles</a>
-          <a href="./social.html" role="menuitem">Social Media</a>
-          <a href="./software.html" role="menuitem">Custom software</a>
-          <a href="./hosting.html" role="menuitem">Hosting plans</a>
-          <a href="./zoho.html" role="menuitem">Zoho</a>
-        </div>
-      </div>
-      <a class="nav-link" href="./portfolio.html">Portfolio</a>
-      <a class="nav-link" href="./about.html">About</a>
-      <a class="nav-link" href="./login.html">Login</a>
-      <a class="nav-cta" href="#contact">
-        <i class="fa-solid fa-rocket"></i> Start your project
-      </a>
+      <a class="nav-link" href="/events">Events</a>
+      <a class="nav-link" href="/orders">Orders</a>
     </nav>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
   </div>
-  <nav class="nav-menu" aria-label="Mobile">
-    <a href="/">Home</a>
-    <div class="nav-group-title">Services</div>
-    <a href="./web-design.html">Websites</a>
-    <a href="./automation.html">AI</a>
-    <a href="./google.html">Google Business profiles</a>
-    <a href="./social.html">Social Media</a>
-    <a href="./software.html">Custom software</a>
-    <a href="./hosting.html">Hosting plans</a>
-    <a href="./zoho.html">Zoho</a>
-    <a href="./portfolio.html">Portfolio</a>
-    <a href="./about.html">About</a>
-    <a href="./login.html">Login</a>
-    <a class="nav-cta" href="#contact"><i class="fa-solid fa-rocket"></i> Start your project</a>
-  </nav>
 </header>
 
 <section class="hero">
@@ -375,92 +424,71 @@
 <section class="section pricing-section" id="packages">
   <div class="mx-auto max-w-4xl text-center">
     <h2 class="text-base/7 font-semibold text-indigo-400">Pricing</h2>
-    <p class="mt-2 text-5xl font-semibold tracking-tight text-balance text-white sm:text-6xl">Choose the right plan for you</p>
+    <p class="section-title mt-2 text-white">Choose the right plan for you</p>
   </div>
   <p class="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer loyalty, and driving sales.</p>
   <div class="pricing-grid" data-reveal>
     <div class="pricing-card">
-      <h3 id="tier-essentials" class="text-base/7 font-semibold text-indigo-400">Essentials Package</h3>
+      <h3 id="tier-essentials" class="text-base/7 font-semibold text-indigo-400">Essentials — Social Basics</h3>
       <p class="mt-4 flex items-baseline gap-x-2">
         <span class="price">$499</span>
         <span class="price-sub">/month</span>
       </p>
-      <p class="mt-6 text-base/7 text-gray-300">This is your baseline package, a nice entry point for small businesses.</p>
+      <p class="mt-6 text-base/7 text-gray-300">Best for small teams getting consistent, on-brand activity without the overwhelm.</p>
       <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-300 sm:mt-10">
-        <li class="flex gap-x-3">
-          <i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>
-          Managing up to two social media platforms
-        </li>
-        <li class="flex gap-x-3">
-          <i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>
-          Three posts per week, per platform
-        </li>
-        <li class="flex gap-x-3">
-          <i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>
-          Basic engagement and replies
-        </li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Management of up to <strong>2 platforms</strong> (Facebook, Instagram, etc.)</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>12 posts/month</strong> (mix of branded graphics, short clips, or carousels)</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Metricool scheduling</strong> + monthly analytics report</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Basic caption writing + hashtag research</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Basic engagement (replying to comments <strong>1–2x/week</strong>)</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><em>Quarterly photo/video day add-on</em> for new content — <strong>$299</strong></li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Quarterly 30‑min strategy call</strong></li>
       </ul>
-      <a href="#contact" aria-describedby="tier-essentials" class="nav-cta mt-8 block sm:mt-10">Get Started</a>
+      <a href="#contact" aria-describedby="tier-essentials" class="nav-cta mt-8 block sm:mt-10">Choose Essentials</a>
     </div>
 
     <div class="pricing-card">
-      <h3 id="tier-growth" class="text-base/7 font-semibold text-indigo-400">Growth Package</h3>
+      <h3 id="tier-growth" class="text-base/7 font-semibold text-indigo-400">Growth &amp; Engagement</h3>
       <p class="mt-4 flex items-baseline gap-x-2">
         <span class="price">$999</span>
         <span class="price-sub">/month</span>
       </p>
-      <p class="mt-6 text-base/7 text-gray-300">This mid-tier package is designed for brands ready to increase their reach.</p>
+      <p class="mt-6 text-base/7 text-gray-300">For organizations ready to grow reach and deepen relationships with their community.</p>
       <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-300 sm:mt-10">
-        <li class="flex gap-x-3">
-          <i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>
-          Managing up to four social media platforms
-        </li>
-        <li class="flex gap-x-3">
-          <i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>
-          Daily posting
-        </li>
-        <li class="flex gap-x-3">
-          <i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>
-          Some content creation
-        </li>
-        <li class="flex gap-x-3">
-          <i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>
-          Detailed monthly analytics reports
-        </li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Management of up to <strong>4 platforms</strong></li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>20–25 posts/month</strong>, custom‑designed for your audience</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Monthly content capture session</strong> (up to 1 hour — photos + short video clips)</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Metricool analytics + <strong>growth insights report</strong></li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Community engagement</strong> (comments + DMs <strong>3–4x/week</strong>)</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Ad campaign setup + management</strong> (1 active campaign at a time)</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Monthly strategy call</strong></li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>AI‑assisted caption + trend research</strong> (leveraging Redeemed Digital’s AI tools)</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Highlight reel or story package</strong> (up to 3 short videos per month)</li>
       </ul>
-      <a href="#contact" aria-describedby="tier-growth" class="nav-cta mt-8 block sm:mt-10">Choose Growth</a>
+      <a href="#contact" aria-describedby="tier-growth" class="nav-cta mt-8 block sm:mt-10">Choose Growth &amp; Engagement</a>
     </div>
 
     <div class="pricing-card highlight">
-      <h3 id="tier-premium" class="text-base/7 font-semibold text-indigo-400">Premium Package</h3>
+      <h3 id="tier-premium" class="text-base/7 font-semibold text-indigo-400">Authority &amp; Content Partner</h3>
       <p class="mt-4 flex items-baseline gap-x-2">
         <span class="price">$1,499</span>
         <span class="price-sub">/month</span>
       </p>
-      <p class="mt-6 text-base/7 text-gray-300">This top-tier package is a full-service option for maximum brand authority.</p>
+      <p class="mt-6 text-base/7 text-gray-300">Our full-service partnership for maximum brand authority, production quality, and growth.</p>
       <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-300 sm:mt-10">
-        <li class="flex gap-x-3">
-          <i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>
-          Managing all major platforms
-        </li>
-        <li class="flex gap-x-3">
-          <i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>
-          Unlimited posting
-        </li>
-        <li class="flex gap-x-3">
-          <i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>
-          In-depth content creation
-        </li>
-        <li class="flex gap-x-3">
-          <i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>
-          Full analytics and strategy calls
-        </li>
-        <li class="flex gap-x-3">
-          <i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>
-          Optional ad budget management
-        </li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Management of <strong>all major platforms</strong></li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Unlimited scheduling</strong> via Metricool</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Weekly content capture sessions</strong> (or equivalent batch sessions)</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Full editing of 6–8 short‑form videos/month</strong> (Reels, TikToks, Shorts)</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Professional photo delivery</strong> (10–20 edited images/month)</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Ad strategy + optimization</strong> for multiple campaigns</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Monthly analytics deep‑dive</strong> + competitor benchmarking</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Full brand strategy</strong> and trend adaptation</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>AI‑optimized posting schedule</strong> (using Metricool insights)</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Dedicated account manager</strong> + content planner dashboard</li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Quarterly strategy overhaul call</strong></li>
       </ul>
-      <a href="#contact" aria-describedby="tier-premium" class="nav-cta mt-8 block sm:mt-10">Go Premium</a>
+      <a href="#contact" aria-describedby="tier-premium" class="nav-cta mt-8 block sm:mt-10">Choose Authority &amp; Content Partner</a>
     </div>
   </div>
 </section>
@@ -536,6 +564,21 @@ Think of me as the caffeine shot your brand didn’t know it needed: energizing 
             </select>
           </div>
 
+          <!-- Referral Source -->
+          <div style="grid-column:1/-1">
+            <label class="eyebrow" for="hear" style="letter-spacing:.06em">How did you hear about us?</label>
+            <select id="hear" name="heard_about_us" required style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem">
+              <option value="">Select an option</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Instagram">Instagram</option>
+              <option value="LinkedIn">LinkedIn</option>
+              <option value="TikTok">TikTok</option>
+              <option value="Google">Google</option>
+              <option value="Personal referral">Personal referral</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
           <!-- Website -->
           <div>
             <label class="eyebrow" for="website" style="letter-spacing:.06em">Current website</label>
@@ -592,13 +635,28 @@ Think of me as the caffeine shot your brand didn’t know it needed: energizing 
       <p style="color:var(--muted);margin:.6rem 0 0;max-width:520px">Empowering businesses with digital tools—built with purpose, designed for growth.</p>
       <div class="socials">
         <a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61577762971978" target="_blank" rel="noopener">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:800;color:#ffffff;">
+          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#ffffff;">
             <i class="fa-brands fa-facebook-f"></i>
           </span>
         </a>
         <a aria-label="LinkedIn" href="https://www.linkedin.com/company/redeemed-digital" target="_blank" rel="noopener">
           <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
             <i class="fa-brands fa-linkedin-in"></i>
+          </span>
+        </a>
+        <a aria-label="Instagram" href="https://www.instagram.com/redeemed.digital/" target="_blank" rel="noopener">
+          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+            <i class="fa-brands fa-instagram"></i>
+          </span>
+        </a>
+        <a aria-label="TikTok" href="https://www.tiktok.com/@redeemed.digital?_t=ZP-908Hy1eQPB0&_r=1" target="_blank" rel="noopener">
+          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+            <i class="fa-brands fa-tiktok"></i>
+          </span>
+        </a>
+        <a aria-label="Google Business Profile" href="https://share.google/W0t1I9XadK97m89S0" target="_blank" rel="noopener">
+          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+            <i class="fa-brands fa-google"></i>
           </span>
         </a>
       </div>
@@ -638,32 +696,6 @@ Think of me as the caffeine shot your brand didn’t know it needed: energizing 
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('shown'); io.unobserve(e.target); } });
   },{threshold:0.14});
   nodes.forEach(n=>io.observe(n));
-  const dd = document.getElementById('servicesDropdown');
-  if (dd){
-    const toggle = dd.querySelector('.dropdown-toggle');
-    const menu = dd.querySelector('.dropdown-menu');
-    const open = () => { dd.classList.add('open'); toggle.setAttribute('aria-expanded','true'); };
-    const close = () => { dd.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); };
-    toggle.addEventListener('click', (e)=>{ e.preventDefault(); dd.classList.toggle('open'); toggle.setAttribute('aria-expanded', dd.classList.contains('open') ? 'true':'false'); });
-    dd.addEventListener('mouseleave', close);
-    document.addEventListener('click',(e)=>{ if(!dd.contains(e.target)) close(); });
-  }
-  const burger = document.querySelector('.menu-toggle');
-  const drawer = document.querySelector('.nav-menu');
-  if (burger && drawer){
-    burger.addEventListener('click', ()=>{
-      const open = drawer.classList.toggle('open');
-      burger.setAttribute('aria-expanded', open ? 'true':'false');
-      document.body.style.overflow = open ? 'hidden' : '';
-    });
-    drawer.querySelectorAll('a').forEach(a=>{
-      a.addEventListener('click', ()=>{
-        drawer.classList.remove('open');
-        burger.setAttribute('aria-expanded','false');
-        document.body.style.overflow = '';
-      });
-    });
-  }
 </script>
 <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script>
 <script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq018e18ad8915609debcc99abcbdf321daf8e51f93e656d5cd6dff74e3c8cee82" defer></script>
