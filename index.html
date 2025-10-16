@@ -25,9 +25,10 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="preconnect" href="https://scripts.simpleanalyticscdn.com" crossorigin>
+  <link rel="preconnect" href="https://maps.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
 
-  <link rel="preload" href="./styles.css?v=1" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="./styles.css?v=1"></noscript>
+  <link rel="stylesheet" href="./styles.css?v=1">
 
   <!-- ADDED: Canonical + Social + Icons -->
   <link rel="canonical" href="https://redeemeddigital.com/"/>
@@ -94,7 +95,7 @@
     /* Deferred map placeholder */
     .map-placeholder {
       position:relative;
-      min-height:360px;
+      min-height:620px;
       background:radial-gradient(circle at 20% 20%, rgba(79, 70, 229, 0.24), transparent 60%), #001633;
       color:#fff;
       display:flex;
@@ -475,7 +476,7 @@
         <div class="work-thumb">
           <picture>
             <source type="image/webp" srcset="Images/optimized/work-garrett-400.webp 400w, Images/optimized/work-garrett-800.webp 800w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 100vw">
-            <img alt="Legacy Real Estate IDX website — Grand Lake area project by Redeemed Digital" src="Images/optimized/work-garrett-800.jpg" width="800" height="446" decoding="async"/>
+            <img alt="Legacy Real Estate IDX website — Grand Lake area project by Redeemed Digital" src="Images/optimized/work-garrett-800.jpg" width="800" height="446" loading="eager" fetchpriority="high" decoding="async"/>
           </picture>
         </div>
         <div class="body">
@@ -834,11 +835,13 @@
         entries.forEach(entry=>{
           if (entry.isIntersecting){
             observer.disconnect();
-            setTimeout(loadMap, 600);
+            setTimeout(loadMap, 120);
           }
         });
       }, { rootMargin: '160px 0px' });
       observer.observe(mapPlaceholder);
+    } else {
+      setTimeout(loadMap, 2000);
     }
   }
 </script>
