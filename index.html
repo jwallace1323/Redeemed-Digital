@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) | FIXED: GA4 script ID now matches config -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZTWTM0S01"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} 
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-NZTWTM0S01');
+    window.addEventListener('load', function(){
+      var gtagScript = document.createElement('script');
+      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-NZTWTM0S01';
+      gtagScript.async = true;
+      document.head.appendChild(gtagScript);
+    }, { once: true });
   </script>
 
   <meta charset="utf-8"/>
@@ -17,7 +22,12 @@
   <title>Web Design & AI Automation — Four States (NE OK, NW AR, SW MO, SE KS) | Redeemed Digital</title>
   <meta name="description" content="SEO-first web design and AI automation for the Four States region — Northeast Oklahoma, Northwest Arkansas, Southwest Missouri, and Southeast Kansas. Serving Tulsa, Fayetteville, Joplin, Pittsburg, and beyond."/>
   <meta name="theme-color" content="#002362"/>
-  <link rel="stylesheet" href="./styles.css?v=1">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://scripts.simpleanalyticscdn.com" crossorigin>
+
+  <link rel="preload" href="./styles.css?v=1" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="./styles.css?v=1"></noscript>
 
   <!-- ADDED: Canonical + Social + Icons -->
   <link rel="canonical" href="https://redeemeddigital.com/"/>
@@ -30,7 +40,8 @@
   <meta name="twitter:card" content="summary_large_image"/>
 
   <!-- Font Awesome (icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'" referrerpolicy="no-referrer"/>
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/></noscript>
 
   <!-- minimal header-only overrides + dropdown + CTA -->
   <style>
@@ -79,6 +90,22 @@
     /* Make anchor-wrapped cards look identical to .card */
     a.card { display:block; color:inherit; text-decoration:none; }
     a.card .head { color:#fff; }
+
+    /* Ensure Font Awesome icons do not delay text rendering */
+    @font-face {
+      font-family: "Font Awesome 6 Free";
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: "Font Awesome 6 Brands";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-brands-400.woff2") format("woff2");
+    }
   </style>
 
   <!-- LocalBusiness schema: broadened areaServed to Four States (unchanged) -->
@@ -124,7 +151,10 @@
     <!-- CHANGED: Home link now points to root ('/') to avoid /index.html duplication -->
     <a href="/" class="brand-cta" aria-label="Redeemed Digital Home">
       <span class="brand-cta__icon">
-        <img src="images/Rd logo 1.png" alt="Redeemed Digital logo — Four States web design & AI automation" loading="lazy"/>
+        <picture>
+          <source type="image/webp" srcset="Images/optimized/logo-brand-40.webp 1x, Images/optimized/logo-brand-80.webp 2x">
+          <img src="Images/optimized/logo-brand-40.png" srcset="Images/optimized/logo-brand-40.png 1x, Images/optimized/logo-brand-80.png 2x" alt="Redeemed Digital logo — Four States web design & AI automation" loading="lazy" width="40" height="40"/>
+        </picture>
       </span>
       Redeemed Digital
     </a>
@@ -229,11 +259,36 @@
     </div>
     <div class="carousel-viewport">
       <div class="carousel-track" id="trustCarousel">
-        <a class="carousel-item" href="https://creationschildcare.net" target="_blank" rel="noopener"><img alt="Creations Childcare website by Redeemed Digital" class="carousel-logo" src="images/CC logo.png" loading="lazy"/></a>
-        <a class="carousel-item" href="https://brushcreekpestcontrol.com" target="_blank" rel="noopener"><img alt="Brush Creek Pest Control site by Redeemed Digital" class="carousel-logo" src="images/BC logo.png" loading="lazy"/></a>
-        <a class="carousel-item" href="https://grandlakeroofing.net" target="_blank" rel="noopener"><img alt="Grand Lake Roofing site by Redeemed Digital" class="carousel-logo" src="images/GLR logo.png" loading="lazy"/></a>
-        <a class="carousel-item" href="https://deepstudios.net" target="_blank" rel="noopener"><img alt="Deep Studios website by Redeemed Digital" class="carousel-logo" src="images/deep studios logo.png" loading="lazy"/></a>
-        <a class="carousel-item" href="https://chaney-insurance.com" target="_blank" rel="noopener"><img alt="Chaney Insurance website by Redeemed Digital" class="carousel-logo" src="images/chany insurance logo.png" loading="lazy"/></a> 
+        <a class="carousel-item" href="https://creationschildcare.net" target="_blank" rel="noopener">
+          <picture>
+            <source type="image/webp" srcset="Images/optimized/logo-cc-88.webp 1x, Images/optimized/logo-cc-176.webp 2x">
+            <img alt="Creations Childcare website by Redeemed Digital" class="carousel-logo" src="Images/optimized/logo-cc-88.png" srcset="Images/optimized/logo-cc-88.png 1x, Images/optimized/logo-cc-176.png 2x" loading="lazy" decoding="async" width="88" height="88"/>
+          </picture>
+        </a>
+        <a class="carousel-item" href="https://brushcreekpestcontrol.com" target="_blank" rel="noopener">
+          <picture>
+            <source type="image/webp" srcset="Images/optimized/logo-bc-88.webp 1x, Images/optimized/logo-bc-176.webp 2x">
+            <img alt="Brush Creek Pest Control site by Redeemed Digital" class="carousel-logo" src="Images/optimized/logo-bc-88.png" srcset="Images/optimized/logo-bc-88.png 1x, Images/optimized/logo-bc-176.png 2x" loading="lazy" decoding="async" width="88" height="88"/>
+          </picture>
+        </a>
+        <a class="carousel-item" href="https://grandlakeroofing.net" target="_blank" rel="noopener">
+          <picture>
+            <source type="image/webp" srcset="Images/optimized/logo-glr-88.webp 1x, Images/optimized/logo-glr-176.webp 2x">
+            <img alt="Grand Lake Roofing site by Redeemed Digital" class="carousel-logo" src="Images/optimized/logo-glr-88.png" srcset="Images/optimized/logo-glr-88.png 1x, Images/optimized/logo-glr-176.png 2x" loading="lazy" decoding="async" width="88" height="88"/>
+          </picture>
+        </a>
+        <a class="carousel-item" href="https://deepstudios.net" target="_blank" rel="noopener">
+          <picture>
+            <source type="image/webp" srcset="Images/optimized/logo-deep-88.webp 1x, Images/optimized/logo-deep-176.webp 2x">
+            <img alt="Deep Studios website by Redeemed Digital" class="carousel-logo" src="Images/optimized/logo-deep-88.png" srcset="Images/optimized/logo-deep-88.png 1x, Images/optimized/logo-deep-176.png 2x" loading="lazy" decoding="async" width="88" height="88"/>
+          </picture>
+        </a>
+        <a class="carousel-item" href="https://chaney-insurance.com" target="_blank" rel="noopener">
+          <picture>
+            <source type="image/webp" srcset="Images/optimized/logo-chany-88.webp 1x, Images/optimized/logo-chany-176.webp 2x">
+            <img alt="Chaney Insurance website by Redeemed Digital" class="carousel-logo" src="Images/optimized/logo-chany-88.png" srcset="Images/optimized/logo-chany-88.png 1x, Images/optimized/logo-chany-176.png 2x" loading="lazy" decoding="async" width="88" height="88"/>
+          </picture>
+        </a> 
       </div>
     </div>
   </div>
@@ -348,7 +403,12 @@
     <h2 class="title">Recent Four States Web Design Projects &amp; Client Results</h2>
     <div class="work-grid" data-reveal>
       <a class="card portfolio-link" href="https://creationschildcare.net" target="_blank" rel="noopener">
-        <div class="work-thumb"><img alt="images/Creations Childcare responsive web design — Oklahoma project by Redeemed Digital" src="images/creations .png" loading="lazy"/></div>
+        <div class="work-thumb">
+          <picture>
+            <source type="image/webp" srcset="Images/optimized/work-creations-400.webp 400w, Images/optimized/work-creations-800.webp 800w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 100vw">
+            <img alt="Creations Childcare responsive web design — Oklahoma project by Redeemed Digital" src="Images/optimized/work-creations-800.jpg" width="800" height="367" loading="lazy" decoding="async"/>
+          </picture>
+        </div>
         <div class="body">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <h3 style="margin:0;display:flex;gap:.6rem;align-items:center">Creations Childcare</h3>
@@ -358,7 +418,12 @@
       </a>
 
       <a class="card portfolio-link" href="https://realtorgrandlake.com" target="_blank" rel="noopener">
-        <div class="work-thumb"><img alt="Legacy Real Estate IDX website — Grand Lake area project by Redeemed Digital" src="images/Garrett.png" loading="lazy"/></div>
+        <div class="work-thumb">
+          <picture>
+            <source type="image/webp" srcset="Images/optimized/work-garrett-400.webp 400w, Images/optimized/work-garrett-800.webp 800w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 100vw">
+            <img alt="Legacy Real Estate IDX website — Grand Lake area project by Redeemed Digital" src="Images/optimized/work-garrett-800.jpg" width="800" height="446" decoding="async" fetchpriority="high"/>
+          </picture>
+        </div>
         <div class="body">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <h3 style="margin:0;display:flex;gap:.6rem;align-items:center">Garrett Schaede-Legacy Real Estate</h3>
@@ -368,7 +433,12 @@
       </a>
 
       <a class="card portfolio-link" href="https://chaney-insurance.com" target="_blank" rel="noopener">
-        <div class="work-thumb"><img alt="Chaney insurance one-page website — Oklahoma project by Redeemed Digital" src="images/chaney insurance.png" loading="lazy"/></div>
+        <div class="work-thumb">
+          <picture>
+            <source type="image/webp" srcset="Images/optimized/work-chaney-400.webp 400w, Images/optimized/work-chaney-800.webp 800w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 100vw">
+            <img alt="Chaney insurance one-page website — Oklahoma project by Redeemed Digital" src="Images/optimized/work-chaney-800.jpg" width="800" height="334" loading="lazy" decoding="async"/>
+          </picture>
+        </div>
         <div class="body">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <h3 style="margin:0;display:flex;gap:.6rem;align-items:center">Chaney Insurance</h3>
@@ -533,7 +603,10 @@
   <div class="container footer-grid" style="padding:30px 0">
     <div>
       <div class="logo-wrap">
-        <img alt="Redeemed Digital wordmark — Four States web design agency" class="logo-img" src="images/RD logo 2.png" style="max-width:150px; height:auto;" loading="lazy"/>
+        <picture>
+          <source type="image/webp" srcset="Images/optimized/logo-footer-150.webp 1x, Images/optimized/logo-footer-300.webp 2x">
+          <img alt="Redeemed Digital wordmark — Four States web design agency" class="logo-img" src="Images/optimized/logo-footer-150.png" srcset="Images/optimized/logo-footer-150.png 1x, Images/optimized/logo-footer-300.png 2x" style="max-width:150px; height:auto;" loading="lazy" width="150" height="150"/>
+        </picture>
         <strong>Redeemed Digital</strong>
       </div>
       <p style="color:var(--muted);margin:.6rem 0 0;max-width:520px">Empowering businesses with digital tools—built with purpose, designed for growth.</p>
@@ -662,8 +735,33 @@
 <script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq018e18ad8915609debcc99abcbdf321daf8e51f93e656d5cd6dff74e3c8cee82" defer></script>
 
 <!-- 100% privacy-first analytics -->
-<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<!--Simple Analytics Automated Events Script-->
-<script async data-collect="outbound,emails" src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
+<script>
+  (function(){
+    function loadSimpleAnalytics(){
+      var sa = document.createElement('script');
+      sa.src = 'https://scripts.simpleanalyticscdn.com/latest.js';
+      sa.defer = true;
+      document.head.appendChild(sa);
+      var auto = document.createElement('script');
+      auto.src = 'https://scripts.simpleanalyticscdn.com/auto-events.js';
+      auto.defer = true;
+      auto.dataset.collect = 'outbound,emails';
+      document.head.appendChild(auto);
+    }
+    function schedule(){
+      if ('requestIdleCallback' in window){
+        requestIdleCallback(loadSimpleAnalytics, { timeout: 3000 });
+      } else {
+        setTimeout(loadSimpleAnalytics, 1200);
+      }
+    }
+    if (document.readyState === 'complete'){
+      schedule();
+    } else {
+      window.addEventListener('load', schedule, { once: true });
+    }
+  })();
+</script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" style="position:absolute;left:-9999px;"/></noscript>
 </body>
 </html>
