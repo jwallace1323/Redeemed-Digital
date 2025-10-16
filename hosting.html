@@ -30,9 +30,11 @@
   <meta name="twitter:card" content="summary_large_image"/>
 
   <!-- Font Awesome (icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/></noscript>
 
-  <link rel="stylesheet" href="./styles.css?v=1">
+  <link rel="preload" href="./styles.css?v=1" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="./styles.css?v=1"></noscript>
 
   <!-- Nav dropdown + CTA styles (match index) -->
   <style>
@@ -151,6 +153,30 @@
       {"@type":"Question","name":"Do you support sites you didn’t build?","acceptedAnswer":{"@type":"Answer","text":"In most cases yes—after a quick audit we’ll recommend the right plan or fixes before onboarding."}}
     ]
   }
+  </script>
+  <script>
+    (function(){
+      var supportsPreload = false;
+      try {
+        var link = document.createElement('link');
+        supportsPreload = link.relList && link.relList.supports && link.relList.supports('preload');
+      } catch (err) {
+        supportsPreload = false;
+      }
+      if (supportsPreload) { return; }
+      var links = document.querySelectorAll('link[rel="preload"][as="style"]');
+      for (var i = 0; i < links.length; i++) {
+        var preload = links[i];
+        if (!preload.href) { continue; }
+        var fallback = document.createElement('link');
+        fallback.rel = 'stylesheet';
+        fallback.href = preload.href;
+        if (preload.crossOrigin) { fallback.crossOrigin = preload.crossOrigin; }
+        var ref = preload.getAttribute('referrerpolicy');
+        if (ref) { fallback.referrerPolicy = ref; }
+        document.head.appendChild(fallback);
+      }
+    })();
   </script>
 </head>
 <body>
@@ -487,3 +513,34 @@
     document.addEventListener('click',(e)=>{ if(!dd.contains(e.target)) close(); });
   }
 
+  // Mobile menu toggle
+  const burger = document.querySelector('.menu-toggle');
+  const drawer = document.querySelector('.nav-menu');
+  if (burger && drawer){
+    burger.addEventListener('click', ()=>{
+      const open = drawer.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true':'false');
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    drawer.querySelectorAll('a').forEach(a=>{
+      a.addEventListener('click', ()=>{
+        drawer.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+</script>
+<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script>
+<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq018e18ad8915609debcc99abcbdf321daf8e51f93e656d5cd6dff74e3c8cee82" defer></script>
+<!-- 100% privacy-first analytics -->
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"
+></script>
+<!--Simple Analytics Automated Events Script-->
+<script
+ async
+ data-collect="outbound,emails"
+ src="https://scripts.simpleanalyticscdn.com/auto-events.js"
+ ></script>
+</body>
+</html>
