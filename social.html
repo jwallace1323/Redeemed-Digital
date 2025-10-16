@@ -31,20 +31,11 @@
 
   <style>
     /* Desktop nav */
-    header .container.nav { align-items: center; display:flex; }
+    header .container.nav { align-items: center; }
     .main-nav { display:flex; gap:18px; align-items:center; }
-    .nav-divider{width:1px;height:28px;background:rgba(255,255,255,.2);margin:0 12px;}
     .nav-link { color:#fff; text-decoration:none; padding:8px 10px; }
     .nav-cta { background:#22c55e; color:#001633; font-weight:800; padding:10px 16px; border-radius:999px; display:inline-flex; align-items:center; gap:8px; text-decoration:none; }
     .nav-cta:hover { filter:brightness(1.05); }
-
-    /* Brand logo sizing */
-    .brand-cta{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
-    .brand-cta__icon{display:inline-flex;align-items:center;justify-content:center;line-height:0}
-    .brand-cta__icon img{height:40px;width:auto;object-fit:contain}
-    @media (min-width:640px){ /* sm breakpoint */
-      .brand-cta__icon img{height:32px}
-    }
 
     /* Dropdown */
     .dropdown { position:relative; }
@@ -454,20 +445,61 @@
 </head>
 <body>
 <header>
-  <div class="container nav" style="gap:12px">
+  <div class="container nav">
     <a href="/" class="brand-cta" aria-label="Redeemed Digital Home">
       <span class="brand-cta__icon">
-        <img src="images/Rd logo 1.png" alt="Redeemed Digital logo — Four States web design & AI automation" loading="lazy"/>
+        <picture>
+          <source type="image/webp" srcset="Images/optimized/logo-brand-40.webp 1x, Images/optimized/logo-brand-80.webp 2x">
+          <img src="Images/optimized/logo-brand-40.png" srcset="Images/optimized/logo-brand-40.png 1x, Images/optimized/logo-brand-80.png 2x" alt="Redeemed Digital logo — Four States web design & AI automation" loading="lazy" width="40" height="40"/>
+        </picture>
       </span>
       Redeemed Digital
     </a>
-    <div class="nav-divider" aria-hidden="true"></div>
+
     <nav class="main-nav" aria-label="Primary">
       <a class="nav-link" href="/">Home</a>
-      <a class="nav-link" href="/events">Events</a>
-      <a class="nav-link" href="/orders">Orders</a>
+      <div class="dropdown" id="servicesDropdown">
+        <a class="nav-link dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false">
+          Services <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu" role="menu" aria-label="Services submenu">
+          <a href="./web-design.html" role="menuitem">Websites</a>
+          <a href="./automation.html" role="menuitem">AI</a>
+          <a href="./google.html" role="menuitem">Google Business profiles</a>
+          <a href="./social.html" role="menuitem">Social Media</a>
+          <a href="./software.html" role="menuitem">Custom software</a>
+          <a href="./hosting.html" role="menuitem">Hosting plans</a>
+          <a href="./zoho.html" role="menuitem">Zoho</a>
+        </div>
+      </div>
+      <a class="nav-link" href="./portfolio.html">Portfolio</a>
+      <a class="nav-link" href="./about.html">About</a>
+      <a class="nav-link" href="./login.html">Login</a>
+      <a class="nav-cta" href="#contact">
+        <i class="fa-solid fa-rocket"></i> Start your project
+      </a>
     </nav>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
   </div>
+
+  <nav class="nav-menu" aria-label="Mobile">
+    <a href="/">Home</a>
+
+    <div class="nav-group-title">Services</div>
+    <a href="./web-design.html">Websites</a>
+    <a href="./automation.html">AI</a>
+    <a href="./google.html">Google Business profiles</a>
+    <a href="./social.html">Social Media</a>
+    <a href="./software.html">Custom software</a>
+    <a href="./hosting.html">Hosting plans</a>
+    <a href="./zoho.html">Zoho</a>
+
+    <a href="./portfolio.html">Portfolio</a>
+    <a href="./about.html">About</a>
+    <a href="./login.html">Login</a>
+    <a class="nav-cta" href="#contact"><i class="fa-solid fa-rocket"></i> Start your project</a>
+  </nav>
 </header>
 
 <section class="hero">
@@ -562,7 +594,7 @@
       </p>
       <p class="plan-description">Our full-service partnership for maximum brand authority, production quality, and growth.</p>
       <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-300 sm:mt-10">
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Management of all major platforms</strong></li>
+        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Management of all major platforms</strong></li>
         <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Weekly content capture sessions</strong></li>
         <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Full editing of 6–8 short‑form videos/month</strong></li>
         <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Professional photo delivery</strong></li>
@@ -785,6 +817,41 @@ Think of me as the caffeine shot your brand didn’t know it needed: energizing 
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('shown'); io.unobserve(e.target); } });
   },{threshold:0.14});
   nodes.forEach(n=>io.observe(n));
+
+  const dd = document.getElementById('servicesDropdown');
+  if (dd){
+    const toggle = dd.querySelector('.dropdown-toggle');
+    const close = () => {
+      dd.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    };
+    toggle.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const isOpen = dd.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    dd.addEventListener('mouseleave', close);
+    document.addEventListener('click', (e)=>{
+      if (!dd.contains(e.target)) close();
+    });
+  }
+
+  const burger = document.querySelector('.menu-toggle');
+  const drawer = document.querySelector('.nav-menu');
+  if (burger && drawer){
+    burger.addEventListener('click', ()=>{
+      const open = drawer.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    drawer.querySelectorAll('a').forEach(a=>{
+      a.addEventListener('click', ()=>{
+        drawer.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
 </script>
 <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script>
 <script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq018e18ad8915609debcc99abcbdf321daf8e51f93e656d5cd6dff74e3c8cee82" defer></script>
@@ -797,4 +864,3 @@ Think of me as the caffeine shot your brand didn’t know it needed: energizing 
  ></script>
 </body>
 </html>
-
