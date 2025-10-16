@@ -143,6 +143,30 @@
     }]
   }
   </script>
+  <script>
+    (function(){
+      var supportsPreload = false;
+      try {
+        var link = document.createElement('link');
+        supportsPreload = link.relList && link.relList.supports && link.relList.supports('preload');
+      } catch (err) {
+        supportsPreload = false;
+      }
+      if (supportsPreload) { return; }
+      var links = document.querySelectorAll('link[rel="preload"][as="style"]');
+      for (var i = 0; i < links.length; i++) {
+        var preload = links[i];
+        if (!preload.href) { continue; }
+        var fallback = document.createElement('link');
+        fallback.rel = 'stylesheet';
+        fallback.href = preload.href;
+        if (preload.crossOrigin) { fallback.crossOrigin = preload.crossOrigin; }
+        var ref = preload.getAttribute('referrerpolicy');
+        if (ref) { fallback.referrerPolicy = ref; }
+        document.head.appendChild(fallback);
+      }
+    })();
+  </script>
 </head>
 <body>
 <!-- Header -->
