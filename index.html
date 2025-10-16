@@ -91,6 +91,36 @@
     a.card { display:block; color:inherit; text-decoration:none; }
     a.card .head { color:#fff; }
 
+    /* Deferred map placeholder */
+    .map-placeholder {
+      position:relative;
+      min-height:360px;
+      background:radial-gradient(circle at 20% 20%, rgba(79, 70, 229, 0.24), transparent 60%), #001633;
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:32px 18px;
+      gap:16px;
+    }
+    .map-placeholder .map-copy { max-width:340px; color:rgba(255,255,255,0.82); }
+    .map-trigger {
+      background:#22c55e;
+      color:#001633;
+      font-weight:700;
+      border:0;
+      border-radius:999px;
+      padding:12px 22px;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+    }
+    .map-trigger:hover,
+    .map-trigger:focus-visible { filter:brightness(1.05); outline:2px solid rgba(255,255,255,0.4); outline-offset:2px; }
     /* Ensure Font Awesome icons do not delay text rendering */
     @font-face {
       font-family: "Font Awesome 6 Free";
@@ -430,7 +460,7 @@
         <div class="work-thumb">
           <picture>
             <source type="image/webp" srcset="Images/optimized/work-creations-400.webp 400w, Images/optimized/work-creations-800.webp 800w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 100vw">
-            <img alt="Creations Childcare responsive web design — Oklahoma project by Redeemed Digital" src="Images/optimized/work-creations-800.jpg" width="800" height="367" loading="lazy" decoding="async"/>
+            <img alt="Creations Childcare responsive web design — Oklahoma project by Redeemed Digital" src="Images/optimized/work-creations-800.jpg" width="800" height="367" loading="eager" fetchpriority="high" decoding="async"/>
           </picture>
         </div>
         <div class="body">
@@ -445,7 +475,7 @@
         <div class="work-thumb">
           <picture>
             <source type="image/webp" srcset="Images/optimized/work-garrett-400.webp 400w, Images/optimized/work-garrett-800.webp 800w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 100vw">
-            <img alt="Legacy Real Estate IDX website — Grand Lake area project by Redeemed Digital" src="Images/optimized/work-garrett-800.jpg" width="800" height="446" decoding="async" fetchpriority="high"/>
+            <img alt="Legacy Real Estate IDX website — Grand Lake area project by Redeemed Digital" src="Images/optimized/work-garrett-800.jpg" width="800" height="446" decoding="async"/>
           </picture>
         </div>
         <div class="body">
@@ -612,11 +642,28 @@
 
       <!-- Google Map -->
       <div class="card" style="padding:0;overflow:hidden;border-radius:12px">
-        <iframe
-          title="Redeemed Digital — Four States service area (centered near Grove, OK)"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51936.09153403257!2d-94.807!3d36.593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b6c7f2a0b8d1db%3A0x0000000000000000!2sGrove%2C%20OK!5e0!3m2!1sen!2sus!4v1710000000000"
-          width="100%" height="100%" style="min-height:620px;border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <div
+          class="map-placeholder"
+          data-map-lazy
+          data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51936.09153403257!2d-94.807!3d36.593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b6c7f2a0b8d1db%3A0x0000000000000000!2sGrove%2C%20OK!5e0!3m2!1sen!2sus!4v1710000000000"
+          data-map-title="Redeemed Digital — Four States service area (centered near Grove, OK)"
+        >
+          <div class="eyebrow" style="letter-spacing:.12em;color:rgba(255,255,255,0.7)">Service area map</div>
+          <p class="map-copy">View our coverage across Northeast Oklahoma, Northwest Arkansas, Southwest Missouri, and Southeast Kansas.</p>
+          <button type="button" class="map-trigger" data-map-trigger>
+            <span aria-hidden="true" class="badge" style="background:#046a88;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;width:36px;height:36px;color:#fff;">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </span>
+            Load interactive map
+          </button>
+        </div>
+        <noscript>
+          <iframe
+            title="Redeemed Digital — Four States service area (centered near Grove, OK)"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51936.09153403257!2d-94.807!3d36.593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b6c7f2a0b8d1db%3A0x0000000000000000!2sGrove%2C%20OK!5e0!3m2!1sen!2sus!4v1710000000000"
+            width="100%" height="100%" style="min-height:620px;border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </noscript>
       </div>
     </div>
   </div>
@@ -754,9 +801,71 @@
       });
     });
   }
+
+  // Lazy-load Google Map once nearby or on demand
+  const mapPlaceholder = document.querySelector('[data-map-lazy]');
+  if (mapPlaceholder){
+    let mapLoaded = false;
+    const loadMap = () => {
+      if (mapLoaded) return;
+      mapLoaded = true;
+      const iframe = document.createElement('iframe');
+      iframe.title = mapPlaceholder.getAttribute('data-map-title') || 'Redeemed Digital service area map';
+      iframe.src = mapPlaceholder.getAttribute('data-map-src');
+      iframe.width = '100%';
+      iframe.height = '100%';
+      iframe.style.border = '0';
+      iframe.style.minHeight = '620px';
+      iframe.loading = 'lazy';
+      iframe.referrerPolicy = 'no-referrer-when-downgrade';
+      iframe.setAttribute('allowfullscreen', '');
+      const wrapper = mapPlaceholder.parentElement;
+      wrapper.replaceChild(iframe, mapPlaceholder);
+    };
+    const trigger = mapPlaceholder.querySelector('[data-map-trigger]');
+    if (trigger){
+      trigger.addEventListener('click', (event)=>{
+        event.preventDefault();
+        loadMap();
+      });
+    }
+    if ('IntersectionObserver' in window){
+      const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if (entry.isIntersecting){
+            observer.disconnect();
+            setTimeout(loadMap, 600);
+          }
+        });
+      }, { rootMargin: '160px 0px' });
+      observer.observe(mapPlaceholder);
+    }
+  }
 </script>
-<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script>
-<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq018e18ad8915609debcc99abcbdf321daf8e51f93e656d5cd6dff74e3c8cee82" defer></script>
+<script>
+  window.$zoho=window.$zoho || {};
+  $zoho.salesiq=$zoho.salesiq||{ready:function(){}};
+  (function(){
+    let zohoLoaded = false;
+    const loadZoho = () => {
+      if (zohoLoaded) return;
+      zohoLoaded = true;
+      const script = document.createElement('script');
+      script.id = 'zsiqscript';
+      script.src = 'https://salesiq.zohopublic.com/widget?wc=siq018e18ad8915609debcc99abcbdf321daf8e51f93e656d5cd6dff74e3c8cee82';
+      script.defer = true;
+      document.body.appendChild(script);
+    };
+    ['scroll','pointerdown','keydown'].forEach((evt)=>{
+      window.addEventListener(evt, loadZoho, { once: true, passive: true });
+    });
+    if ('requestIdleCallback' in window){
+      requestIdleCallback(loadZoho, { timeout: 8000 });
+    } else {
+      setTimeout(loadZoho, 5000);
+    }
+  })();
+</script>
 
 <!-- 100% privacy-first analytics -->
 <script>
