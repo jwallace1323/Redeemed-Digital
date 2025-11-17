@@ -97,6 +97,8 @@ header{
 .badge{--bsize:38px;--isize:22px;display:inline-flex;align-items:center;justify-content:center;width:var(--bsize);height:var(--bsize);border-radius:999px;background:var(--brand);box-shadow:0 6px 16px rgba(9,194,236,.25);flex:0 0 var(--bsize)}
 .duo{width:var(--isize);height:var(--isize)}
 .duo .a{fill:var(--brand)} .duo .b{fill:var(--brand-dark)}
+.icon{width:1em;height:1em;display:inline-block;vertical-align:middle;fill:currentColor}
+.badge .icon{width:var(--isize);height:var(--isize);display:block}
 
 /* ---------------- Layout ---------------- */
 .hero{position:relative;overflow:hidden}
