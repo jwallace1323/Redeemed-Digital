@@ -31,10 +31,11 @@
   <meta name="twitter:card" content="summary_large_image"/>
 
   <meta name="theme-color" content="#002362"/>
-  <link rel="stylesheet" href="./styles.css?v=1"/>
+  <link rel="stylesheet" href="./styles.css?v=1">
 
   <!-- Font Awesome (icons for nav/CTA carets/rockets) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/></noscript>
 
   <!-- header-only overrides to mirror index.html -->
   <style>
@@ -127,6 +128,32 @@
     ]
   }
   </script>
+  <script>
+    (function(){
+      var supportsPreload = false;
+      try {
+        var link = document.createElement('link');
+        supportsPreload = link.relList && link.relList.supports && link.relList.supports('preload');
+      } catch (err) {
+        supportsPreload = false;
+      }
+      if (supportsPreload) { return; }
+      var links = document.querySelectorAll('link[rel="preload"][as="style"]');
+      for (var i = 0; i < links.length; i++) {
+        var preload = links[i];
+        if (!preload.href) { continue; }
+        var fallback = document.createElement('link');
+        fallback.rel = 'stylesheet';
+        fallback.href = preload.href;
+        if (preload.crossOrigin) { fallback.crossOrigin = preload.crossOrigin; }
+        var ref = preload.getAttribute('referrerpolicy');
+        if (ref) { fallback.referrerPolicy = ref; }
+        document.head.appendChild(fallback);
+      }
+    })();
+  </script>
+  <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"7799dc09417c4b1f35afdc2a64eb32af"})});</script>
+
 </head>
 <body>
 
@@ -135,7 +162,7 @@
   <div class="container nav">
     <a href="/" class="brand-cta" aria-label="Redeemed Digital Home">
       <span class="brand-cta__icon">
-        <img src="images/Rd logo 1.png" alt="Redeemed Digital logo — Four States web design & AI automation" loading="lazy"/>
+        <img src="Images/Rd logo 1.png" alt="Redeemed Digital logo — Four States web design & AI automation" loading="lazy"/>
       </span>
       Redeemed Digital
     </a>
@@ -238,7 +265,7 @@
          target="_blank" rel="noopener"
          data-cats="local">
         <div class="work-thumb">
-          <img src="images/creations .png"
+          <img src="Images/creations .png"
                alt="Creations Childcare website — responsive web design for a local childcare in the Four States"
                loading="lazy">
         </div>
@@ -256,7 +283,7 @@
          target="_blank" rel="noopener"
          data-cats="real-estate local">
         <div class="work-thumb">
-          <img src="images/Garrett.png"
+          <img src="Images/Garrett.png"
                alt="Legacy Real Estate IDX website — MLS-powered real estate site for the Grand Lake area"
                loading="lazy">
         </div>
@@ -274,7 +301,7 @@
          target="_blank" rel="noopener"
          data-cats="home-services local">
         <div class="work-thumb">
-          <img src="images/brushcreek.png"
+          <img src="Images/brushcreek.png"
                alt="Brush Creek Pest Control — one-page home services website for a Four States business"
                loading="lazy">
         </div>
@@ -292,7 +319,7 @@
          target="_blank" rel="noopener"
          data-cats="home-services local">
         <div class="work-thumb">
-          <img src="images/Grand lake roofing .png"
+          <img src="Images/Grand lake roofing .png"
                alt="Grand Lake Roofing — local roofing website designed for the Grand Lake area"
                loading="lazy">
         </div>
@@ -309,7 +336,7 @@
          target="_blank" rel="noopener"
          data-cats="home-services local">
         <div class="work-thumb">
-          <img src="images/chaney insurance.png"
+          <img src="Images/chaney insurance.png"
                alt="Chaney Insurance — one-page home services website for a Four States business"
                loading="lazy">
         </div>
@@ -329,7 +356,7 @@
   <div class="container footer-grid" style="padding:30px 0">
     <div>
       <div class="logo-wrap">
-        <img alt="Redeemed Digital wordmark — Four States web design agency" class="logo-img" src="images/RD logo 2.png" style="max-width:150px;height:auto" loading="lazy"/>
+        <img alt="Redeemed Digital wordmark — Four States web design agency" class="logo-img" src="Images/RD logo 2.png" style="max-width:150px;height:auto" loading="lazy"/>
         <strong>Redeemed Digital</strong>
       </div>
       <p style="color:var(--muted);margin:.6rem 0 0;max-width:520px">Empowering businesses with digital tools—built with purpose, designed for growth.</p>
@@ -382,7 +409,7 @@
       </div>
     </div>
     <a href="https://go.zoho.com/qFy" target="_blank" rel="noopener noreferrer" title="Zoho Affiliate">
-      <img src="images/New Zoho Affiliate Badge-Rectangle.svg" alt="Zoho Affiliate Logo" style="width:150px;margin-top:20px" loading="lazy">
+      <img src="Images/New Zoho Affiliate Badge-Rectangle.svg" alt="Zoho Affiliate Logo" style="width:150px;margin-top:20px" loading="lazy">
     </a>
   </div>
   <div class="container" style="padding:0 0 26px;color:var(--muted);font-size:.92rem">© <span id="year"></span> Redeemed Digital. All rights reserved.</div>
