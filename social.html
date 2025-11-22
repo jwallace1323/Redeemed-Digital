@@ -1,413 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZTWTM0S01"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-NZTWTM0S01');
   </script>
 
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
 
   <title>Social Media Management — Four States | Redeemed Digital</title>
-  <meta name="description" content="Professional social media management services for the Four States region, including content creation, scheduling, and community engagement. Grow your brand with strategic social media."/>
-  <link rel="canonical" href="https://redeemeddigital.com/social.html"/>
+  <meta name="description"
+    content="Professional social media management services for the Four States region, including content creation, scheduling, and community engagement. Grow your brand with strategic social media." />
+  <link rel="canonical" href="https://redeemeddigital.com/social.html" />
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <meta property="og:title" content="Social Media Management — Four States | Redeemed Digital"/>
-  <meta property="og:description" content="Professional social media management services for the Four States region, including content creation, scheduling, and community engagement."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://redeemeddigital.com/social.html"/>
-  <meta property="og:image" content="https://redeemeddigital.com/og-image.jpg"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="theme-color" content="#002362"/>
+  <meta property="og:title" content="Social Media Management — Four States | Redeemed Digital" />
+  <meta property="og:description"
+    content="Professional social media management services for the Four States region, including content creation, scheduling, and community engagement." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://redeemeddigital.com/social.html" />
+  <meta property="og:image" content="https://redeemeddigital.com/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#002362" />
   <link rel="stylesheet" href="./styles.css?v=1">
 
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'"/>
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style"
+    crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </noscript>
 
-  <style>
-    /* Desktop nav */
-    header .container.nav { align-items: center; }
-    .main-nav { display:flex; gap:18px; align-items:center; }
-    .nav-link { color:#fff; text-decoration:none; padding:8px 10px; }
-    .nav-cta { background:#22c55e; color:#001633; font-weight:800; padding:10px 16px; border-radius:999px; display:inline-flex; align-items:center; gap:8px; text-decoration:none; }
-    .nav-cta:hover { filter:brightness(1.05); }
 
-    /* Dropdown */
-    .dropdown { position:relative; }
-    .dropdown-toggle { cursor:pointer; display:inline-flex; align-items:center; gap:8px; }
-    .dropdown-menu {
-      position:absolute; top:100%; left:0; min-width:240px;
-      background:#0c1533; border:1px solid var(--border); border-radius:12px;
-      padding:8px; display:none; z-index:1000;
-    }
-    .dropdown-menu a { display:block; color:#fff; padding:10px 12px; border-radius:10px; text-decoration:none; }
-    .dropdown-menu a:hover { background:rgba(255,255,255,.06); }
-    .dropdown.open .dropdown-menu { display:block; }
-
-    /* Mobile drawer hidden by default (desktop) */
-    .nav-menu{display:none}
-    .menu-toggle{display:none}
-
-    @media (max-width:768px){
-      .menu-toggle{display:block;margin-left:auto;font-size:1.6rem;background:none;border:0;cursor:pointer;color:#fff}
-      header .container.nav > nav{display:none}
-      .nav-menu{
-        display:flex;flex-direction:column;position:fixed;top:0;right:-100%;
-        width:82%;max-width:360px;height:100dvh;background:#001633;border-left:1px solid var(--border);
-        padding:80px 18px 18px;gap:10px;transition:right .26s ease;z-index:999
-      }
-      .nav-menu.open{right:0}
-      .nav-menu a{padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.06);color:#fff;text-decoration:none}
-
-      /* Mobile dropdown group */
-      .nav-group-title{font-weight:800; letter-spacing:.04em; padding:10px 0 4px; color:#9fb0ff;}
-      .nav-cta{justify-content:center}
-    }
-
-    html{scroll-behavior:smooth}
-    #contact{scroll-margin-top:90px}
-
-    /* Make anchor-wrapped cards look identical to .card */
-    a.card { display:block; color:inherit; text-decoration:none; }
-    a.card .head { color:#fff; }
-
-    /* Custom styles for this page */
-    /* Utility shim for common classes used in markup */
-    .mx-auto{margin-left:auto;margin-right:auto}
-    .max-w-4xl{max-width:56rem}
-    .max-w-2xl{max-width:42rem}
-    .text-center{text-align:center}
-    .text-white{color:#fff}
-    .service-package {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .service-package .body {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      flex: 1;
-    }
-    .service-package ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .service-package li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 8px;
-    }
-    .service-package .fa-check {
-      color: #22c55e;
-      font-size: 1.1rem;
-    }
-    
-    /* REFORMATTED team-card styling */
-    .team-card {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 30px;
-        align-items: center;
-        padding: 30px;
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        background: var(--card-bg);
-    }
-    .team-card .image-wrapper {
-      width: 100%;
-      max-width: 200px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .team-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px; /* Square with rounded corners */
-      display: block;
-      margin: 0 auto;
-    }
-    .team-card .image-wrapper p {
-      margin-top: 8px;
-      color: var(--muted);
-      font-size: 0.9em;
-    }
-    .team-card .text-content {
-      padding: 0;
-    }
-    .team-card .cta-group {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: flex-start;
-      margin-top: 20px;
-    }
-    
-    @media (min-width: 768px) {
-      .team-card {
-        grid-template-columns: 240px 1fr;
-        gap: 40px;
-        align-items: flex-start;
-      }
-      .team-card .image-wrapper {
-        margin: 0;
-        text-align: left;
-      }
-      .team-card img {
-        margin: 0;
-      }
-    }
-
-    /* New pricing section styles */
-    .pricing-section {
-      position: relative;
-      color: #fff;
-      background: linear-gradient(180deg, rgba(14, 24, 63, 0.96), rgba(4, 10, 29, 0.94));
-      padding: clamp(3.5rem, 6vw, 6rem) clamp(1.5rem, 4vw, 3.5rem);
-      border-radius: 18px;
-      max-width: 1280px;
-      margin: clamp(1.5rem, 4vw, 3rem) auto;
-      box-shadow: 0 12px 38px rgba(0,0,0,.28);
-      isolation: isolate;
-    }
-
-    .pricing-section::before {
-      content: "";
-      position: absolute;
-      inset: -140px -28%;
-      background:
-        radial-gradient(circle at top right, rgba(92, 123, 255, 0.36), transparent 58%),
-        radial-gradient(circle at bottom left, rgba(34, 197, 94, 0.25), transparent 62%);
-      filter: blur(42px);
-      opacity: .8;
-      z-index: -1;
-    }
-
-    /* Pricing header typography */
-    .pricing-section h2{
-      font-weight:700;
-      letter-spacing:.02em;
-      color:#9fb0ff;
-      text-align:center;
-      margin:0;
-    }
-    .pricing-section .section-title{
-      font-size:clamp(1.8rem,3.6vw,3rem);
-      line-height:1.1;
-      font-weight:800;
-      text-align:center;
-      color:#fff;
-      margin:.5rem auto 0;
-      max-width:56rem;
-    }
-    .pricing-section > p{
-      max-width:42rem;
-      margin:1rem auto 0;
-      text-align:center;
-      color:#cbd5e1;
-      font-size:1.125rem;
-    }
-
-    .pricing-section .pricing-grid{
-      display:grid;
-      gap:clamp(1.5rem, 3vw, 2.5rem);
-      margin-top:2.5rem;
-      align-items:stretch;
-      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-      grid-auto-rows: 1fr;
-    }
-
-    .pricing-card {
-      position: relative;
-      padding: clamp(2rem, 3vw, 2.85rem);
-      border-radius: 20px;
-      border: 1px solid rgba(151, 176, 255, 0.16);
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
-      display: flex;
-      flex-direction: column;
-      gap: clamp(0.75rem, 2vw, 1.25rem);
-      min-height: 100%;
-      backdrop-filter: saturate(150%) blur(3px);
-      box-shadow: 0 10px 28px rgba(0,0,0,.22);
-      transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
-    }
-
-    .pricing-card::after {
-      content: "";
-      position: absolute;
-      inset: -1px;
-      border-radius: inherit;
-      border: 1px solid rgba(122, 164, 255, 0.28);
-      opacity: 0;
-      transition: opacity .28s ease;
-      pointer-events: none;
-    }
-
-    .pricing-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 18px 44px rgba(0,0,0,.32);
-    }
-
-    .pricing-card:hover::after {
-      opacity: 1;
-    }
-
-    .pricing-card.highlight {
-      background: linear-gradient(170deg, rgba(44, 73, 202, 0.72), rgba(13, 20, 56, 0.92));
-      border-color: rgba(120, 176, 255, 0.45);
-      box-shadow: 0 22px 50px rgba(28,47,110,.48), inset 0 0 0 1px rgba(255,255,255,.05);
-    }
-    
-    .pricing-card.highlight::after {
-      border-color: rgba(148, 205, 255, 0.65);
-    }
-
-    .plan-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.35rem 0.75rem;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      background: rgba(130, 151, 255, 0.14);
-      color: #9fb0ff;
-    }
-
-    .plan-badge .fa-solid {
-      font-size: .85rem;
-    }
-
-    .pricing-card:nth-of-type(2) .plan-badge {
-      background: rgba(255, 171, 84, 0.18);
-      color: #fed7aa;
-    }
-
-    .pricing-card.highlight .plan-badge {
-      background: rgba(34, 197, 94, 0.18);
-      color: #d8ffe8;
-    }
-
-    .pricing-card.highlight .plan-badge .fa-solid {
-      color: #34d399;
-    }
-    
-    .pricing-card h3 {
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: #9fb0ff;
-    }
-
-    .pricing-card .price-wrap {
-      display: flex;
-      align-items: flex-end;
-      gap: 0.5rem;
-      margin-top: 1.25rem;
-    }
-
-    .pricing-card .price{
-      font-size: clamp(2.25rem, 4.6vw, 3rem);
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: -.02em;
-    }
-    
-    .pricing-card .price-sub {
-      font-size: 1rem;
-      color: #a3a3a3;
-      opacity:.9;
-    }
-
-    .pricing-card .plan-description {
-      margin-top: 0.9rem;
-      color: #d4dcff;
-      font-size: 1.02rem;
-      line-height: 1.65;
-    }
-    
-    .pricing-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 2rem 0 0;
-      flex-grow: 1; /* Make the list grow to fill space */
-      line-height:1.55;
-    }
-    
-    .pricing-card li {
-      display: grid;
-      grid-template-columns: 1.75rem 1fr;
-      gap: 0.75rem;
-      margin-bottom: 0.75rem;
-      font-size: 0.875rem;
-      color: #d4d4d4;
-    }
-    
-    .pricing-card li svg {
-      height: 1.5rem;
-      width: 1.25rem;
-      flex-shrink: 0;
-      color: #7c3aed;
-    }
-    
-    .pricing-card li .fa-check{
-      color:#22c55e;
-      margin-top:0;
-      height:1.75rem;
-      width:1.75rem;
-      border-radius:999px;
-      background:rgba(34,197,94,.14);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      align-self:flex-start;
-    }
-
-    /* Fix odd justified spacing and broken line wraps inside pricing bullets */
-    .pricing-card ul,
-    .pricing-card li{
-      text-align: left;         /* override any global justify */
-      text-justify: auto;
-      white-space: normal;
-      word-spacing: normal;
-      letter-spacing: normal;
-    }
-    .pricing-card li{
-      justify-content: flex-start; /* keep text next to icon */
-      max-width: 68ch;             /* improve readability */
-    }
-    .pricing-card li strong,
-    .pricing-card li em{
-      white-space: normal;         /* allow natural wrapping without orphan words */
-    }
-
-    .pricing-card .nav-cta{
-      margin-top:auto;
-      text-align:center;
-      width:100%;
-      justify-content:center;
-    }
-
-    .pricing-card .btn {
-      width: 100%;
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    /* Responsive grid for pricing */
-    @media (min-width: 768px){
-      .pricing-section .pricing-grid{ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-    }
-  </style>
 
   <script type="application/ld+json">
   {
@@ -444,7 +74,7 @@
   }
   </script>
   <script>
-    (function(){
+    (function () {
       var supportsPreload = false;
       try {
         var link = document.createElement('link');
@@ -467,427 +97,489 @@
       }
     })();
   </script>
-  <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"7799dc09417c4b1f35afdc2a64eb32af"})});</script>
+  <script>function loadScript(a) { var b = document.getElementsByTagName("head")[0], c = document.createElement("script"); c.type = "text/javascript", c.src = "https://tracker.metricool.com/resources/be.js", c.onreadystatechange = a, c.onload = a, b.appendChild(c) } loadScript(function () { beTracker.t({ hash: "7799dc09417c4b1f35afdc2a64eb32af" }) });</script>
 
 </head>
+
 <body>
-<header>
-  <div class="container nav">
-    <a href="/" class="brand-cta" aria-label="Redeemed Digital Home">
-      <span class="brand-cta__icon">
-        <picture>
-          <source type="image/webp" srcset="Images/optimized/logo-brand-40.webp 1x, Images/optimized/logo-brand-80.webp 2x">
-          <img src="Images/optimized/logo-brand-40.png" srcset="Images/optimized/logo-brand-40.png 1x, Images/optimized/logo-brand-80.png 2x" alt="Redeemed Digital logo — Four States web design & AI automation" loading="lazy" width="40" height="40"/>
-        </picture>
-      </span>
-      Redeemed Digital
-    </a>
-
-    <nav class="main-nav" aria-label="Primary">
-      <a class="nav-link" href="/">Home</a>
-      <div class="dropdown" id="servicesDropdown">
-        <a class="nav-link dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false">
-          Services <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
-        </a>
-        <div class="dropdown-menu" role="menu" aria-label="Services submenu">
-          <a href="./web-design.html" role="menuitem">Websites</a>
-          <a href="./automation.html" role="menuitem">AI</a>
-          <a href="./google.html" role="menuitem">Google Business profiles</a>
-          <a href="./social.html" role="menuitem">Social Media</a>
-          <a href="./software.html" role="menuitem">Custom software</a>
-          <a href="./hosting.html" role="menuitem">Hosting plans</a>
-          <a href="./zoho.html" role="menuitem">Zoho</a>
-        </div>
-      </div>
-      <a class="nav-link" href="./portfolio.html">Portfolio</a>
-      <a class="nav-link" href="./about.html">About</a>
-      <a class="nav-link" href="./login.html">Login</a>
-      <a class="nav-cta" href="#contact">
-        <i class="fa-solid fa-rocket"></i> Start your project
-      </a>
-    </nav>
-
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-  </div>
-
-  <nav class="nav-menu" aria-label="Mobile">
-    <a href="/">Home</a>
-
-    <div class="nav-group-title">Services</div>
-    <a href="./web-design.html">Websites</a>
-    <a href="./automation.html">AI</a>
-    <a href="./google.html">Google Business profiles</a>
-    <a href="./social.html">Social Media</a>
-    <a href="./software.html">Custom software</a>
-    <a href="./hosting.html">Hosting plans</a>
-    <a href="./zoho.html">Zoho</a>
-
-    <a href="./portfolio.html">Portfolio</a>
-    <a href="./about.html">About</a>
-    <a href="./login.html">Login</a>
-    <a class="nav-cta" href="#contact"><i class="fa-solid fa-rocket"></i> Start your project</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="container hero-wrap">
-    <div data-reveal>
-      <div class="eyebrow">
-        <span aria-hidden="true" class="badge" style="background:#046a88">
-          <i class="fa-solid fa-share-nodes"></i>
+  <header>
+    <div class="container nav">
+      <a href="/" class="brand-cta" aria-label="Redeemed Digital Home">
+        <span class="brand-cta__icon">
+          <picture>
+            <source type="image/webp"
+              srcset="Images/optimized/logo-brand-40.webp 1x, Images/optimized/logo-brand-80.webp 2x">
+            <img src="Images/optimized/logo-brand-40.png"
+              srcset="Images/optimized/logo-brand-40.png 1x, Images/optimized/logo-brand-80.png 2x"
+              alt="Redeemed Digital logo — Four States web design & AI automation" loading="lazy" width="40"
+              height="40" />
+          </picture>
         </span>
-        Engage, Grow, Convert
-      </div>
-      <h1>Strategic Social Media Management for Your Brand</h1>
-      <p class="lead">
-        We handle your social media, so you can focus on your business. From content creation to community engagement, we build a strong, active online presence for businesses across the Four States.
-      </p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 6px">
-        <a class="btn" href="#packages">
+        Redeemed Digital
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a class="nav-link" href="/">Home</a>
+        <div class="dropdown" id="servicesDropdown">
+          <a class="nav-link dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false">
+            Services <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu" role="menu" aria-label="Services submenu">
+            <a href="./web-design.html" role="menuitem">Websites</a>
+            <a href="./automation.html" role="menuitem">AI</a>
+            <a href="./google.html" role="menuitem">Google Business profiles</a>
+            <a href="./social.html" role="menuitem">Social Media</a>
+            <a href="./software.html" role="menuitem">Custom software</a>
+            <a href="./hosting.html" role="menuitem">Hosting plans</a>
+            <a href="./zoho.html" role="menuitem">Zoho</a>
+          </div>
+        </div>
+        <a class="nav-link" href="./portfolio.html">Portfolio</a>
+        <a class="nav-link" href="./about.html">About</a>
+        <a class="nav-link" href="./login.html">Login</a>
+        <a class="nav-cta" href="#contact">
+          <i class="fa-solid fa-rocket"></i> Start your project
+        </a>
+      </nav>
+
+
+    </div>
+
+
+  </header>
+
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div data-reveal>
+        <div class="eyebrow">
           <span aria-hidden="true" class="badge" style="background:#046a88">
-            <i class="fa-solid fa-cube"></i>
+            <i class="fa-solid fa-share-nodes"></i>
           </span>
-          See Our Packages
-        </a>
-        <a class="btn" href="#contact">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:inline-flex;align-items:center;justify-content:center;">
-            <i class="fa-solid fa-paper-plane"></i>
-          </span>
-          Get a Quote
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section pricing-section" id="packages">
-  <div class="mx-auto max-w-4xl text-center">
-    <h2 class="text-base/7 font-semibold text-indigo-400">Pricing</h2>
-    <p class="section-title mt-2 text-white">Choose the right plan for you</p>
-  </div>
-  <p class="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer loyalty, and driving sales.</p>
-  <div class="pricing-grid" data-reveal>
-    <div class="pricing-card">
-      <span class="plan-badge"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Starter</span>
-      <h3 id="tier-essentials" class="text-base/7 font-semibold text-indigo-400">Essentials — Social Basics</h3>
-      <p class="price-wrap">
-        <span class="price">$499</span>
-        <span class="price-sub">/month</span>
-      </p>
-      <p class="plan-description">Best for small teams getting consistent, on-brand activity without the overwhelm.</p>
-      <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-300 sm:mt-10">
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Management of up to 2 platforms</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>12 posts/month</strong></li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Metricool scheduling</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Monthly analytics report</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Basic caption writing</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Hashtag research</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Basic engagement</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Quarterly photo/video day for new content</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Monthly 30‑min strategy call</li>
-      </ul>
-      <a href="#contact" aria-describedby="tier-essentials" class="nav-cta mt-8 block sm:mt-10">Choose Essentials</a>
-    </div>
-
-    <div class="pricing-card highlight">
-      <span class="plan-badge"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> Most Popular</span>
-      <h3 id="tier-growth" class="text-base/7 font-semibold text-indigo-400">Growth &amp; Engagement</h3>
-      <p class="price-wrap">
-        <span class="price">$999</span>
-        <span class="price-sub">/month</span>
-      </p>
-      <p class="plan-description">For organizations ready to grow reach and deepen relationships with their community.</p>
-      <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-300 sm:mt-10">
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Management of up to 4 platforms</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>20–25 posts/month</strong></li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Monthly content capture session (up to 1 hour — photos + short video clips)</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Metricool analytics</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Growth insights report</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Community engagement</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Ad campaign setup + management</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Monthly strategy call</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>AI‑assisted caption + trend research</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Highlight reel or story package</li>
-      </ul>
-      <a href="#contact" aria-describedby="tier-growth" class="nav-cta mt-8 block sm:mt-10">Choose Growth &amp; Engagement</a>
-    </div>
-
-    <div class="pricing-card">
-      <span class="plan-badge"><i class="fa-solid fa-crown" aria-hidden="true"></i> Premier</span>
-      <h3 id="tier-premium" class="text-base/7 font-semibold text-indigo-400">Authority &amp; Content Partner</h3>
-      <p class="price-wrap">
-        <span class="price">$1,499</span>
-        <span class="price-sub">/month</span>
-      </p>
-      <p class="plan-description">Our full-service partnership for maximum brand authority, production quality, and growth.</p>
-      <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-300 sm:mt-10">
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Management of all major platforms</strong></li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Weekly content capture sessions</strong></li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Full editing of 6–8 short‑form videos/month</strong></li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Professional photo delivery</strong></li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Ad strategy + optimization</strong></li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Monthly analytics deep‑dive</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Competitor benchmarking</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Full brand strategy</strong></li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Trend adaptation</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>AI‑optimized posting schedule</strong></li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Dedicated account manager</strong></li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Content planner dashboard</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Monthly strategy call</li>
-        <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Quarterly strategy overhaul call</strong></li>
-      </ul>
-      <a href="#contact" aria-describedby="tier-premium" class="nav-cta mt-8 block sm:mt-10">Choose Authority &amp; Content Partner</a>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="jennifer-houseman">
-  <div class="container">
-    <h2 class="title">Meet Your Social Media Manager</h2>
-    <div class="team-card" data-reveal>
-      <div class="image-wrapper">
-        <img src="Images/jennifer-houseman social media expert.jpg" alt="Jennifer Houseman, Social Media Content Manager"/>
-        <p><strong>Jennifer Houseman</strong><br/>Social Media Strategist</p>
-      </div>
-      <div class="text-content">
-        <h3 style="margin-top:0">Jennifer Houseman</h3>
-        <p style="color:var(--muted)">
-          Hi, I’m Jennifer—social media strategist, content creator, and brand invigorator based on Grand Lake, Oklahoma. My passion is helping small businesses step confidently into the digital stage by streamlining their online presence and giving their brand voice the clarity (and personality) it deserves.
-
-I believe every brand has a story worth telling, and my job is to make sure yours comes through loud and clear. By blending smart tools (yes, even a little AI magic) with a personal, human-first approach, I create strategies that feel authentic, approachable, and uniquely yours. Whether it’s content photography, updated headshots, or social posts that connect with your audience, I keep the focus on what matters most—you and your business.
-
-Think of me as the caffeine shot your brand didn’t know it needed: energizing your message, simplifying your marketing, and sparking the kind of attention that turns browsers into buyers. With me in your corner, your brand isn’t just managed—it’s invigorated.
+          Engage, Grow, Convert
+        </div>
+        <h1>Strategic Social Media Management for Your Brand</h1>
+        <p class="lead">
+          We handle your social media, so you can focus on your business. From content creation to community engagement,
+          we build a strong, active online presence for businesses across the Four States.
         </p>
-        <div class="cta-group">
-          <p style="color:var(--muted); margin-top: 0;">
-              Go check out some of Jennifer's work!
-            </a>
-          </p>
-          <a href="https://www.jenniferhousemanphotography.com" class="nav-cta">
-            <i class="fa-solid fa-camera"></i>  Jennifers Portfolio
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 6px">
+          <a class="btn" href="#packages">
+            <span aria-hidden="true" class="badge" style="background:#046a88">
+              <i class="fa-solid fa-cube"></i>
+            </span>
+            See Our Packages
+          </a>
+          <a class="btn" href="#contact">
+            <span aria-hidden="true" class="badge"
+              style="background:#046a88;display:inline-flex;align-items:center;justify-content:center;">
+              <i class="fa-solid fa-paper-plane"></i>
+            </span>
+            Get a Quote
           </a>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Contact -->
-<section class="section" id="contact">
-  <div class="container">
-    <h2 class="title">Get a Quote — Serving NE OK, NW AR, SW MO & SE KS</h2>
-    <p style="color:var(--muted);margin:0 0 10px">We typically reply within 24 hours.</p>
+  <section class="section pricing-section" id="packages">
+    <div class="mx-auto max-w-4xl text-center">
+      <h2 class="text-base/7 font-semibold text-indigo-400">Pricing</h2>
+      <p class="section-title mt-2 text-white">Choose the right plan for you</p>
+    </div>
+    <p class="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">Choose an
+      affordable plan that’s packed with the best features for engaging your audience, creating customer loyalty, and
+      driving sales.</p>
+    <div class="pricing-grid" data-reveal>
+      <div class="pricing-card">
+        <span class="plan-badge"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Starter</span>
+        <h3 id="tier-essentials" class="text-base/7 font-semibold text-indigo-400">Essentials — Social Basics</h3>
+        <p class="price-wrap">
+          <span class="price">$499</span>
+          <span class="price-sub">/month</span>
+        </p>
+        <p class="plan-description">Best for small teams getting consistent, on-brand activity without the overwhelm.
+        </p>
+        <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-300 sm:mt-10">
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Management of up
+            to 2 platforms</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>12
+              posts/month</strong></li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Metricool
+            scheduling</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Monthly analytics
+            report</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Basic caption
+            writing</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Hashtag research
+          </li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Basic engagement
+          </li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Quarterly
+            photo/video day for new content</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Monthly 30‑min
+            strategy call</li>
+        </ul>
+        <a href="#contact" aria-describedby="tier-essentials" class="nav-cta mt-8 block sm:mt-10">Choose Essentials</a>
+      </div>
 
-    <div class="service-grid" data-reveal style="grid-template-columns:1fr 1fr;gap:24px">
+      <div class="pricing-card highlight">
+        <span class="plan-badge"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> Most Popular</span>
+        <h3 id="tier-growth" class="text-base/7 font-semibold text-indigo-400">Growth &amp; Engagement</h3>
+        <p class="price-wrap">
+          <span class="price">$999</span>
+          <span class="price-sub">/month</span>
+        </p>
+        <p class="plan-description">For organizations ready to grow reach and deepen relationships with their community.
+        </p>
+        <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-300 sm:mt-10">
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Management of up
+            to 4 platforms</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>20–25
+              posts/month</strong></li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Monthly content
+            capture session (up to 1 hour — photos + short video clips)</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Metricool
+            analytics</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Growth insights
+            report</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Community
+            engagement</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Ad campaign setup
+            + management</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Monthly strategy
+            call</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>AI‑assisted
+            caption + trend research</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Highlight reel or
+            story package</li>
+        </ul>
+        <a href="#contact" aria-describedby="tier-growth" class="nav-cta mt-8 block sm:mt-10">Choose Growth &amp;
+          Engagement</a>
+      </div>
 
-      <!-- Contact Form -->
-      <form action="https://formspree.io/f/xrbkpyll" class="card" id="contactForm" method="POST" style="padding:18px">
-        <div class="service-grid" style="grid-template-columns:1fr 1fr;gap:18px">
-          
-          <!-- Name -->
-          <div>
-            <label class="eyebrow" for="name" style="letter-spacing:.06em">Name</label>
-            <input id="name" name="name" placeholder="Your name" required style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"/>
-          </div>
+      <div class="pricing-card">
+        <span class="plan-badge"><i class="fa-solid fa-crown" aria-hidden="true"></i> Premier</span>
+        <h3 id="tier-premium" class="text-base/7 font-semibold text-indigo-400">Authority &amp; Content Partner</h3>
+        <p class="price-wrap">
+          <span class="price">$1,499</span>
+          <span class="price-sub">/month</span>
+        </p>
+        <p class="plan-description">Our full-service partnership for maximum brand authority, production quality, and
+          growth.</p>
+        <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-300 sm:mt-10">
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Management
+              of all major platforms</strong></li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Weekly
+              content capture sessions</strong></li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Full
+              editing of 6–8 short‑form videos/month</strong></li>
+          <li class="flex gap-x-3"><i
+              class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Professional photo
+              delivery</strong></li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Ad
+              strategy + optimization</strong></li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Monthly analytics
+            deep‑dive</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Competitor
+            benchmarking</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Full brand
+              strategy</strong></li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Trend adaptation
+          </li>
+          <li class="flex gap-x-3"><i
+              class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>AI‑optimized posting
+              schedule</strong></li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Dedicated
+              account manager</strong></li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Content planner
+            dashboard</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i>Monthly strategy
+            call</li>
+          <li class="flex gap-x-3"><i class="fa-solid fa-check h-6 w-5 flex-none text-indigo-400"></i><strong>Quarterly
+              strategy overhaul call</strong></li>
+        </ul>
+        <a href="#contact" aria-describedby="tier-premium" class="nav-cta mt-8 block sm:mt-10">Choose Authority &amp;
+          Content Partner</a>
+      </div>
+    </div>
+  </section>
 
-          <!-- Email -->
-          <div>
-            <label class="eyebrow" for="email" style="letter-spacing:.06em">Email</label>
-            <input id="email" name="_replyto" placeholder="you@company.com" required type="email" style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"/>
-          </div>
-
-          <!-- Dropdown -->
-          <div style="grid-column:1/-1">
-            <label class="eyebrow" for="service" style="letter-spacing:.06em">What service are you interested in?</label>
-            <select id="service" name="service" required style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem">
-              <option value="">Select a service</option>
-              <option value="Website">Website</option>
-              <option value="Artificial Intelligence">Artificial Intelligence</option>
-              <option value="Social Media Management">Social Media Management</option>
-              <option value="Google Business Profile">Google Business Profile</option>
-              <option value="Software/App Development">Software/App Development</option>
-              <option value="Hosting Plans">Hosting Plans</option>
-              <option value="Zoho">Zoho</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <!-- Referral Source -->
-          <div style="grid-column:1/-1">
-            <label class="eyebrow" for="hear" style="letter-spacing:.06em">How did you hear about us?</label>
-            <select id="hear" name="heard_about_us" required style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem">
-              <option value="">Select an option</option>
-              <option value="Facebook">Facebook</option>
-              <option value="Instagram">Instagram</option>
-              <option value="LinkedIn">LinkedIn</option>
-              <option value="TikTok">TikTok</option>
-              <option value="Google">Google</option>
-              <option value="Personal referral">Personal referral</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <!-- Website -->
-          <div>
-            <label class="eyebrow" for="website" style="letter-spacing:.06em">Current website</label>
-            <input id="website" name="website" placeholder="https://" type="url" style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"/>
-          </div>
-
-          <!-- Budget -->
-          <div>
-            <label class="eyebrow" for="budget" style="letter-spacing:.06em">Estimated budget</label>
-            <input id="budget" name="budget" placeholder="$2,500 - $5,000" style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"/>
-          </div>
-
-          <!-- Message -->
-          <div style="grid-column:1/-1">
-            <label class="eyebrow" for="message" style="letter-spacing:.06em">Project goals</label>
-            <textarea id="message" name="message" placeholder="Tell us what success looks like…" rows="5" style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"></textarea>
-          </div>
-
-          <!-- Hidden fields -->
-          <input name="_gotcha" style="display:none" type="text"/>
-          <input name="_subject" type="hidden" value="New Contact Form Submission from Redeemed Digital"/>
+  <section class="section" id="jennifer-houseman">
+    <div class="container">
+      <h2 class="title">Meet Your Social Media Manager</h2>
+      <div class="team-card" data-reveal>
+        <div class="image-wrapper">
+          <img src="Images/jennifer-houseman social media expert.jpg"
+            alt="Jennifer Houseman, Social Media Content Manager" />
+          <p><strong>Jennifer Houseman</strong><br />Social Media Strategist</p>
         </div>
+        <div class="text-content">
+          <h3 style="margin-top:0">Jennifer Houseman</h3>
+          <p style="color:var(--muted)">
+            Hi, I’m Jennifer—social media strategist, content creator, and brand invigorator based on Grand Lake,
+            Oklahoma. My passion is helping small businesses step confidently into the digital stage by streamlining
+            their online presence and giving their brand voice the clarity (and personality) it deserves.
 
-        <!-- Submit Button -->
-        <div style="display:flex;gap:10px;align-items:center;margin-top:14px">
-          <button class="btn" type="submit">
-            <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
-              <i class="fa-solid fa-paper-plane"></i>
+            I believe every brand has a story worth telling, and my job is to make sure yours comes through loud and
+            clear. By blending smart tools (yes, even a little AI magic) with a personal, human-first approach, I create
+            strategies that feel authentic, approachable, and uniquely yours. Whether it’s content photography, updated
+            headshots, or social posts that connect with your audience, I keep the focus on what matters most—you and
+            your business.
+
+            Think of me as the caffeine shot your brand didn’t know it needed: energizing your message, simplifying your
+            marketing, and sparking the kind of attention that turns browsers into buyers. With me in your corner, your
+            brand isn’t just managed—it’s invigorated.
+          </p>
+          <div class="cta-group">
+            <p style="color:var(--muted); margin-top: 0;">
+              Go check out some of Jennifer's work!
+              </a>
+            </p>
+            <a href="https://www.jenniferhousemanphotography.com" class="nav-cta">
+              <i class="fa-solid fa-camera"></i> Jennifers Portfolio
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="title">Get a Quote — Serving NE OK, NW AR, SW MO & SE KS</h2>
+      <p style="color:var(--muted);margin:0 0 10px">We typically reply within 24 hours.</p>
+
+      <div class="service-grid" data-reveal style="grid-template-columns:1fr 1fr;gap:24px">
+
+        <!-- Contact Form -->
+        <form action="https://formspree.io/f/xrbkpyll" class="card" id="contactForm" method="POST" style="padding:18px">
+          <div class="service-grid" style="grid-template-columns:1fr 1fr;gap:18px">
+
+            <!-- Name -->
+            <div>
+              <label class="eyebrow" for="name" style="letter-spacing:.06em">Name</label>
+              <input id="name" name="name" placeholder="Your name" required
+                style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem" />
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="eyebrow" for="email" style="letter-spacing:.06em">Email</label>
+              <input id="email" name="_replyto" placeholder="you@company.com" required type="email"
+                style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem" />
+            </div>
+
+            <!-- Dropdown -->
+            <div style="grid-column:1/-1">
+              <label class="eyebrow" for="service" style="letter-spacing:.06em">What service are you interested
+                in?</label>
+              <select id="service" name="service" required
+                style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem">
+                <option value="">Select a service</option>
+                <option value="Website">Website</option>
+                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                <option value="Social Media Management">Social Media Management</option>
+                <option value="Google Business Profile">Google Business Profile</option>
+                <option value="Software/App Development">Software/App Development</option>
+                <option value="Hosting Plans">Hosting Plans</option>
+                <option value="Zoho">Zoho</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <!-- Referral Source -->
+            <div style="grid-column:1/-1">
+              <label class="eyebrow" for="hear" style="letter-spacing:.06em">How did you hear about us?</label>
+              <select id="hear" name="heard_about_us" required
+                style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem">
+                <option value="">Select an option</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Instagram">Instagram</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="TikTok">TikTok</option>
+                <option value="Google">Google</option>
+                <option value="Personal referral">Personal referral</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <!-- Website -->
+            <div>
+              <label class="eyebrow" for="website" style="letter-spacing:.06em">Current website</label>
+              <input id="website" name="website" placeholder="https://" type="url"
+                style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem" />
+            </div>
+
+            <!-- Budget -->
+            <div>
+              <label class="eyebrow" for="budget" style="letter-spacing:.06em">Estimated budget</label>
+              <input id="budget" name="budget" placeholder="$2,500 - $5,000"
+                style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem" />
+            </div>
+
+            <!-- Message -->
+            <div style="grid-column:1/-1">
+              <label class="eyebrow" for="message" style="letter-spacing:.06em">Project goals</label>
+              <textarea id="message" name="message" placeholder="Tell us what success looks like…" rows="5"
+                style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"></textarea>
+            </div>
+
+            <!-- Hidden fields -->
+            <input name="_gotcha" style="display:none" type="text" />
+            <input name="_subject" type="hidden" value="New Contact Form Submission from Redeemed Digital" />
+          </div>
+
+          <!-- Submit Button -->
+          <div style="display:flex;gap:10px;align-items:center;margin-top:14px">
+            <button class="btn" type="submit">
+              <span aria-hidden="true" class="badge"
+                style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+                <i class="fa-solid fa-paper-plane"></i>
+              </span>
+              Send Inquiry
+            </button>
+          </div>
+        </form>
+
+        <!-- Google Map -->
+        <div class="card" style="padding:0;overflow:hidden;border-radius:12px">
+          <iframe title="Redeemed Digital — Four States service area (centered near Grove, OK)"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51936.09153403257!2d-94.807!3d36.593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b6c7f2a0b8d1db%3A0x0000000000000000!2sGrove%2C%20OK!5e0!3m2!1sen!2sus!4v1710000000000"
+            width="100%" height="100%" style="min-height:620px;border:0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid" style="padding:30px 0">
+      <div>
+        <div class="logo-wrap">
+          <img alt="Redeemed Digital wordmark — Four States web design agency" class="logo-img"
+            src="Images/RD logo 2.png" style="max-width:150px; height:auto;" loading="lazy" />
+          <strong>Redeemed Digital</strong>
+        </div>
+        <p style="color:var(--muted);margin:.6rem 0 0;max-width:520px">Empowering businesses with digital tools—built
+          with purpose, designed for growth.</p>
+        <div class="socials">
+          <a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61577762971978" target="_blank"
+            rel="noopener">
+            <span aria-hidden="true" class="badge"
+              style="background:#046a88;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#ffffff;">
+              <i class="fa-brands fa-facebook-f"></i>
             </span>
-            Send Inquiry
-          </button>
+          </a>
+          <a aria-label="LinkedIn" href="https://www.linkedin.com/company/redeemed-digital" target="_blank"
+            rel="noopener">
+            <span aria-hidden="true" class="badge"
+              style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </span>
+          </a>
+          <a aria-label="Instagram" href="https://www.instagram.com/redeemed.digital/" target="_blank" rel="noopener">
+            <span aria-hidden="true" class="badge"
+              style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+              <i class="fa-brands fa-instagram"></i>
+            </span>
+          </a>
+          <a aria-label="TikTok" href="https://www.tiktok.com/@redeemed.digital?_t=ZP-908Hy1eQPB0&_r=1" target="_blank"
+            rel="noopener">
+            <span aria-hidden="true" class="badge"
+              style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+              <i class="fa-brands fa-tiktok"></i>
+            </span>
+          </a>
+          <a aria-label="Google Business Profile" href="https://share.google/W0t1I9XadK97m89S0" target="_blank"
+            rel="noopener">
+            <span aria-hidden="true" class="badge"
+              style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+              <i class="fa-brands fa-google"></i>
+            </span>
+          </a>
         </div>
-      </form>
-
-      <!-- Google Map -->
-      <div class="card" style="padding:0;overflow:hidden;border-radius:12px">
-        <iframe
-          title="Redeemed Digital — Four States service area (centered near Grove, OK)"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51936.09153403257!2d-94.807!3d36.593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b6c7f2a0b8d1db%3A0x0000000000000000!2sGrove%2C%20OK!5e0!3m2!1sen!2sus!4v1710000000000"
-          width="100%" height="100%" style="min-height:620px;border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
       </div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px">
+        <div>
+          <div style="font-weight:700">Services</div>
+          <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:6px;color:var(--muted)">
+            <li><a href="./web-design.html">Websites</a></li>
+            <li><a href="./automation.html">AI Automation</a></li>
+            <li><a href="./google.html">Google Business</a></li>
+            <li><a href="./social.html">Social Media</a></li>
+            <li><a href="/#services">SEO</a></li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-weight:700">Zoho</div>
+          <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:6px;color:var(--muted)">
+            <li><a href="https://go.zoho.com/fOg">CRM</a></li>
+            <li><a href="https://go.zoho.com/Cl1">Books</a></li>
+            <li><a href="https://go.zoho.com/Fu3">One</a></li>
+            <li><a href="https://go.zoho.com/qFy">More...</a></li>
+          </ul>
+        </div>
+      </div>
+      <a href="https://go.zoho.com/qFy" target="_blank" rel="noopener noreferrer" title="Zoho Affiliate">
+        <img src="Images/New Zoho Affiliate Badge-Rectangle.svg" alt="Zoho Affiliate Logo"
+          style="width: 150px; margin-top: 20px;" loading="lazy">
+      </a>
     </div>
-  </div>
-</section>
+    <div class="container" style="padding:0 0 26px;color:var(--muted);font-size:.92rem">© <span id="year"></span>
+      Redeemed Digital. All rights reserved.</div>
+  </footer>
 
-<footer>
-  <div class="container footer-grid" style="padding:30px 0">
-    <div>
-      <div class="logo-wrap">
-        <img alt="Redeemed Digital wordmark — Four States web design agency" class="logo-img" src="Images/RD logo 2.png" style="max-width:150px; height:auto;" loading="lazy"/>
-        <strong>Redeemed Digital</strong>
-      </div>
-      <p style="color:var(--muted);margin:.6rem 0 0;max-width:520px">Empowering businesses with digital tools—built with purpose, designed for growth.</p>
-      <div class="socials">
-        <a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61577762971978" target="_blank" rel="noopener">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#ffffff;">
-            <i class="fa-brands fa-facebook-f"></i>
-          </span>
-        </a>
-        <a aria-label="LinkedIn" href="https://www.linkedin.com/company/redeemed-digital" target="_blank" rel="noopener">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </span>
-        </a>
-        <a aria-label="Instagram" href="https://www.instagram.com/redeemed.digital/" target="_blank" rel="noopener">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
-            <i class="fa-brands fa-instagram"></i>
-          </span>
-        </a>
-        <a aria-label="TikTok" href="https://www.tiktok.com/@redeemed.digital?_t=ZP-908Hy1eQPB0&_r=1" target="_blank" rel="noopener">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
-            <i class="fa-brands fa-tiktok"></i>
-          </span>
-        </a>
-        <a aria-label="Google Business Profile" href="https://share.google/W0t1I9XadK97m89S0" target="_blank" rel="noopener">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
-            <i class="fa-brands fa-google"></i>
-          </span>
-        </a>
-      </div>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px">
-      <div>
-        <div style="font-weight:700">Services</div>
-        <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:6px;color:var(--muted)">
-          <li><a href="./web-design.html">Websites</a></li>
-          <li><a href="./automation.html">AI Automation</a></li>
-          <li><a href="./google.html">Google Business</a></li>
-          <li><a href="./social.html">Social Media</a></li>
-          <li><a href="/#services">SEO</a></li>
-        </ul>
-      </div>
-      <div>
-        <div style="font-weight:700">Zoho</div>
-        <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:6px;color:var(--muted)">
-          <li><a href="https://go.zoho.com/fOg">CRM</a></li>
-          <li><a href="https://go.zoho.com/Cl1">Books</a></li>
-          <li><a href="https://go.zoho.com/Fu3">One</a></li>
-          <li><a href="https://go.zoho.com/qFy">More...</a></li>
-        </ul>
-      </div>
-    </div>
-    <a href="https://go.zoho.com/qFy" target="_blank" rel="noopener noreferrer" title="Zoho Affiliate">
-      <img src="Images/New Zoho Affiliate Badge-Rectangle.svg" alt="Zoho Affiliate Logo" style="width: 150px; margin-top: 20px;" loading="lazy">
-    </a>
-  </div>
-  <div class="container" style="padding:0 0 26px;color:var(--muted);font-size:.92rem">© <span id="year"></span> Redeemed Digital. All rights reserved.</div>
-</footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const nodes = Array.from(document.querySelectorAll('[data-reveal]'));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('shown'); io.unobserve(e.target); } });
+    }, { threshold: 0.14 });
+    nodes.forEach(n => io.observe(n));
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  const nodes = Array.from(document.querySelectorAll('[data-reveal]'));
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('shown'); io.unobserve(e.target); } });
-  },{threshold:0.14});
-  nodes.forEach(n=>io.observe(n));
-
-  const dd = document.getElementById('servicesDropdown');
-  if (dd){
-    const toggle = dd.querySelector('.dropdown-toggle');
-    const close = () => {
-      dd.classList.remove('open');
-      toggle.setAttribute('aria-expanded','false');
-    };
-    toggle.addEventListener('click', (e)=>{
-      e.preventDefault();
-      const isOpen = dd.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-    dd.addEventListener('mouseleave', close);
-    document.addEventListener('click', (e)=>{
-      if (!dd.contains(e.target)) close();
-    });
-  }
-
-  const burger = document.querySelector('.menu-toggle');
-  const drawer = document.querySelector('.nav-menu');
-  if (burger && drawer){
-    burger.addEventListener('click', ()=>{
-      const open = drawer.classList.toggle('open');
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      document.body.style.overflow = open ? 'hidden' : '';
-    });
-    drawer.querySelectorAll('a').forEach(a=>{
-      a.addEventListener('click', ()=>{
-        drawer.classList.remove('open');
-        burger.setAttribute('aria-expanded','false');
-        document.body.style.overflow = '';
+    const dd = document.getElementById('servicesDropdown');
+    if (dd) {
+      const toggle = dd.querySelector('.dropdown-toggle');
+      const close = () => {
+        dd.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      };
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isOpen = dd.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       });
-    });
-  }
-</script>
-<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script>
-<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq018e18ad8915609debcc99abcbdf321daf8e51f93e656d5cd6dff74e3c8cee82" defer></script>
-<script async src="https://scripts.simpleanalyticscdn.com/latest.js"
-></script>
-<script
- async
- data-collect="outbound,emails"
- src="https://scripts.simpleanalyticscdn.com/auto-events.js"
- ></script>
+      dd.addEventListener('mouseleave', close);
+      document.addEventListener('click', (e) => {
+        if (!dd.contains(e.target)) close();
+      });
+    }
+
+    const burger = document.querySelector('.menu-toggle');
+    const drawer = document.querySelector('.nav-menu');
+    if (burger && drawer) {
+      burger.addEventListener('click', () => {
+        const open = drawer.classList.toggle('open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      drawer.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          drawer.classList.remove('open');
+          burger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+  </script>
+  <script>window.$zoho = window.$zoho || {}; $zoho.salesiq = $zoho.salesiq || { ready: function () { } }</script>
+  <script id="zsiqscript"
+    src="https://salesiq.zohopublic.com/widget?wc=siq018e18ad8915609debcc99abcbdf321daf8e51f93e656d5cd6dff74e3c8cee82"
+    defer></script>
+  <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <script async data-collect="outbound,emails" src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
 </body>
+
 </html>
