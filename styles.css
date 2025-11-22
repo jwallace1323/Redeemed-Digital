@@ -543,6 +543,11 @@ header .container.nav {
 
 /* .menu-toggle is already defined in styles.css but we might need to reconcile */
 
+/* Default: Hide menu toggle on desktop */
+.menu-toggle {
+  display: none;
+}
+
 @media (max-width:768px) {
 
   /* Reconciling menu-toggle display */
@@ -553,7 +558,8 @@ header .container.nav {
     background: none;
     border: 0;
     cursor: pointer;
-    color: #fff
+    color: var(--brand);
+    /* Changed from #fff to blue */
   }
 
   header .container.nav>nav {
