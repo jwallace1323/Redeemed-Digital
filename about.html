@@ -1,89 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Google tag (gtag.js) | GA4 ID fixed to match config -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZTWTM0S01"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-NZTWTM0S01');
   </script>
 
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
 
   <!-- SEO -->
   <title>About Redeemed Digital — Four States (NE OK • NW AR • SW MO • SE KS) | My Story & Mission</title>
-  <meta name="description" content="Hi, I’m the founder of Redeemed Digital. I build fast, SEO-first websites and AI automations for businesses across the Four States—Northeast Oklahoma, Northwest Arkansas, Southwest Missouri, and Southeast Kansas."/>
-  <link rel="canonical" href="https://redeemeddigital.com/about.html"/>
-  <meta name="theme-color" content="#002362"/>
+  <meta name="description"
+    content="Hi, I’m the founder of Redeemed Digital. I build fast, SEO-first websites and AI automations for businesses across the Four States—Northeast Oklahoma, Northwest Arkansas, Southwest Missouri, and Southeast Kansas." />
+  <link rel="canonical" href="https://redeemeddigital.com/about.html" />
+  <meta name="theme-color" content="#002362" />
 
   <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Social cards -->
-  <meta property="og:title" content="About Redeemed Digital — My Story & Mission"/>
-  <meta property="og:description" content="Purpose-driven web design and automation for the Four States region."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://redeemeddigital.com/about.html"/>
-  <meta property="og:image" content="https://redeemeddigital.com/og-image.jpg"/>
-  <meta name="twitter:card" content="summary_large_image"/>
+  <meta property="og:title" content="About Redeemed Digital — My Story & Mission" />
+  <meta property="og:description" content="Purpose-driven web design and automation for the Four States region." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://redeemeddigital.com/about.html" />
+  <meta property="og:image" content="https://redeemeddigital.com/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Font Awesome (icons) -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'"/>
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style"
+    crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </noscript>
 
-  <link rel="preload" href="./styles.css?v=1" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="./styles.css?v=1"></noscript>
+  <link rel="stylesheet" href="./styles.css?v=1">
 
   <!-- Header/nav & layout helpers -->
-  <style>
-    /* Desktop nav */
-    header .container.nav { align-items: center; }
-    .main-nav { display:flex; gap:18px; align-items:center; }
-    .nav-link { color:#fff; text-decoration:none; padding:8px 10px; }
-    .nav-cta { background:#22c55e; color:#001633; font-weight:800; padding:10px 16px; border-radius:999px; display:inline-flex; align-items:center; gap:8px; text-decoration:none; }
-    .nav-cta:hover { filter:brightness(1.05); }
 
-    /* Dropdown */
-    .dropdown { position:relative; }
-    .dropdown-toggle { cursor:pointer; display:inline-flex; align-items:center; gap:8px; }
-    .dropdown-menu {
-      position:absolute; top:100%; left:0; min-width:240px;
-      background:#0c1533; border:1px solid var(--border); border-radius:12px;
-      padding:8px; display:none; z-index:1000;
-    }
-    .dropdown-menu a { display:block; color:#fff; padding:10px 12px; border-radius:10px; text-decoration:none; }
-    .dropdown-menu a:hover { background:rgba(255,255,255,.06); }
-    .dropdown.open .dropdown-menu { display:block; }
-
-    /* Mobile drawer hidden by default (desktop) */
-    .nav-menu{display:none}
-    .menu-toggle{display:none}
-    @media (max-width:768px){
-      .menu-toggle{display:block;margin-left:auto;font-size:1.6rem;background:none;border:0;cursor:pointer;color:#fff}
-      header .container.nav > nav{display:none}
-      .nav-menu{
-        display:flex;flex-direction:column;position:fixed;top:0;right:-100%;
-        width:82%;max-width:360px;height:100dvh;background:#001633;border-left:1px solid var(--border);
-        padding:80px 18px 18px;gap:10px;transition:right .26s ease;z-index:999
-      }
-      .nav-menu.open{right:0}
-      .nav-menu a{padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.06);color:#fff;text-decoration:none}
-      .nav-group-title{font-weight:800; letter-spacing:.04em; padding:10px 0 4px; color:#9fb0ff;}
-      .nav-cta{justify-content:center}
-    }
-
-    html{scroll-behavior:smooth}
-    #contact{scroll-margin-top:90px}
-
-    /* About layout helpers */
-    .bio-section { display:grid; grid-template-columns: 1fr; gap: 2rem; align-items:center; }
-    .bio-image { width:100%; max-width:300px; margin:0 auto; border-radius:12px; object-fit:cover; }
-    @media (min-width: 768px){ .bio-section { grid-template-columns: 1fr 2fr; } }
-  </style>
 
   <!-- LocalBusiness schema (service area) -->
   <script type="application/ld+json">
@@ -120,381 +81,432 @@
     }]
   }
   </script>
+  <script>
+    (function () {
+      var supportsPreload = false;
+      try {
+        var link = document.createElement('link');
+        supportsPreload = link.relList && link.relList.supports && link.relList.supports('preload');
+      } catch (err) {
+        supportsPreload = false;
+      }
+      if (supportsPreload) { return; }
+      var links = document.querySelectorAll('link[rel="preload"][as="style"]');
+      for (var i = 0; i < links.length; i++) {
+        var preload = links[i];
+        if (!preload.href) { continue; }
+        var fallback = document.createElement('link');
+        fallback.rel = 'stylesheet';
+        fallback.href = preload.href;
+        if (preload.crossOrigin) { fallback.crossOrigin = preload.crossOrigin; }
+        var ref = preload.getAttribute('referrerpolicy');
+        if (ref) { fallback.referrerPolicy = ref; }
+        document.head.appendChild(fallback);
+      }
+    })();
+  </script>
+  <script>function loadScript(a) { var b = document.getElementsByTagName("head")[0], c = document.createElement("script"); c.type = "text/javascript", c.src = "https://tracker.metricool.com/resources/be.js", c.onreadystatechange = a, c.onload = a, b.appendChild(c) } loadScript(function () { beTracker.t({ hash: "7799dc09417c4b1f35afdc2a64eb32af" }) });</script>
+
 </head>
+
 <body>
-<!-- Header -->
-<header>
-  <div class="container nav">
-    <!-- Home link updated to root to avoid /index.html duplication -->
-    <a href="/" class="brand-cta" aria-label="Redeemed Digital Home">
-      <span class="brand-cta__icon">
-        <img src="images/Rd logo 1.png" alt="Redeemed Digital logo — Four States web design & AI automation" loading="lazy"/>
-      </span>
-      Redeemed Digital
-    </a>
-
-    <!-- New desktop nav -->
-    <nav class="main-nav" aria-label="Primary">
-      <!-- Home link updated -->
-      <a class="nav-link" href="/">Home</a>
-
-      <div class="dropdown" id="servicesDropdown">
-        <a class="nav-link dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false">
-          Services <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
-        </a>
-        <div class="dropdown-menu" role="menu" aria-label="Services submenu">
-          <a href="./web-design.html" role="menuitem">Websites</a>
-          <a href="./automation.html" role="menuitem">AI</a>
-          <a href="./google.html" role="menuitem">Google Business profiles</a>
-          <a href="./social.html" role="menuitem">Social Media</a>
-          <a href="./software.html" role="menuitem">Custom software</a>
-          <a href="./hosting.html" role="menuitem">Hosting plans</a>
-          <a href="./zoho.html" role="menuitem">Zoho</a>
-        </div>
-      </div>
-
-      <a class="nav-link" href="./portfolio.html">Portfolio</a>
-      <a class="nav-link" href="./about.html" aria-current="page">About</a>
-      <a class="nav-link" href="./login.html">Login</a>
-      <a class="nav-cta" href="#contact">
-        <i class="fa-solid fa-rocket"></i> Start your project
-      </a>
-    </nav>
-
-    <!-- Burger -->
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-  </div>
-
-  <!-- Mobile drawer -->
-  <nav class="nav-menu" aria-label="Mobile">
-    <!-- Home link updated -->
-    <a href="/">Home</a>
-
-    <div class="nav-group-title">Services</div>
-    <a href="./web-design.html">Websites</a>
-    <a href="./automation.html">AI</a>
-    <a href="./google.html">Google Business profiles</a>
-    <a href="./social.html">Social Media</a>
-    <a href="./software.html">Custom software</a>
-    <a href="./hosting.html">Hosting plans</a>
-    <a href="./zoho.html">Zoho</a>
-
-    <a href="./portfolio.html">Portfolio</a>
-    <a href="./about.html" aria-current="page">About</a>
-    <a href="./login.html">Login</a>
-    <a class="nav-cta" href="#contact"><i class="fa-solid fa-rocket"></i> Start your project</a>
-  </nav>
-</header>
-
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container hero-wrap">
-    <div data-reveal>
-      <div class="eyebrow">
-        <span aria-hidden="true" class="badge" style="background:#046a88">
-          <i class="fa-solid fa-seedling"></i>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <!-- Home link updated to root to avoid /index.html duplication -->
+      <a href="/" class="brand-cta" aria-label="Redeemed Digital Home">
+        <span class="brand-cta__icon">
+          <img src="Images/Rd logo 1.png" alt="Redeemed Digital logo — Four States web design & AI automation"
+            loading="lazy" />
         </span>
-        My Story
-      </div>
-      <h1>About Redeemed Digital & My Mission</h1>
-      <p class="lead">
-        I founded Redeemed Digital to help small businesses across the Four States region grow and thrive. My journey began with a passion for web design and technology, and a desire to use those skills for a greater purpose.
-      </p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 6px">
-        <a class="btn" href="#contact">
-          <span aria-hidden="true" class="badge" style="background:#046a88">
-            <i class="fa-solid fa-paper-plane"></i>
-          </span>
-          Get in Touch
+        Redeemed Digital
+      </a>
+
+      <!-- New desktop nav -->
+      <nav class="main-nav" aria-label="Primary">
+        <!-- Home link updated -->
+        <a class="nav-link" href="/">Home</a>
+
+        <div class="dropdown" id="servicesDropdown">
+          <a class="nav-link dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false">
+            Services <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu" role="menu" aria-label="Services submenu">
+            <a href="./web-design.html" role="menuitem">Websites</a>
+            <a href="./automation.html" role="menuitem">AI</a>
+            <a href="./google.html" role="menuitem">Google Business profiles</a>
+            <a href="./social.html" role="menuitem">Social Media</a>
+            <a href="./software.html" role="menuitem">Custom software</a>
+            <a href="./hosting.html" role="menuitem">Hosting plans</a>
+            <a href="./zoho.html" role="menuitem">Zoho</a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="./portfolio.html">Portfolio</a>
+        <a class="nav-link" href="./about.html" aria-current="page">About</a>
+        <a class="nav-link" href="./login.html">Login</a>
+        <a class="nav-cta" href="#contact">
+          <i class="fa-solid fa-rocket"></i> Start your project
         </a>
-      </div>
+      </nav>
+
+
     </div>
-  </div>
-</section>
 
-<!-- Meet the Founder Section -->
-<section class="section">
-  <div class="container" data-reveal>
-    <h2 class="title">Meet the Founder</h2>
-    <div class="bio-section">
-      <div class="card" style="padding:0; display:flex; flex-direction:column; align-items:center;">
-        <img src="images/Jacob Wallace.jpg" alt="Headshot of Jacob Wallace, founder of Redeemed Digital" class="bio-image" style="border-bottom-left-radius:0; border-bottom-right-radius:0;" />
-        <div style="padding:1.5rem; text-align:center;">
-          <h3 style="margin:0;">Jacob Wallace</h3>
-          <p style="color:var(--muted); margin:.4rem 0 0;">Founder, Redeemed Digital</p>
-        </div>
-      </div>
-      <div>
-        <p>
-          I’m Jacob Wallace — founder, builder, and lifelong systems thinker. Whether it’s in real estate, childcare, lending, or marketing, I’ve always been drawn to understanding how things work and how they can work better. That curiosity, paired with a passion for helping others, led me to create Redeemed Digital — a company built on faith, strategy, and purpose.
-        </p>
-        <p>
-          My career has been rooted in relationship-building through sales and marketing. I’ve seen firsthand how presenting yourself professionally opens doors and builds trust — and your business should be no different. As small business owners, we often wear all the hats. We’re busy running day-to-day operations, managing people, solving problems — all while trying to grow. That’s where I come in. My goal is to help you showcase your business in the way it truly deserves — with modern websites, streamlined digital tools, and smart automation systems that do the heavy lifting in the background.
-        </p>
-        <p>
-          At the core of Redeemed Digital is a commitment to purpose — rooted in <strong>1 Corinthians 10:31:</strong><br>
-          <em>“So whether you eat or drink or whatever you do, do it all for the glory of God.”</em><br>
-          This verse guides everything I do. I believe excellence in business is a form of worship — and that doing our best, in every detail, is one way we glorify God.
-        </p>
-        <p>
-          I live in <strong>Grove, Oklahoma</strong>, with my wife, Kaylee, and our three amazing children. We’re a family rooted in faith, community, and creativity. Kaylee runs a local dance studio and childcare center, and together we stay busy juggling family life and entrepreneurship. Whether we’re cheering on our kids, building businesses, or serving in our community, we believe in doing everything with purpose — and Redeemed Digital is a reflection of that.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Philosophy / Values -->
-<section class="section">
-  <div class="container">
-    <h2 class="title">My Philosophy: Purpose Over Profit</h2>
-    <div class="service-grid" data-reveal>
-      <div class="card">
-        <div class="head">
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div data-reveal>
+        <div class="eyebrow">
           <span aria-hidden="true" class="badge" style="background:#046a88">
-            <i class="fa-solid fa-bullseye"></i>
+            <i class="fa-solid fa-seedling"></i>
           </span>
-          Your Goals Are My Focus
+          My Story
         </div>
-        <div class="body" style="color:var(--muted)">I believe that the best digital solutions are built with a clear purpose. My focus is on understanding your business goals so I can create a website that truly works for you and your customers.</div>
-      </div>
-      <div class="card">
-        <div class="head">
-          <span aria-hidden="true" class="badge" style="background:#046a88">
-            <i class="fa-solid fa-handshake"></i>
-          </span>
-          Transparency & Trust
-        </div>
-        <div class="body" style="color:var(--muted)">You'll get an honest, straightforward approach from me. I'm dedicated to clear communication, fair pricing, and building a relationship based on trust.</div>
-      </div>
-      <div class="card">
-        <div class="head">
-          <span aria-hidden="true" class="badge" style="background:#046a88">
-            <i class="fa-solid fa-chart-line"></i>
-          </span>
-          Long-Term Partnership
-        </div>
-        <div class="body" style="color:var(--muted)">I don't just build a website and disappear. I'm here to support you long-term, providing everything from ongoing hosting and maintenance to new feature development as your business evolves.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section class="section" id="contact">
-  <div class="container">
-    <h2 class="title">Get a Quote — Serving NE OK, NW AR, SW MO & SE KS</h2>
-    <p style="color:var(--muted);margin:0 0 10px">We typically reply within 24 hours.</p>
-
-    <div class="service-grid" data-reveal style="grid-template-columns:1fr 1fr;gap:24px">
-
-      <!-- Contact Form -->
-      <form action="https://formspree.io/f/xrbkpyll" class="card" id="contactForm" method="POST" style="padding:18px">
-        <div class="service-grid" style="grid-template-columns:1fr 1fr;gap:18px">
-          
-          <!-- Name -->
-          <div>
-            <label class="eyebrow" for="name" style="letter-spacing:.06em">Name</label>
-            <input id="name" name="name" placeholder="Your name" required style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"/>
-          </div>
-
-          <!-- Email -->
-          <div>
-            <label class="eyebrow" for="email" style="letter-spacing:.06em">Email</label>
-            <input id="email" name="_replyto" placeholder="you@company.com" required type="email" style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"/>
-          </div>
-
-          <!-- Dropdown -->
-          <div style="grid-column:1/-1">
-            <label class="eyebrow" for="service" style="letter-spacing:.06em">What service are you interested in?</label>
-            <select id="service" name="service" required style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem">
-              <option value="">Select a service</option>
-              <option value="Website">Website</option>
-              <option value="Artificial Intelligence">Artificial Intelligence</option>
-              <option value="Social Media Management">Social Media Management</option>
-              <option value="Google Business Profile">Google Business Profile</option>
-              <option value="Software/App Development">Software/App Development</option>
-              <option value="Hosting Plans">Hosting Plans</option>
-              <option value="Zoho">Zoho</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <!-- Referral Source -->
-          <div style="grid-column:1/-1">
-            <label class="eyebrow" for="hear" style="letter-spacing:.06em">How did you hear about us?</label>
-            <select id="hear" name="heard_about_us" required style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem">
-              <option value="">Select an option</option>
-              <option value="Facebook">Facebook</option>
-              <option value="Instagram">Instagram</option>
-              <option value="LinkedIn">LinkedIn</option>
-              <option value="TikTok">TikTok</option>
-              <option value="Google">Google</option>
-              <option value="Personal referral">Personal referral</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <!-- Website -->
-          <div>
-            <label class="eyebrow" for="website" style="letter-spacing:.06em">Current website</label>
-            <input id="website" name="website" placeholder="https://" type="url" style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"/>
-          </div>
-
-          <!-- Budget -->
-          <div>
-            <label class="eyebrow" for="budget" style="letter-spacing:.06em">Estimated budget</label>
-            <input id="budget" name="budget" placeholder="$2,500 - $5,000" style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"/>
-          </div>
-
-          <!-- Message -->
-          <div style="grid-column:1/-1">
-            <label class="eyebrow" for="message" style="letter-spacing:.06em">Project goals</label>
-            <textarea id="message" name="message" placeholder="Tell us what success looks like…" rows="5" style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"></textarea>
-          </div>
-
-          <!-- Hidden fields -->
-          <input name="_gotcha" style="display:none" type="text"/>
-          <input name="_subject" type="hidden" value="New Contact Form Submission from Redeemed Digital"/>
-        </div>
-
-        <!-- Submit Button -->
-        <div style="display:flex;gap:10px;align-items:center;margin-top:14px">
-          <button class="btn" type="submit">
-            <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+        <h1>About Redeemed Digital & My Mission</h1>
+        <p class="lead">
+          I founded Redeemed Digital to help small businesses across the Four States region grow and thrive. My journey
+          began with a passion for web design and technology, and a desire to use those skills for a greater purpose.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 6px">
+          <a class="btn" href="#contact">
+            <span aria-hidden="true" class="badge" style="background:#046a88">
               <i class="fa-solid fa-paper-plane"></i>
             </span>
-            Send Inquiry
-          </button>
+            Get in Touch
+          </a>
         </div>
-      </form>
-
-      <!-- Google Map -->
-      <div class="card" style="padding:0;overflow:hidden;border-radius:12px">
-        <iframe
-          title="Redeemed Digital — Four States service area (centered near Grove, OK)"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51936.09153403257!2d-94.807!3d36.593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b6c7f2a0b8d1db%3A0x0000000000000000!2sGrove%2C%20OK!5e0!3m2!1sen!2sus!4v1710000000000"
-          width="100%" height="100%" style="min-height:620px;border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer>
-  <div class="container footer-grid" style="padding:30px 0">
-    <div>
-      <div class="logo-wrap">
-        <img class="logo-img" src="images/RD logo 2.png" alt="Redeemed Digital wordmark" style="max-width:150px;height:auto" loading="lazy" />
-        <strong>Redeemed Digital</strong>
-      </div>
-      <p style="color:var(--muted);margin:.6rem 0 0;max-width:520px">Empowering businesses with digital tools—built with purpose, designed for growth.</p>
-      <div class="socials">
-        <a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61577762971978" target="_blank" rel="noopener">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#ffffff;">
-            <i class="fa-brands fa-facebook-f"></i>
-          </span>
-        </a>
-        <a aria-label="LinkedIn" href="https://www.linkedin.com/company/redeemed-digital" target="_blank" rel="noopener">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </span>
-        </a>
-        <a aria-label="Instagram" href="https://www.instagram.com/redeemed.digital/" target="_blank" rel="noopener">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
-            <i class="fa-brands fa-instagram"></i>
-          </span>
-        </a>
-        <a aria-label="TikTok" href="https://www.tiktok.com/@redeemed.digital?_t=ZP-908Hy1eQPB0&_r=1" target="_blank" rel="noopener">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
-            <i class="fa-brands fa-tiktok"></i>
-          </span>
-        </a>
-        <a aria-label="Google Business Profile" href="https://share.google/W0t1I9XadK97m89S0" target="_blank" rel="noopener">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
-            <i class="fa-brands fa-google"></i>
-          </span>
-        </a>
+  <!-- Meet the Founder Section -->
+  <section class="section">
+    <div class="container" data-reveal>
+      <h2 class="title">Meet the Founder</h2>
+      <div class="bio-section">
+        <div class="card" style="padding:0; display:flex; flex-direction:column; align-items:center;">
+          <img src="Images/Jacob Wallace.jpg" alt="Headshot of Jacob Wallace, founder of Redeemed Digital"
+            class="bio-image" style="border-bottom-left-radius:0; border-bottom-right-radius:0;" />
+          <div style="padding:1.5rem; text-align:center;">
+            <h3 style="margin:0;">Jacob Wallace</h3>
+            <p style="color:var(--muted); margin:.4rem 0 0;">Founder, Redeemed Digital</p>
+          </div>
+        </div>
+        <div>
+          <p>
+            I’m Jacob Wallace — founder, builder, and lifelong systems thinker. Whether it’s in real estate, childcare,
+            lending, or marketing, I’ve always been drawn to understanding how things work and how they can work better.
+            That curiosity, paired with a passion for helping others, led me to create Redeemed Digital — a company
+            built on faith, strategy, and purpose.
+          </p>
+          <p>
+            My career has been rooted in relationship-building through sales and marketing. I’ve seen firsthand how
+            presenting yourself professionally opens doors and builds trust — and your business should be no different.
+            As small business owners, we often wear all the hats. We’re busy running day-to-day operations, managing
+            people, solving problems — all while trying to grow. That’s where I come in. My goal is to help you showcase
+            your business in the way it truly deserves — with modern websites, streamlined digital tools, and smart
+            automation systems that do the heavy lifting in the background.
+          </p>
+          <p>
+            At the core of Redeemed Digital is a commitment to purpose — rooted in <strong>1 Corinthians
+              10:31:</strong><br>
+            <em>“So whether you eat or drink or whatever you do, do it all for the glory of God.”</em><br>
+            This verse guides everything I do. I believe excellence in business is a form of worship — and that doing
+            our best, in every detail, is one way we glorify God.
+          </p>
+          <p>
+            I live in <strong>Grove, Oklahoma</strong>, with my wife, Kaylee, and our three amazing children. We’re a
+            family rooted in faith, community, and creativity. Kaylee runs a local dance studio and childcare center,
+            and together we stay busy juggling family life and entrepreneurship. Whether we’re cheering on our kids,
+            building businesses, or serving in our community, we believe in doing everything with purpose — and Redeemed
+            Digital is a reflection of that.
+          </p>
+        </div>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px">
+  </section>
+
+  <!-- Philosophy / Values -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title">My Philosophy: Purpose Over Profit</h2>
+      <div class="service-grid" data-reveal>
+        <div class="card">
+          <div class="head">
+            <span aria-hidden="true" class="badge" style="background:#046a88">
+              <i class="fa-solid fa-bullseye"></i>
+            </span>
+            Your Goals Are My Focus
+          </div>
+          <div class="body" style="color:var(--muted)">I believe that the best digital solutions are built with a clear
+            purpose. My focus is on understanding your business goals so I can create a website that truly works for you
+            and your customers.</div>
+        </div>
+        <div class="card">
+          <div class="head">
+            <span aria-hidden="true" class="badge" style="background:#046a88">
+              <i class="fa-solid fa-handshake"></i>
+            </span>
+            Transparency & Trust
+          </div>
+          <div class="body" style="color:var(--muted)">You'll get an honest, straightforward approach from me. I'm
+            dedicated to clear communication, fair pricing, and building a relationship based on trust.</div>
+        </div>
+        <div class="card">
+          <div class="head">
+            <span aria-hidden="true" class="badge" style="background:#046a88">
+              <i class="fa-solid fa-chart-line"></i>
+            </span>
+            Long-Term Partnership
+          </div>
+          <div class="body" style="color:var(--muted)">I don't just build a website and disappear. I'm here to support
+            you long-term, providing everything from ongoing hosting and maintenance to new feature development as your
+            business evolves.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="title">Get a Quote — Serving NE OK, NW AR, SW MO & SE KS</h2>
+      <p style="color:var(--muted);margin:0 0 10px">We typically reply within 24 hours.</p>
+
+      <div class="service-grid" data-reveal style="grid-template-columns:1fr 1fr;gap:24px">
+
+        <!-- Contact Form -->
+        <form action="https://formspree.io/f/xrbkpyll" class="card" id="contactForm" method="POST" style="padding:18px">
+          <div class="service-grid" style="grid-template-columns:1fr 1fr;gap:18px">
+
+            <!-- Name -->
+            <div>
+              <label class="eyebrow" for="name" style="letter-spacing:.06em">Name</label>
+              <input id="name" name="name" placeholder="Your name" required
+                style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem" />
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="eyebrow" for="email" style="letter-spacing:.06em">Email</label>
+              <input id="email" name="_replyto" placeholder="you@company.com" required type="email"
+                style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem" />
+            </div>
+
+            <!-- Dropdown -->
+            <div style="grid-column:1/-1">
+              <label class="eyebrow" for="service" style="letter-spacing:.06em">What service are you interested
+                in?</label>
+              <select id="service" name="service" required
+                style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem">
+                <option value="">Select a service</option>
+                <option value="Website">Website</option>
+                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                <option value="Social Media Management">Social Media Management</option>
+                <option value="Google Business Profile">Google Business Profile</option>
+                <option value="Software/App Development">Software/App Development</option>
+                <option value="Hosting Plans">Hosting Plans</option>
+                <option value="Zoho">Zoho</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <!-- Referral Source -->
+            <div style="grid-column:1/-1">
+              <label class="eyebrow" for="hear" style="letter-spacing:.06em">How did you hear about us?</label>
+              <select id="hear" name="heard_about_us" required
+                style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem">
+                <option value="">Select an option</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Instagram">Instagram</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="TikTok">TikTok</option>
+                <option value="Google">Google</option>
+                <option value="Personal referral">Personal referral</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <!-- Website -->
+            <div>
+              <label class="eyebrow" for="website" style="letter-spacing:.06em">Current website</label>
+              <input id="website" name="website" placeholder="https://" type="url"
+                style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem" />
+            </div>
+
+            <!-- Budget -->
+            <div>
+              <label class="eyebrow" for="budget" style="letter-spacing:.06em">Estimated budget</label>
+              <input id="budget" name="budget" placeholder="$2,500 - $5,000"
+                style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem" />
+            </div>
+
+            <!-- Message -->
+            <div style="grid-column:1/-1">
+              <label class="eyebrow" for="message" style="letter-spacing:.06em">Project goals</label>
+              <textarea id="message" name="message" placeholder="Tell us what success looks like…" rows="5"
+                style="width:100%;margin-top:6px;border:1px solid var(--border);border-radius:10px;background:#0c1533;color:#fff;padding:.8rem"></textarea>
+            </div>
+
+            <!-- Hidden fields -->
+            <input name="_gotcha" style="display:none" type="text" />
+            <input name="_subject" type="hidden" value="New Contact Form Submission from Redeemed Digital" />
+          </div>
+
+          <!-- Submit Button -->
+          <div style="display:flex;gap:10px;align-items:center;margin-top:14px">
+            <button class="btn" type="submit">
+              <span aria-hidden="true" class="badge"
+                style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+                <i class="fa-solid fa-paper-plane"></i>
+              </span>
+              Send Inquiry
+            </button>
+          </div>
+        </form>
+
+        <!-- Google Map -->
+        <div class="card" style="padding:0;overflow:hidden;border-radius:12px">
+          <iframe title="Redeemed Digital — Four States service area (centered near Grove, OK)"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51936.09153403257!2d-94.807!3d36.593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b6c7f2a0b8d1db%3A0x0000000000000000!2sGrove%2C%20OK!5e0!3m2!1sen!2sus!4v1710000000000"
+            width="100%" height="100%" style="min-height:620px;border:0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid" style="padding:30px 0">
       <div>
-        <div style="font-weight:700">Services</div>
-        <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:6px;color:var(--muted)">
-          <li><a href="./web-design.html">Websites</a></li>
-          <li><a href="./automation.html">AI Automation</a></li>
-          <li><a href="./google.html">Google Business</a></li>
-          <!-- Updated link to avoid /index.html anchor -->
-          <li><a href="/#services">SEO</a></li>
-        </ul>
+        <div class="logo-wrap">
+          <img class="logo-img" src="Images/RD logo 2.png" alt="Redeemed Digital wordmark"
+            style="max-width:150px;height:auto" loading="lazy" />
+          <strong>Redeemed Digital</strong>
+        </div>
+        <p style="color:var(--muted);margin:.6rem 0 0;max-width:520px">Empowering businesses with digital tools—built
+          with purpose, designed for growth.</p>
+        <div class="socials">
+          <a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61577762971978" target="_blank"
+            rel="noopener">
+            <span aria-hidden="true" class="badge"
+              style="background:#046a88;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#ffffff;">
+              <i class="fa-brands fa-facebook-f"></i>
+            </span>
+          </a>
+          <a aria-label="LinkedIn" href="https://www.linkedin.com/company/redeemed-digital" target="_blank"
+            rel="noopener">
+            <span aria-hidden="true" class="badge"
+              style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </span>
+          </a>
+          <a aria-label="Instagram" href="https://www.instagram.com/redeemed.digital/" target="_blank" rel="noopener">
+            <span aria-hidden="true" class="badge"
+              style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+              <i class="fa-brands fa-instagram"></i>
+            </span>
+          </a>
+          <a aria-label="TikTok" href="https://www.tiktok.com/@redeemed.digital?_t=ZP-908Hy1eQPB0&_r=1" target="_blank"
+            rel="noopener">
+            <span aria-hidden="true" class="badge"
+              style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+              <i class="fa-brands fa-tiktok"></i>
+            </span>
+          </a>
+          <a aria-label="Google Business Profile" href="https://share.google/W0t1I9XadK97m89S0" target="_blank"
+            rel="noopener">
+            <span aria-hidden="true" class="badge"
+              style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+              <i class="fa-brands fa-google"></i>
+            </span>
+          </a>
+        </div>
       </div>
-      <div>
-        <div style="font-weight:700">Zoho</div>
-        <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:6px;color:var(--muted)">
-          <li><a href="https://go.zoho.com/fOg">CRM</a></li>
-          <li><a href="https://go.zoho.com/Cl1">Books</a></li>
-          <li><a href="https://go.zoho.com/Fu3">One</a></li>
-          <li><a href="https://go.zoho.com/qFy">More...</a></li>
-        </ul>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px">
+        <div>
+          <div style="font-weight:700">Services</div>
+          <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:6px;color:var(--muted)">
+            <li><a href="./web-design.html">Websites</a></li>
+            <li><a href="./automation.html">AI Automation</a></li>
+            <li><a href="./google.html">Google Business</a></li>
+            <!-- Updated link to avoid /index.html anchor -->
+            <li><a href="/#services">SEO</a></li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-weight:700">Zoho</div>
+          <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:6px;color:var(--muted)">
+            <li><a href="https://go.zoho.com/fOg">CRM</a></li>
+            <li><a href="https://go.zoho.com/Cl1">Books</a></li>
+            <li><a href="https://go.zoho.com/Fu3">One</a></li>
+            <li><a href="https://go.zoho.com/qFy">More...</a></li>
+          </ul>
+        </div>
       </div>
+      <a href="https://go.zoho.com/qFy" target="_blank" rel="noopener noreferrer" title="Zoho Affiliate">
+        <img src="Images/New Zoho Affiliate Badge-Rectangle.svg" alt="Zoho Affiliate Logo"
+          style="width:150px;margin-top:20px" loading="lazy" />
+      </a>
     </div>
-    <a href="https://go.zoho.com/qFy" target="_blank" rel="noopener noreferrer" title="Zoho Affiliate">
-      <img src="images/New Zoho Affiliate Badge-Rectangle.svg" alt="Zoho Affiliate Logo" style="width:150px;margin-top:20px" loading="lazy" />
-    </a>
-  </div>
-  <div class="container" style="padding:0 0 26px;color:var(--muted);font-size:.92rem">© <span id="year"></span> Redeemed Digital. All rights reserved.</div>
-</footer>
+    <div class="container" style="padding:0 0 26px;color:var(--muted);font-size:.92rem">© <span id="year"></span>
+      Redeemed Digital. All rights reserved.</div>
+  </footer>
 
-<!-- Scripts -->
-<script>
-  // Year
-  const yEl = document.getElementById('year'); if (yEl) yEl.textContent = new Date().getFullYear();
+  <!-- Scripts -->
+  <script>
+    // Year
+    const yEl = document.getElementById('year'); if (yEl) yEl.textContent = new Date().getFullYear();
 
-  // Reveal on scroll
-  const nodes = Array.from(document.querySelectorAll('[data-reveal]'));
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('shown'); io.unobserve(e.target); } });
-  },{threshold:0.14});
-  nodes.forEach(n=>io.observe(n));
+    // Reveal on scroll
+    const nodes = Array.from(document.querySelectorAll('[data-reveal]'));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('shown'); io.unobserve(e.target); } });
+    }, { threshold: 0.14 });
+    nodes.forEach(n => io.observe(n));
 
-  // Desktop Services dropdown toggle
-  const dd = document.getElementById('servicesDropdown');
-  if (dd){
-    const toggle = dd.querySelector('.dropdown-toggle');
-    const close = () => { dd.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); };
-    toggle.addEventListener('click', (e)=>{ e.preventDefault(); dd.classList.toggle('open'); toggle.setAttribute('aria-expanded', dd.classList.contains('open') ? 'true':'false'); });
-    dd.addEventListener('mouseleave', close);
-    document.addEventListener('click',(e)=>{ if(!dd.contains(e.target)) close(); });
-  }
+    // Desktop Services dropdown toggle
+    const dd = document.getElementById('servicesDropdown');
+    if (dd) {
+      const toggle = dd.querySelector('.dropdown-toggle');
+      const close = () => { dd.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); };
+      toggle.addEventListener('click', (e) => { e.preventDefault(); dd.classList.toggle('open'); toggle.setAttribute('aria-expanded', dd.classList.contains('open') ? 'true' : 'false'); });
+      dd.addEventListener('mouseleave', close);
+      document.addEventListener('click', (e) => { if (!dd.contains(e.target)) close(); });
+    }
 
-  // Mobile menu toggle
-  const burger = document.querySelector('.menu-toggle');
-  const drawer = document.querySelector('.nav-menu');
-  if (burger && drawer){
-    burger.addEventListener('click', ()=>{
-      const open = drawer.classList.toggle('open');
-      burger.setAttribute('aria-expanded', open ? 'true':'false');
-      document.body.style.overflow = open ? 'hidden' : '';
-    });
-    drawer.querySelectorAll('a').forEach(a=>{
-      a.addEventListener('click', ()=>{
-        drawer.classList.remove('open');
-        burger.setAttribute('aria-expanded','false');
-        document.body.style.overflow = '';
+    // Mobile menu toggle
+    const burger = document.querySelector('.menu-toggle');
+    const drawer = document.querySelector('.nav-menu');
+    if (burger && drawer) {
+      burger.addEventListener('click', () => {
+        const open = drawer.classList.toggle('open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.style.overflow = open ? 'hidden' : '';
       });
-    });
-  }
-</script>
-<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script>
-<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq018e18ad8915609debcc99abcbdf321daf8e51f93e656d5cd6dff74e3c8cee82" defer></script>
-<!-- 100% privacy-first analytics -->
-<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<!--Simple Analytics Automated Events Script-->
-<script
- async
- data-collect="outbound,emails"
- src="https://scripts.simpleanalyticscdn.com/auto-events.js"
- ></script>
+      drawer.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          drawer.classList.remove('open');
+          burger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+  </script>
+  <script>window.$zoho = window.$zoho || {}; $zoho.salesiq = $zoho.salesiq || { ready: function () { } }</script>
+  <script id="zsiqscript"
+    src="https://salesiq.zohopublic.com/widget?wc=siq018e18ad8915609debcc99abcbdf321daf8e51f93e656d5cd6dff74e3c8cee82"
+    defer></script>
+  <!-- 100% privacy-first analytics -->
+  <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <!--Simple Analytics Automated Events Script-->
+  <script async data-collect="outbound,emails" src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
 </body>
+
 </html>
