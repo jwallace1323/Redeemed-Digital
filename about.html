@@ -150,6 +150,31 @@
         </a>
       </nav>
 
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Mobile Nav Drawer -->
+      <div class="nav-menu">
+        <button class="menu-close-btn" aria-label="Close navigation"
+          style="background:none;border:none;color:white;font-size:1.5rem;align-self:flex-end;cursor:pointer;margin-bottom:10px;">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="/">Home</a>
+        <div class="nav-group-title">Services</div>
+        <a href="./web-design.html">Websites</a>
+        <a href="./automation.html">AI Automation</a>
+        <a href="./google.html">Google Business</a>
+        <a href="./social.html">Social Media</a>
+        <a href="./software.html">Custom Software</a>
+        <a href="./hosting.html">Hosting</a>
+        <a href="./zoho.html">Zoho</a>
+        <a href="./portfolio.html">Portfolio</a>
+        <a href="./about.html">About</a>
+        <a href="./login.html">Login</a>
+        <a href="#contact" class="nav-cta">Start your project</a>
+      </div>
 
     </div>
 
@@ -484,18 +509,23 @@
     // Mobile menu toggle
     const burger = document.querySelector('.menu-toggle');
     const drawer = document.querySelector('.nav-menu');
+    const closeBtn = document.querySelector('.menu-close-btn');
+
     if (burger && drawer) {
-      burger.addEventListener('click', () => {
-        const open = drawer.classList.toggle('open');
+      const toggleMenu = (open) => {
+        drawer.classList.toggle('open', open);
         burger.setAttribute('aria-expanded', open ? 'true' : 'false');
         document.body.style.overflow = open ? 'hidden' : '';
-      });
+      };
+
+      burger.addEventListener('click', () => toggleMenu(!drawer.classList.contains('open')));
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => toggleMenu(false));
+      }
+
       drawer.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          drawer.classList.remove('open');
-          burger.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
-        });
+        a.addEventListener('click', () => toggleMenu(false));
       });
     }
   </script>
