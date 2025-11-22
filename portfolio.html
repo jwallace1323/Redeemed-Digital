@@ -1,86 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZTWTM0S01"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-NZTWTM0S01');
   </script>
 
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- SEO: Region-focused title + description -->
   <title>Four States Web Design Portfolio (NE OK • NW AR • SW MO • SE KS) | Redeemed Digital</title>
-  <meta name="description" content="See live websites we designed for businesses across the Four States—Northeast Oklahoma, Northwest Arkansas, Southwest Missouri, and Southeast Kansas. View projects in real estate, home services, and local brands."/>
-  <link rel="canonical" href="https://redeemeddigital.com/portfolio.html"/>
+  <meta name="description"
+    content="See live websites we designed for businesses across the Four States—Northeast Oklahoma, Northwest Arkansas, Southwest Missouri, and Southeast Kansas. View projects in real estate, home services, and local brands." />
+  <link rel="canonical" href="https://redeemeddigital.com/portfolio.html" />
 
   <!-- Icons -->
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Social cards -->
-  <meta property="og:title" content="Four States Web Design Portfolio | Redeemed Digital"/>
-  <meta property="og:description" content="Real projects for businesses across NE OK, NW AR, SW MO, and SE KS."/>
-  <meta property="og:image" content="https://redeemeddigital.com/og-image.jpg"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://redeemeddigital.com/portfolio.html"/>
-  <meta name="twitter:card" content="summary_large_image"/>
+  <meta property="og:title" content="Four States Web Design Portfolio | Redeemed Digital" />
+  <meta property="og:description" content="Real projects for businesses across NE OK, NW AR, SW MO, and SE KS." />
+  <meta property="og:image" content="https://redeemeddigital.com/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://redeemeddigital.com/portfolio.html" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <meta name="theme-color" content="#002362"/>
+  <meta name="theme-color" content="#002362" />
   <link rel="stylesheet" href="./styles.css?v=1">
 
   <!-- Font Awesome (icons for nav/CTA carets/rockets) -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'"/>
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style"
+    crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </noscript>
 
   <!-- header-only overrides to mirror index.html -->
-  <style>
-    /* Desktop nav */
-    header .container.nav { align-items: center; }
-    .main-nav { display:flex; gap:18px; align-items:center; }
-    .nav-link { color:#fff; text-decoration:none; padding:8px 10px; }
-    .nav-cta { background:#22c55e; color:#001633; font-weight:800; padding:10px 16px; border-radius:999px; display:inline-flex; align-items:center; gap:8px; text-decoration:none; }
-    .nav-cta:hover { filter:brightness(1.05); }
 
-    /* Dropdown */
-    .dropdown { position:relative; }
-    .dropdown-toggle { cursor:pointer; display:inline-flex; align-items:center; gap:8px; }
-    .dropdown-menu {
-      position:absolute; top:100%; left:0; min-width:240px;
-      background:#0c1533; border:1px solid var(--border); border-radius:12px;
-      padding:8px; display:none; z-index:1000;
-    }
-    .dropdown-menu a { display:block; color:#fff; padding:10px 12px; border-radius:10px; text-decoration:none; }
-    .dropdown-menu a:hover { background:rgba(255,255,255,.06); }
-    .dropdown.open .dropdown-menu { display:block; }
-
-    /* Mobile drawer hidden by default (desktop) */
-    .nav-menu{display:none}
-    .menu-toggle{display:none}
-    @media (max-width:768px){
-      /* On mobile: show burger, hide desktop nav, enable drawer */
-      .menu-toggle{display:block;margin-left:auto;font-size:1.6rem;background:none;border:0;cursor:pointer;color:#fff}
-      header .container.nav > nav{display:none}
-      .nav-menu{display:flex;flex-direction:column;position:fixed;top:0;right:-100%;width:82%;max-width:360px;height:100dvh;background:#001633;border-left:1px solid var(--border);padding:80px 18px 18px;gap:10px;transition:right .26s ease;z-index:999}
-      .nav-menu.open{right:0}
-      .nav-menu a{padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.06);color:#fff;text-decoration:none}
-      .nav-group-title{font-weight:800; letter-spacing:.04em; padding:10px 0 4px; color:#9fb0ff;}
-      .nav-cta{justify-content:center}
-    }
-
-    /* Page-local bits */
-    .filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 24px}
-    .filter-btn{cursor:pointer}
-    .filter-btn.active{background:var(--brand);color:#002b3a;border-color:rgba(9,194,236,.6)}
-    .card[hidden]{display:none !important}
-    .category-links{margin:8px 0 18px;font-size:.98rem;color:var(--muted)}
-    .category-links a{color:inherit;text-decoration:underline dotted}
-    html{scroll-behavior:smooth}
-  </style>
 
   <!-- Portfolio ItemList schema (unchanged) -->
   <script type="application/ld+json">
@@ -129,7 +93,7 @@
   }
   </script>
   <script>
-    (function(){
+    (function () {
       var supportsPreload = false;
       try {
         var link = document.createElement('link');
@@ -152,336 +116,332 @@
       }
     })();
   </script>
-  <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"7799dc09417c4b1f35afdc2a64eb32af"})});</script>
+  <script>function loadScript(a) { var b = document.getElementsByTagName("head")[0], c = document.createElement("script"); c.type = "text/javascript", c.src = "https://tracker.metricool.com/resources/be.js", c.onreadystatechange = a, c.onload = a, b.appendChild(c) } loadScript(function () { beTracker.t({ hash: "7799dc09417c4b1f35afdc2a64eb32af" }) });</script>
 
 </head>
+
 <body>
 
-<!-- Header -->
-<header>
-  <div class="container nav">
-    <a href="/" class="brand-cta" aria-label="Redeemed Digital Home">
-      <span class="brand-cta__icon">
-        <img src="Images/Rd logo 1.png" alt="Redeemed Digital logo — Four States web design & AI automation" loading="lazy"/>
-      </span>
-      Redeemed Digital
-    </a>
-
-    <!-- New desktop nav -->
-    <nav class="main-nav" aria-label="Primary">
-      <a class="nav-link" href="/">Home</a>
-
-      <div class="dropdown" id="servicesDropdown">
-        <a class="nav-link dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false">
-          Services <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
-        </a>
-        <div class="dropdown-menu" role="menu" aria-label="Services submenu">
-          <a href="./web-design.html" role="menuitem">Websites</a>
-          <a href="./automation.html" role="menuitem">AI</a>
-          <a href="./google.html" role="menuitem">Google Business profiles</a>
-          <a href="./social.html" role="menuitem">Social Media</a>
-          <a href="./software.html" role="menuitem">Custom software</a>
-          <a href="./hosting.html" role="menuitem">Hosting plans</a>
-          <a href="./zoho.html" role="menuitem">Zoho</a>
-        </div>
-      </div>
-
-      <a class="nav-link" href="./portfolio.html" aria-current="page">Portfolio</a>
-      <a class="nav-link" href="./about.html">About</a>
-      <a class="nav-link" href="./login.html">Login</a>
-      <a class="nav-cta" href="/#contact">
-        <i class="fa-solid fa-rocket"></i> Start your project
-      </a>
-    </nav>
-
-    <!-- Burger -->
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-  </div>
-
-  <!-- Mobile drawer -->
-  <nav class="nav-menu" aria-label="Mobile">
-    <a href="/">Home</a>
-
-    <div class="nav-group-title">Services</div>
-    <a href="./web-design.html">Websites</a>
-    <a href="./automation.html">AI</a>
-    <a href="./google.html">Google Business profiles</a>
-    <a href="./social.html">Social Media</a>
-    <a href="./software.html">Custom software</a>
-    <a href="./hosting.html">Hosting plans</a>
-    <a href="./zoho.html">Zoho</a>
-
-    <a href="./portfolio.html" aria-current="page">Portfolio</a>
-    <a href="./about.html">About</a>
-    <a href="./login.html">Login</a>
-    <a class="nav-cta" href="/#contact"><i class="fa-solid fa-rocket"></i> Start your project</a>
-  </nav>
-</header>
-
-<!-- Hero / Page header -->
-<section class="hero">
-  <div class="container hero-wrap">
-    <div data-reveal>
-      <div class="eyebrow">
-        <span aria-hidden="true" class="badge" style="background:#046a88">
-          <svg aria-label="grid" class="duo" role="img" viewBox="0 0 24 24">
-            <path class="a" d="M3 3h8v8H3zM13 3h8v8h-8zM3 13h8v8H3zM13 13h8v8h-8z"></path>
-          </svg>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a href="/" class="brand-cta" aria-label="Redeemed Digital Home">
+        <span class="brand-cta__icon">
+          <img src="Images/Rd logo 1.png" alt="Redeemed Digital logo — Four States web design & AI automation"
+            loading="lazy" />
         </span>
-        Our Work
-      </div>
-      <!-- SEO: regionalized H1 and lead -->
-      <h1>Four States Web Design Portfolio: Live Client Websites</h1>
-      <p class="lead">Explore websites we’ve launched for businesses across <strong>Northeast Oklahoma, Northwest Arkansas, Southwest Missouri, and Southeast Kansas</strong>. Browse by category or view everything—click any project to visit the live site.</p>
+        Redeemed Digital
+      </a>
+
+      <!-- New desktop nav -->
+      <nav class="main-nav" aria-label="Primary">
+        <a class="nav-link" href="/">Home</a>
+
+        <div class="dropdown" id="servicesDropdown">
+          <a class="nav-link dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false">
+            Services <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu" role="menu" aria-label="Services submenu">
+            <a href="./web-design.html" role="menuitem">Websites</a>
+            <a href="./automation.html" role="menuitem">AI</a>
+            <a href="./google.html" role="menuitem">Google Business profiles</a>
+            <a href="./social.html" role="menuitem">Social Media</a>
+            <a href="./software.html" role="menuitem">Custom software</a>
+            <a href="./hosting.html" role="menuitem">Hosting plans</a>
+            <a href="./zoho.html" role="menuitem">Zoho</a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="./portfolio.html" aria-current="page">Portfolio</a>
+        <a class="nav-link" href="./about.html">About</a>
+        <a class="nav-link" href="./login.html">Login</a>
+        <a class="nav-cta" href="/#contact">
+          <i class="fa-solid fa-rocket"></i> Start your project
+        </a>
+      </nav>
+
+
     </div>
-  </div>
-</section>
 
-<!-- Filters -->
-<section class="section" id="portfolio">
-  <div class="container">
-    <!-- Crawlable category links for SEO-friendly landings -->
-    <nav class="category-links" aria-label="Portfolio categories">
-      <a href="/portfolio.html?cat=real-estate">Real Estate Websites</a> ·
-      <a href="/portfolio.html?cat=home-services">Home Services Websites</a> ·
-      <a href="/portfolio.html?cat=local">Local Business Websites</a>
-    </nav>
 
-    <!-- SEO: regionalized H2 -->
-    <h2 class="title" style="margin-bottom:.25rem">Featured Four States Projects (Real Estate, Home Services & Local)</h2>
+  </header>
 
-    <div class="filter-bar" role="tablist" aria-label="Portfolio filters">
-      <button class="btn outline filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
-      <button class="btn outline filter-btn" data-filter="real-estate" role="tab" aria-selected="false">Real Estate</button>
-      <button class="btn outline filter-btn" data-filter="home-services" role="tab" aria-selected="false">Home Services</button>
-      <button class="btn outline filter-btn" data-filter="local" role="tab" aria-selected="false">Local</button>
-    </div>
-
-    <!-- Grid -->
-    <div class="work-grid" data-reveal id="portfolioGrid">
-      <!-- Item 1: Creations Childcare -->
-      <a class="card portfolio-link"
-         href="https://creationschildcare.net"
-         target="_blank" rel="noopener"
-         data-cats="local">
-        <div class="work-thumb">
-          <img src="Images/creations .png"
-               alt="Creations Childcare website — responsive web design for a local childcare in the Four States"
-               loading="lazy">
-        </div>
-        <div class="body">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <h3 style="margin:0;display:flex;gap:.6rem;align-items:center">Creations Childcare</h3>
-          </div>
-          <p style="color:var(--muted);margin:.4rem 0 0">Responsive site with contact forms and mobile optimization.</p>
-        </div>
-      </a>
-
-      <!-- Item 2: Realtor -->
-      <a class="card portfolio-link"
-         href="https://realtorgrandlake.com"
-         target="_blank" rel="noopener"
-         data-cats="real-estate local">
-        <div class="work-thumb">
-          <img src="Images/Garrett.png"
-               alt="Legacy Real Estate IDX website — MLS-powered real estate site for the Grand Lake area"
-               loading="lazy">
-        </div>
-        <div class="body">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <h3 style="margin:0;display:flex;gap:.6rem;align-items:center">Garrett Schaede – Legacy Real Estate</h3>
-          </div>
-          <p style="color:var(--muted);margin:.4rem 0 0">Modern realtor site with IDX integration for live MLS listings and seamless property searches.</p>
-        </div>
-      </a>
-
-      <!-- Item 3: Brush Creek Pest Control -->
-      <a class="card portfolio-link"
-         href="https://brushcreekpestcontrol.com"
-         target="_blank" rel="noopener"
-         data-cats="home-services local">
-        <div class="work-thumb">
-          <img src="Images/brushcreek.png"
-               alt="Brush Creek Pest Control — one-page home services website for a Four States business"
-               loading="lazy">
-        </div>
-        <div class="body">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <h3 style="margin:0;display:flex;gap:.6rem;align-items:center">Brush Creek Pest Control</h3>
-          </div>
-          <p style="color:var(--muted);margin:.4rem 0 0">Simple, effective one-pager emphasizing services and quick contact.</p>
-        </div>
-      </a>
-
-      <!-- Item 4: Grand Lake Roofing -->
-      <a class="card portfolio-link"
-         href="https://grandlakeroofing.net"
-         target="_blank" rel="noopener"
-         data-cats="home-services local">
-        <div class="work-thumb">
-          <img src="Images/Grand lake roofing .png"
-               alt="Grand Lake Roofing — local roofing website designed for the Grand Lake area"
-               loading="lazy">
-        </div>
-        <div class="body">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <h3 style="margin:0;display:flex;gap:.6rem;align-items:center">Grand Lake Roofing</h3>
-          </div>
-          <p style="color:var(--muted);margin:.4rem 0 0">A clean, trustworthy roofing site built for Grand Lake Roofing, featuring clear service breakdowns, easy quote requests, and a mobile-friendly design to connect with local homeowners and businesses.</p>
-        </div>
-      </a>
-            <!-- Item 5: Chaney Insurance -->
-      <a class="card portfolio-link"
-         href="https://www.chaney-insurance.com"
-         target="_blank" rel="noopener"
-         data-cats="home-services local">
-        <div class="work-thumb">
-          <img src="Images/chaney insurance.png"
-               alt="Chaney Insurance — one-page home services website for a Four States business"
-               loading="lazy">
-        </div>
-        <div class="body">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <h3 style="margin:0;display:flex;gap:.6rem;align-items:center">Chaney Insurance</h3>
-          </div>
-          <p style="color:var(--muted);margin:.4rem 0 0">A simple, high-impact landing page showcasing services and making it effortless for visitors to contact you.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <div class="container footer-grid" style="padding:30px 0">
-    <div>
-      <div class="logo-wrap">
-        <img alt="Redeemed Digital wordmark — Four States web design agency" class="logo-img" src="Images/RD logo 2.png" style="max-width:150px;height:auto" loading="lazy"/>
-        <strong>Redeemed Digital</strong>
-      </div>
-      <p style="color:var(--muted);margin:.6rem 0 0;max-width:520px">Empowering businesses with digital tools—built with purpose, designed for growth.</p>
-      <div class="socials">
-        <a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61577762971978" target="_blank" rel="noopener">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#ffffff;">
-            <i class="fa-brands fa-facebook-f"></i>
+  <!-- Hero / Page header -->
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div data-reveal>
+        <div class="eyebrow">
+          <span aria-hidden="true" class="badge" style="background:#046a88">
+            <svg aria-label="grid" class="duo" role="img" viewBox="0 0 24 24">
+              <path class="a" d="M3 3h8v8H3zM13 3h8v8h-8zM3 13h8v8H3zM13 13h8v8h-8z"></path>
+            </svg>
           </span>
-        </a>
-        <a aria-label="LinkedIn" href="https://www.linkedin.com/company/redeemed-digital" target="_blank" rel="noopener">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </span>
-        </a>
-        <a aria-label="Instagram" href="https://www.instagram.com/redeemed.digital/" target="_blank" rel="noopener">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
-            <i class="fa-brands fa-instagram"></i>
-          </span>
-        </a>
-        <a aria-label="TikTok" href="https://www.tiktok.com/@redeemed.digital?_t=ZP-908Hy1eQPB0&_r=1" target="_blank" rel="noopener">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
-            <i class="fa-brands fa-tiktok"></i>
-          </span>
-        </a>
-        <a aria-label="Google Business Profile" href="https://share.google/W0t1I9XadK97m89S0" target="_blank" rel="noopener">
-          <span aria-hidden="true" class="badge" style="background:#046a88;display:flex;align-items:center;justify-content:center;">
-            <i class="fa-brands fa-google"></i>
-          </span>
-        </a>
+          Our Work
+        </div>
+        <!-- SEO: regionalized H1 and lead -->
+        <h1>Four States Web Design Portfolio: Live Client Websites</h1>
+        <p class="lead">Explore websites we’ve launched for businesses across <strong>Northeast Oklahoma, Northwest
+            Arkansas, Southwest Missouri, and Southeast Kansas</strong>. Browse by category or view everything—click any
+          project to visit the live site.</p>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px">
+  </section>
+
+  <!-- Filters -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <!-- Crawlable category links for SEO-friendly landings -->
+      <nav class="category-links" aria-label="Portfolio categories">
+        <a href="/portfolio.html?cat=real-estate">Real Estate Websites</a> ·
+        <a href="/portfolio.html?cat=home-services">Home Services Websites</a> ·
+        <a href="/portfolio.html?cat=local">Local Business Websites</a>
+      </nav>
+
+      <!-- SEO: regionalized H2 -->
+      <h2 class="title" style="margin-bottom:.25rem">Featured Four States Projects (Real Estate, Home Services & Local)
+      </h2>
+
+      <div class="filter-bar" role="tablist" aria-label="Portfolio filters">
+        <button class="btn outline filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="btn outline filter-btn" data-filter="real-estate" role="tab" aria-selected="false">Real
+          Estate</button>
+        <button class="btn outline filter-btn" data-filter="home-services" role="tab" aria-selected="false">Home
+          Services</button>
+        <button class="btn outline filter-btn" data-filter="local" role="tab" aria-selected="false">Local</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="work-grid" data-reveal id="portfolioGrid">
+        <!-- Item 1: Creations Childcare -->
+        <a class="card portfolio-link" href="https://creationschildcare.net" target="_blank" rel="noopener"
+          data-cats="local">
+          <div class="work-thumb">
+            <img src="Images/creations .png"
+              alt="Creations Childcare website — responsive web design for a local childcare in the Four States"
+              loading="lazy">
+          </div>
+          <div class="body">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <h3 style="margin:0;display:flex;gap:.6rem;align-items:center">Creations Childcare</h3>
+            </div>
+            <p style="color:var(--muted);margin:.4rem 0 0">Responsive site with contact forms and mobile optimization.
+            </p>
+          </div>
+        </a>
+
+        <!-- Item 2: Realtor -->
+        <a class="card portfolio-link" href="https://realtorgrandlake.com" target="_blank" rel="noopener"
+          data-cats="real-estate local">
+          <div class="work-thumb">
+            <img src="Images/Garrett.png"
+              alt="Legacy Real Estate IDX website — MLS-powered real estate site for the Grand Lake area"
+              loading="lazy">
+          </div>
+          <div class="body">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <h3 style="margin:0;display:flex;gap:.6rem;align-items:center">Garrett Schaede – Legacy Real Estate</h3>
+            </div>
+            <p style="color:var(--muted);margin:.4rem 0 0">Modern realtor site with IDX integration for live MLS
+              listings and seamless property searches.</p>
+          </div>
+        </a>
+
+        <!-- Item 3: Brush Creek Pest Control -->
+        <a class="card portfolio-link" href="https://brushcreekpestcontrol.com" target="_blank" rel="noopener"
+          data-cats="home-services local">
+          <div class="work-thumb">
+            <img src="Images/brushcreek.png"
+              alt="Brush Creek Pest Control — one-page home services website for a Four States business" loading="lazy">
+          </div>
+          <div class="body">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <h3 style="margin:0;display:flex;gap:.6rem;align-items:center">Brush Creek Pest Control</h3>
+            </div>
+            <p style="color:var(--muted);margin:.4rem 0 0">Simple, effective one-pager emphasizing services and quick
+              contact.</p>
+          </div>
+        </a>
+
+        <!-- Item 4: Grand Lake Roofing -->
+        <a class="card portfolio-link" href="https://grandlakeroofing.net" target="_blank" rel="noopener"
+          data-cats="home-services local">
+          <div class="work-thumb">
+            <img src="Images/Grand lake roofing .png"
+              alt="Grand Lake Roofing — local roofing website designed for the Grand Lake area" loading="lazy">
+          </div>
+          <div class="body">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <h3 style="margin:0;display:flex;gap:.6rem;align-items:center">Grand Lake Roofing</h3>
+            </div>
+            <p style="color:var(--muted);margin:.4rem 0 0">A clean, trustworthy roofing site built for Grand Lake
+              Roofing, featuring clear service breakdowns, easy quote requests, and a mobile-friendly design to connect
+              with local homeowners and businesses.</p>
+          </div>
+        </a>
+        <!-- Item 5: Chaney Insurance -->
+        <a class="card portfolio-link" href="https://www.chaney-insurance.com" target="_blank" rel="noopener"
+          data-cats="home-services local">
+          <div class="work-thumb">
+            <img src="Images/chaney insurance.png"
+              alt="Chaney Insurance — one-page home services website for a Four States business" loading="lazy">
+          </div>
+          <div class="body">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <h3 style="margin:0;display:flex;gap:.6rem;align-items:center">Chaney Insurance</h3>
+            </div>
+            <p style="color:var(--muted);margin:.4rem 0 0">A simple, high-impact landing page showcasing services and
+              making it effortless for visitors to contact you.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid" style="padding:30px 0">
       <div>
-        <div style="font-weight:700">Services</div>
-        <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:6px;color:var(--muted)">
-          <li><a href="./web-design.html">Websites</a></li>
-          <li><a href="./automation.html">AI Automation</a></li>
-          <li><a href="./google.html">Google Business</a></li>
-          <li><a href="/#services">SEO</a></li>
-        </ul>
+        <div class="logo-wrap">
+          <img alt="Redeemed Digital wordmark — Four States web design agency" class="logo-img"
+            src="Images/RD logo 2.png" style="max-width:150px;height:auto" loading="lazy" />
+          <strong>Redeemed Digital</strong>
+        </div>
+        <p style="color:var(--muted);margin:.6rem 0 0;max-width:520px">Empowering businesses with digital tools—built
+          with purpose, designed for growth.</p>
+        <div class="socials">
+          <a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61577762971978" target="_blank"
+            rel="noopener">
+            <span aria-hidden="true" class="badge"
+              style="background:#046a88;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#ffffff;">
+              <i class="fa-brands fa-facebook-f"></i>
+            </span>
+          </a>
+          <a aria-label="LinkedIn" href="https://www.linkedin.com/company/redeemed-digital" target="_blank"
+            rel="noopener">
+            <span aria-hidden="true" class="badge"
+              style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </span>
+          </a>
+          <a aria-label="Instagram" href="https://www.instagram.com/redeemed.digital/" target="_blank" rel="noopener">
+            <span aria-hidden="true" class="badge"
+              style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+              <i class="fa-brands fa-instagram"></i>
+            </span>
+          </a>
+          <a aria-label="TikTok" href="https://www.tiktok.com/@redeemed.digital?_t=ZP-908Hy1eQPB0&_r=1" target="_blank"
+            rel="noopener">
+            <span aria-hidden="true" class="badge"
+              style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+              <i class="fa-brands fa-tiktok"></i>
+            </span>
+          </a>
+          <a aria-label="Google Business Profile" href="https://share.google/W0t1I9XadK97m89S0" target="_blank"
+            rel="noopener">
+            <span aria-hidden="true" class="badge"
+              style="background:#046a88;display:flex;align-items:center;justify-content:center;">
+              <i class="fa-brands fa-google"></i>
+            </span>
+          </a>
+        </div>
       </div>
-      <div>
-        <div style="font-weight:700">Zoho</div>
-        <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:6px;color:var(--muted)">
-          <li><a href="https://go.zoho.com/fOg">CRM</a></li>
-          <li><a href="https://go.zoho.com/Cl1">Books</a></li>
-          <li><a href="https://go.zoho.com/Fu3">One</a></li>
-          <li><a href="https://go.zoho.com/qFy">More...</a></li>
-        </ul>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px">
+        <div>
+          <div style="font-weight:700">Services</div>
+          <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:6px;color:var(--muted)">
+            <li><a href="./web-design.html">Websites</a></li>
+            <li><a href="./automation.html">AI Automation</a></li>
+            <li><a href="./google.html">Google Business</a></li>
+            <li><a href="/#services">SEO</a></li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-weight:700">Zoho</div>
+          <ul style="list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:6px;color:var(--muted)">
+            <li><a href="https://go.zoho.com/fOg">CRM</a></li>
+            <li><a href="https://go.zoho.com/Cl1">Books</a></li>
+            <li><a href="https://go.zoho.com/Fu3">One</a></li>
+            <li><a href="https://go.zoho.com/qFy">More...</a></li>
+          </ul>
+        </div>
       </div>
+      <a href="https://go.zoho.com/qFy" target="_blank" rel="noopener noreferrer" title="Zoho Affiliate">
+        <img src="Images/New Zoho Affiliate Badge-Rectangle.svg" alt="Zoho Affiliate Logo"
+          style="width:150px;margin-top:20px" loading="lazy">
+      </a>
     </div>
-    <a href="https://go.zoho.com/qFy" target="_blank" rel="noopener noreferrer" title="Zoho Affiliate">
-      <img src="Images/New Zoho Affiliate Badge-Rectangle.svg" alt="Zoho Affiliate Logo" style="width:150px;margin-top:20px" loading="lazy">
-    </a>
-  </div>
-  <div class="container" style="padding:0 0 26px;color:var(--muted);font-size:.92rem">© <span id="year"></span> Redeemed Digital. All rights reserved.</div>
-</footer>
+    <div class="container" style="padding:0 0 26px;color:var(--muted);font-size:.92rem">© <span id="year"></span>
+      Redeemed Digital. All rights reserved.</div>
+  </footer>
 
-<!-- Scripts -->
-<script>
-  // Year
-  document.getElementById('year').textContent = new Date().getFullYear();
+  <!-- Scripts -->
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Reveal on scroll
-  const nodes = Array.from(document.querySelectorAll('[data-reveal]'));
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('shown'); io.unobserve(e.target); } });
-  },{threshold:0.14});
-  nodes.forEach(n=>io.observe(n));
+    // Reveal on scroll
+    const nodes = Array.from(document.querySelectorAll('[data-reveal]'));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('shown'); io.unobserve(e.target); } });
+    }, { threshold: 0.14 });
+    nodes.forEach(n => io.observe(n));
 
-  // Desktop Services dropdown toggle
-  const dd = document.getElementById('servicesDropdown');
-  if (dd){
-    const toggle = dd.querySelector('.dropdown-toggle');
-    const close = () => { dd.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); };
-    toggle.addEventListener('click', (e)=>{ e.preventDefault(); dd.classList.toggle('open'); toggle.setAttribute('aria-expanded', dd.classList.contains('open') ? 'true':'false'); });
-    dd.addEventListener('mouseleave', close);
-    document.addEventListener('click',(e)=>{ if(!dd.contains(e.target)) close(); });
-  }
+    // Desktop Services dropdown toggle
+    const dd = document.getElementById('servicesDropdown');
+    if (dd) {
+      const toggle = dd.querySelector('.dropdown-toggle');
+      const close = () => { dd.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); };
+      toggle.addEventListener('click', (e) => { e.preventDefault(); dd.classList.toggle('open'); toggle.setAttribute('aria-expanded', dd.classList.contains('open') ? 'true' : 'false'); });
+      dd.addEventListener('mouseleave', close);
+      document.addEventListener('click', (e) => { if (!dd.contains(e.target)) close(); });
+    }
 
-  // Mobile menu toggle
-  const burger = document.querySelector('.menu-toggle');
-  const drawer = document.querySelector('.nav-menu');
-  if (burger && drawer){
-    burger.addEventListener('click', ()=>{
-      const open = drawer.classList.toggle('open');
-      burger.setAttribute('aria-expanded', open ? 'true':'false');
-      document.body.style.overflow = open ? 'hidden' : '';
-    });
-    drawer.querySelectorAll('a').forEach(a=>{
-      a.addEventListener('click', ()=>{
-        drawer.classList.remove('open');
-        burger.setAttribute('aria-expanded','false');
-        document.body.style.overflow = '';
+    // Mobile menu toggle
+    const burger = document.querySelector('.menu-toggle');
+    const drawer = document.querySelector('.nav-menu');
+    if (burger && drawer) {
+      burger.addEventListener('click', () => {
+        const open = drawer.classList.toggle('open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      drawer.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          drawer.classList.remove('open');
+          burger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    // Simple filter logic
+    const buttons = Array.from(document.querySelectorAll('.filter-btn'));
+    const cards = Array.from(document.querySelectorAll('#portfolioGrid .card'));
+    function applyFilter(key) {
+      buttons.forEach(b => b.classList.toggle('active', b.dataset.filter === key || (key === 'all' && b.dataset.filter === 'all')));
+      cards.forEach(card => {
+        if (key === 'all') { card.hidden = false; return; }
+        const cats = (card.getAttribute('data-cats') || '').split(/\s+/);
+        card.hidden = !cats.includes(key);
+      });
+    }
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.dataset.filter;
+        applyFilter(key);
       });
     });
-  }
-
-  // Simple filter logic
-  const buttons = Array.from(document.querySelectorAll('.filter-btn'));
-  const cards = Array.from(document.querySelectorAll('#portfolioGrid .card'));
-  function applyFilter(key){
-    buttons.forEach(b=> b.classList.toggle('active', b.dataset.filter===key || (key==='all' && b.dataset.filter==='all')));
-    cards.forEach(card=>{
-      if(key==='all'){ card.hidden=false; return; }
-      const cats = (card.getAttribute('data-cats')||'').split(/\s+/);
-      card.hidden = !cats.includes(key);
-    });
-  }
-  buttons.forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      const key = btn.dataset.filter;
-      applyFilter(key);
-    });
-  });
-  // Prefilter from URL (?cat=real-estate)
-  const params = new URLSearchParams(location.search);
-  const initial = params.get('cat');
-  if (initial){
-    applyFilter(initial);
-  }
-</script>
-<!-- 100% privacy-first analytics -->
-<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<!--Simple Analytics Automated Events Script-->
-<script async data-collect="outbound,emails" src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
+    // Prefilter from URL (?cat=real-estate)
+    const params = new URLSearchParams(location.search);
+    const initial = params.get('cat');
+    if (initial) {
+      applyFilter(initial);
+    }
+  </script>
+  <!-- 100% privacy-first analytics -->
+  <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <!--Simple Analytics Automated Events Script-->
+  <script async data-collect="outbound,emails" src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
 </body>
+
 </html>
